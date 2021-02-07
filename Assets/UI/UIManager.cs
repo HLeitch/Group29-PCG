@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     public UIAbilities uiabilities;
     public UIHealthBar uihealthbar;
     public UIPlayerWeaponText uiPlayerWeaponText;
+    public UIRoomText uiRoomText;
     public Sprite testSprite;
 
     /// <summary>
@@ -33,6 +34,12 @@ public class UIManager : MonoBehaviour
 
     }
 
+    public void ChangeRoomText(string text)
+    {
+        uiRoomText.ChangeText(text);
+
+    }
+
 
     private void Update()
     {
@@ -40,7 +47,7 @@ public class UIManager : MonoBehaviour
         //w key shows or removes a test sprite
         if (Input.GetKeyUp("w"))
         {
-            uiabilities.NewAbilitySprite(testSprite);
+            newAbility(testSprite);
 
 
         }
@@ -52,7 +59,7 @@ public class UIManager : MonoBehaviour
         }
         if (Input.GetKeyUp("space"))
         {
-            uihealthbar.ChangeHealth(0.6f);
+            changeHealthBar(0.6f);
 
         }
 
@@ -60,6 +67,12 @@ public class UIManager : MonoBehaviour
         {
             NewPlayerWeapon("This is not a weapon. This is a debugger");
 
+        }
+
+        if (Input.GetKeyUp("r"))
+        {
+            ChangeRoomText("i am a fish");
+            
         }
 
     }

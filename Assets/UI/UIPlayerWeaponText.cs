@@ -47,7 +47,7 @@ public class UIPlayerWeaponText : MonoBehaviour
 
         
 
-        typing = true;
+       
 
     }
 
@@ -58,6 +58,7 @@ public class UIPlayerWeaponText : MonoBehaviour
         // DEBUGGING
         if (newWeapon)
         {
+            
             TypingEffect();
 
         }
@@ -67,6 +68,7 @@ public class UIPlayerWeaponText : MonoBehaviour
 
     public void DisplayNewWeaponName(string weaponName)
     {
+        typing = true;
         newWeapon = true;
         this.weaponName = weaponName;
 
