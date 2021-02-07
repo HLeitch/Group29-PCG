@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public UIAbilities uiabilities;
     public UIHealthBar uihealthbar;
+    public UIPlayerWeaponText uiPlayerWeaponText;
     public Sprite testSprite;
 
     /// <summary>
@@ -22,6 +23,13 @@ public class UIManager : MonoBehaviour
     public void changeHealthBar(float value)
     {
         uihealthbar.ChangeHealth(value);
+
+    }
+
+    public void NewPlayerWeapon(string weaponName)
+    {
+        uiPlayerWeaponText.DisplayNewWeaponName(weaponName);
+
 
     }
 
@@ -45,6 +53,12 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyUp("space"))
         {
             uihealthbar.ChangeHealth(0.6f);
+
+        }
+
+        if (Input.GetKeyUp("t"))
+        {
+            NewPlayerWeapon("This is not a weapon. This is a debugger");
 
         }
 
