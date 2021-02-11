@@ -14,20 +14,20 @@ public class UIHealthBar : MonoBehaviour
     /// <summary>
     /// Percentage of player health remaining 
     /// </summary>
-    float healthPercentage;
+    protected float healthPercentage;
 
     /// <summary>
     /// Percentage of HealthBar Visable. Should match healthPercentage unless recently changed
     /// </summary>
-    float HealthBarValue;
+    protected float HealthBarValue;
 
-    float originalMaskSize;
+    protected float originalMaskSize;
 
     /// <summary>
     /// Smooth damp velocity. Used in update when healthbar is shrinking
     /// </summary>
 
-    float shrinkVelocity = 0f;
+    protected float shrinkVelocity = 0f;
 
     // Start is called before the first frame update
     void Start()
