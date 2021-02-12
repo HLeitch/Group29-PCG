@@ -37,7 +37,10 @@ public class UIHealthBar : MonoBehaviour
         HealthBarValue = 1;
     }
 
-
+    /// <summary>
+    /// Takes Percentage remaining of health
+    /// </summary>
+    /// <param name="newHealthValue"></param>
     public void ChangeHealth(float newHealthValue)
     {
         healthPercentage = newHealthValue;

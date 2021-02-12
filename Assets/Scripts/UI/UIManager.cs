@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     public UIRoomText uiRoomText;
     public Sprite testSprite;
 
+    public EnemyHealthBar EnemyHealthBarOriginal;
+    public Enemy debuggingEnemy;
+
     /// <summary>
     /// Call when the player is given a weapon with a new ability
     /// </summary>
@@ -72,8 +75,22 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyUp("r"))
         {
             ChangeRoomText("i am a fish");
-            
+
         }
+      
+    }
+
+    /// <summary>
+    /// Assigns a health Bar to an enemy
+    /// </summary>
+    /// <param name="e"></param>
+    public void enemySpawn(Enemy e)
+    {
+
+        EnemyHealthBar newEnemyHealthBar = Instantiate<EnemyHealthBar>(EnemyHealthBarOriginal);
+
+        e.healthBar = newEnemyHealthBar;
+
 
     }
 }

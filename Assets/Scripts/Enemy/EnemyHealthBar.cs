@@ -15,7 +15,7 @@ public class EnemyHealthBar : UIHealthBar
         healthPercentage = 1;
         HealthBarValue = 1;
 
-        canvas = FindObjectOfType<UIManager>().gameObject.GetComponent<Canvas>()
+        canvas = FindObjectOfType<UIManager>().gameObject.GetComponent<Canvas>();
 
 
     }

@@ -8,7 +8,11 @@ public class Enemy : MonoBehaviour
     public float moveSpeed;
     public float health;
 
+    public float maxHealth = 50f;
 
+    public EnemyHealthBar healthBar;
+
+    public Transform healthBarPostitionSet;
 
 
     // Start is called before the first frame update
@@ -16,14 +20,22 @@ public class Enemy : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         moveSpeed = 2;
-        health = 50;
+        health = maxHealth;
+
+        healthBar.healthBarPosition = healthBarPostitionSet;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (Input.GetKeyUp(("e")))
+        {
+
+
+            ChangeHealth(-10f);
+        }
     }
 
 
@@ -33,6 +45,7 @@ public class Enemy : MonoBehaviour
     {
 
         health += Value;
+        healthBar.ChangeHealth(health/maxHealth);
 
         if (health <=0)
         {

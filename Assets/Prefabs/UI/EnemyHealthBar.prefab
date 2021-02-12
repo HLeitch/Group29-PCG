@@ -175,7 +175,6 @@ GameObject:
   - component: {fileID: 7584345580702941498}
   - component: {fileID: 7584345580702941477}
   - component: {fileID: 3028861119442152265}
-  - component: {fileID: 7584345580702941499}
   m_Layer: 5
   m_Name: EnemyHealthBar
   m_TagString: Untagged
@@ -190,7 +189,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7584345580702941479}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9238796, w: -0.38268325}
+  m_LocalRotation: {x: 0, y: -0, z: 0.9238796, w: -0.38268325}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75299996, y: 0.75299996, z: 0.94124997}
   m_Children:
@@ -255,19 +254,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarMask: {fileID: 7584345580344368823}
   healthBarPosition: {fileID: 0}
---- !u!114 &7584345580702941499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7584345580702941479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aead824bdec89114fa9144c5178338de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBarMask: {fileID: 7584345580344368823}
 --- !u!1 &7584345580939055638
 GameObject:
   m_ObjectHideFlags: 0
