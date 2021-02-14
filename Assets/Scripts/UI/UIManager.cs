@@ -77,6 +77,13 @@ public class UIManager : MonoBehaviour
             ChangeRoomText("i am a fish");
 
         }
+
+        if (Input.GetKeyUp("p"))
+        {
+
+            enemySpawn();
+           
+        }
       
     }
 
@@ -84,13 +91,15 @@ public class UIManager : MonoBehaviour
     /// Assigns a health Bar to an enemy
     /// </summary>
     /// <param name="e"></param>
-    public void enemySpawn(Enemy e)
+    public void enemySpawn()
     {
 
-        EnemyHealthBar newEnemyHealthBar = Instantiate<EnemyHealthBar>(EnemyHealthBarOriginal);
+
+        Enemy e = Instantiate<Enemy>(debuggingEnemy);
+
+        EnemyHealthBar newEnemyHealthBar = Instantiate<EnemyHealthBar>(EnemyHealthBarOriginal,uihealthbar.transform);
 
         e.healthBar = newEnemyHealthBar;
-
 
     }
 }

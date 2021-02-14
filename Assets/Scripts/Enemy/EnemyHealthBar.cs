@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealthBar : UIHealthBar
 {
-    public Transform healthBarPosition;
+    public Transform targetPosition;
 
     private Canvas canvas;
 
@@ -24,7 +24,7 @@ public class EnemyHealthBar : UIHealthBar
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = Camera.main.WorldToScreenPoint(healthBarPosition.position);
+        gameObject.transform.position = Camera.main.WorldToScreenPoint(targetPosition.position);
 
 
              if (HealthBarValue != healthPercentage)

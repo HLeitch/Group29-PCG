@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     public Transform healthBarPostitionSet;
 
-
+    UIManager uimanager;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +22,19 @@ public class Enemy : MonoBehaviour
         moveSpeed = 2;
         health = maxHealth;
 
-        healthBar.healthBarPosition = healthBarPostitionSet;
+        uimanager = FindObjectOfType<UIManager>();
+        
+
+
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        healthBar.targetPosition = healthBarPostitionSet;
 
         if (Input.GetKeyUp(("e")))
         {
