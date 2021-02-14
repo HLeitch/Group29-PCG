@@ -20,6 +20,27 @@ public class WeaponManager : MonoBehaviour
         weapon.GetComponent<Weapon>().SetParts(hilt, blade);
     }
 
+    /// <summary>
+    /// Overloaded to return a reference to the weapon created
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <returns></returns>
+    public GameObject GenerateWeapon()
+    {
+
+
+        GameObject weapon = Instantiate(blankWeapon, this.transform.position, Quaternion.identity);
+
+        GameObject hilt = Instantiate(hilts[Random.Range(0, hilts.Length)], weapon.transform);
+        hilt.transform.localPosition = Vector3.zero;
+        GameObject blade = Instantiate(blades[Random.Range(0, blades.Length)], weapon.transform);
+        blade.transform.localPosition = Vector3.zero;
+
+        weapon.GetComponent<Weapon>().SetParts(hilt, blade);
+
+        return weapon;
+    }
+
     void Awake()
     {
         wm = this;

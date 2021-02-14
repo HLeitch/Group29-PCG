@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    public GameObject weapon;
+    public Transform weaponHoldPoint;
+
     public Rigidbody2D rigidbody;
     public float moveSpeed;
     public float health;
@@ -15,6 +19,7 @@ public class Enemy : MonoBehaviour
     public Transform healthBarPostitionSet;
 
     UIManager uimanager;
+    WeaponManager wp;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +28,9 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
 
         uimanager = FindObjectOfType<UIManager>();
-        
 
+        wp = FindObjectOfType<WeaponManager>();
+        weapon = wp.GenerateWeapon();
 
         
         
@@ -42,6 +48,8 @@ public class Enemy : MonoBehaviour
 
             ChangeHealth(-10f);
         }
+
+        weapon.transform.position = weaponHoldPoint.transform.position;
     }
 
 
