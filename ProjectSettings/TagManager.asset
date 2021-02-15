@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Blade
-  - Hilt
-  - Sword
+  - Spikes
+  - Arrows
   layers:
   - Default
   - TransparentFX
@@ -16,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - IgnoreCollisions
   - 
   - 
   - 
@@ -41,9 +40,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 703944055
+    locked: 0
+  - name: Walls
+    uniqueID: 3399118005
+    locked: 0
+  - name: Below Player
+    uniqueID: 2409434081
+    locked: 0
+  - name: Player
+    uniqueID: 3956444983
+    locked: 0
+  - name: Above Player
+    uniqueID: 3323934481
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Weapon
-    uniqueID: 3404529641
     locked: 0
