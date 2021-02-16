@@ -14,6 +14,12 @@ public class DestroyBullet : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        Physics2D.IgnoreLayerCollision(8,8);
+    }
+
+
 
 }
 

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1770952590738269110}
   - component: {fileID: -4022225216186609078}
   - component: {fileID: -3821320513230631152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: placeholder arrow
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +49,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

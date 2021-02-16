@@ -6,37 +6,41 @@ public class TrapTrigger : MonoBehaviour
 {
     public Animator anim;
     private Shooting shooting;
-    private bool isShooting;
+    public GameObject[] firePoint;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        isShooting = false;
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if(gameObject.tag == "Spikes")
+        if(gameObject.tag == "Spikes" && collision.tag == "Player")
             anim.SetBool("playertouch", true);
 
-        if (gameObject.tag == "Arrows")
+        if (gameObject.tag == "Plate" && collision.tag == "Player")
         {
-            isShooting = true;
-            anim.SetBool("playertouch" ,true);
+            foreach(GameObject obj in firePoint)
+            {
+                shooting = obj.GetComponent<Shooting>();
+                shooting.Shoot();
+            }
+            
+            anim.SetBool("playertouch", true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (gameObject.tag == "Spikes")
+        if (gameObject.tag == "Spikes" && collision.tag == "Player")
             anim.SetBool("playertouch", false);
 
-        if (gameObject.tag == "Arrows")
+        if (gameObject.tag == "Plate" && collision.tag == "Player")
         {
-            isShooting = false;
             anim.SetBool("playertouch", false);
+           
         }
+        
     }
-    // Update is called once per frame
-
 }

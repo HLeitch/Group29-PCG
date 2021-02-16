@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     public GameObject bulletPrefab;
 
     public float bulletForce = 20f;
-    private TrapTrigger trap;
+    
 
     // Update is called once per frame
     private void Start()
@@ -19,7 +19,7 @@ public class Shooting : MonoBehaviour
     }
     
        
-    void Shoot()
+    public void Shoot()
     {
         Quaternion rotation = Quaternion.Euler(0f, 0f, -90f);
         foreach (Transform x in firePoint)

@@ -13,21 +13,31 @@ public class ChangeTile : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    
-    private void OnTriggerStay2D(Collider2D collision)
+
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ChangeSprite();
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Below Player";
-           
-        }
-    
+        
     }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (gameObject.CompareTag("Switch"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                ChangeSprite();
+            }
+        }
+
+    }
+
     // Update is called once per frame
-    void ChangeSprite()
+    public void ChangeSprite()
     {
         spriteRenderer.sprite = newSprite;
+
+        gameObject.GetComponent<Collider2D>().enabled = false;
+        //gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Below Player";
     }
 }
