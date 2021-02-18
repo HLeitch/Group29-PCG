@@ -112,6 +112,8 @@ GameObject:
   - component: {fileID: 8758686978942907083}
   - component: {fileID: 8758686978942907080}
   - component: {fileID: 2036444443}
+  - component: {fileID: 4392583068320299198}
+  - component: {fileID: 23653185441034551}
   - component: {fileID: 417975897}
   - component: {fileID: 417975898}
   m_Layer: 0
@@ -174,6 +176,31 @@ MonoBehaviour:
   speed: 200
   drag: 0.875
   weapon_weight: 0
+--- !u!114 &4392583068320299198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758686978942907082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b204b55d2141c448c67226cdf5949c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &23653185441034551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758686978942907082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ca02d3979675644ab752f502236a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max_hp: 10
 --- !u!199 &417975897
 ParticleSystemRenderer:
   serializedVersion: 6

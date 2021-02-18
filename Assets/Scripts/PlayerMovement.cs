@@ -6,44 +6,31 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     public float drag;
+    //[HideInInspector]
     public float weapon_weight;
     Rigidbody2D rb;
     Vector2 movement;
-    SpriteRenderer spr;
-    ParticleSystem parts;
-    Animator anim;
+    //PlayerCombat combat;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spr = GetComponentInChildren<SpriteRenderer>();
-        parts = GetComponent<ParticleSystem>();
-        anim = GetComponentInChildren<Animator>();
-        anim.StopPlayback();
+        //combat = GetComponent<PlayerCombat>();
     }
 
     void Update()
     {
+        // Assign axis data to vector
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (movement.x < 0) spr.flipX = true;
-        else if (movement.x > 0) spr.flipX = false;
+        // Restrict the weapon weight to be 0-1
+        weapon_weight = Mathf.Clamp(weapon_weight, 0, 1); // This will be removed once the player can have a weapon
 
-        weapon_weight = Mathf.Clamp(weapon_weight, 0, 1);
+        // Increase the velocity vector
         rb.velocity += movement.normalized * (speed * (1-weapon_weight)) * Time.deltaTime;
 
-        if (rb.velocity.magnitude < 1)
-        {
-            rb.velocity = Vector2.zero;
-            if (parts.isPlaying) parts.Stop();
-        }
-        else
-        {
-            if (!parts.isPlaying) parts.Play();
-        }
-        anim.SetFloat("Velocity", rb.velocity.magnitude);
-
+        // Apply the drag
         rb.velocity *= drag;
     }
 }
