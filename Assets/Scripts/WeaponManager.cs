@@ -5,40 +5,60 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     public static WeaponManager wm;
+    public GameObject playerWeapon;
     public GameObject blankWeapon;
-    public GameObject[] blades, hilts;
+    public GameObject[] modifiers, effects;
+    public GameObject[] swordBlades, swordHilts;
+    public GameObject[] hammerHeads, hammerHandles;
 
-    public void GenerateWeapon(Vector2 pos)
+    public void GenerateSword(Vector2 pos)
     {
-        GameObject weapon = Instantiate(blankWeapon, (Vector3)pos, Quaternion.identity);
-
-        GameObject hilt = Instantiate(hilts[Random.Range(0, hilts.Length)], weapon.transform);
+        DestroyWeapon();
+        GameObject weapon = playerWeapon;
+        GameObject hilt = Instantiate(swordHilts[Random.Range(0, swordHilts.Length)], weapon.transform);
+        hilt.name = hilt.name.Replace("(Clone)", "");
         hilt.transform.localPosition = Vector3.zero;
-        GameObject blade = Instantiate(blades[Random.Range(0, blades.Length)], weapon.transform);
+        GameObject blade = Instantiate(swordBlades[Random.Range(0, swordBlades.Length)], weapon.transform);
+        blade.name = blade.name.Replace("(Clone)", "");
         blade.transform.localPosition = Vector3.zero;
+        GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], weapon.transform);
+        modifier.name = modifier.name.Replace("(Clone)", "");
+        modifier.transform.localPosition = Vector3.zero;
+        GameObject effect = Instantiate(effects[Random.Range(0, effects.Length)], weapon.transform);
+        effect.name = effect.name.Replace("(Clone)", "");
+        effect.transform.localPosition = Vector3.zero;
 
-        weapon.GetComponent<Weapon>().SetParts(hilt, blade);
+        weapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
+        weapon.transform.localPosition = new Vector3(0, 0.85f, 0);
     }
 
-    /// <summary>
-    /// Overloaded to return a reference to the weapon created
-    /// </summary>
-    /// <param name="pos"></param>
-    /// <returns></returns>
-    public GameObject GenerateWeapon()
+    public void GenerateHammer(Vector2 pos)
     {
+        DestroyWeapon();
+        GameObject weapon = playerWeapon;
+        GameObject handle = Instantiate(hammerHandles[Random.Range(0, hammerHandles.Length)], weapon.transform);
+        handle.name = handle.name.Replace("(Clone)", "");
+        handle.transform.localPosition = Vector3.zero;
+        GameObject head = Instantiate(hammerHeads[Random.Range(0, hammerHeads.Length)], weapon.transform);
+        head.name = head.name.Replace("(Clone)", "");
+        head.transform.localPosition = Vector3.zero;
+        GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], weapon.transform);
+        modifier.name = modifier.name.Replace("(Clone)", "");
+        modifier.transform.localPosition = Vector3.zero;
+        GameObject effect = Instantiate(effects[Random.Range(0, effects.Length)], weapon.transform);
+        effect.name = effect.name.Replace("(Clone)", "");
+        effect.transform.localPosition = Vector3.zero;
 
+        weapon.transform.localPosition = new Vector3(0, 2.1f, 0);
+        weapon.GetComponent<Weapon>().SetParts(handle, head, effect, modifier);
+    }
 
-        GameObject weapon = Instantiate(blankWeapon, this.transform.position, Quaternion.identity);
-
-        GameObject hilt = Instantiate(hilts[Random.Range(0, hilts.Length)], weapon.transform);
-        hilt.transform.localPosition = Vector3.zero;
-        GameObject blade = Instantiate(blades[Random.Range(0, blades.Length)], weapon.transform);
-        blade.transform.localPosition = Vector3.zero;
-
-        weapon.GetComponent<Weapon>().SetParts(hilt, blade);
-
-        return weapon;
+    public void DestroyWeapon()
+    {
+        foreach (Transform child in playerWeapon.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
     }
 
     void Awake()
@@ -48,15 +68,27 @@ public class WeaponManager : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < 25; i++)
-        {
-            GenerateWeapon(new Vector2(i, 0));
-        }
-        //GenerateWeapon(new Vector2(0, 0));
+        ChooseWeaponType();
     }
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (Input.GetKeyDown("space"))
+        {
+            ChooseWeaponType();
+        }
+    }
+
+    public void ChooseWeaponType()
+    {
+        int randWeapon = Random.RandomRange(0, 2);
+        if (randWeapon == 0)
+        {
+            GenerateSword(new Vector2(0, 0));
+        }
+        else if (randWeapon == 1)
+        {
+            GenerateHammer(new Vector2(0, 0));
+        }
     }
 }
