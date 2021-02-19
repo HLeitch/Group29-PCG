@@ -8,8 +8,6 @@ public class Weapon : MonoBehaviour
     public string weaponName;
     Hilt hilt;
     Blade blade;
-    Modifier modifier;
-    Effect effect;
 
     public void GetStats()
     {
@@ -20,17 +18,15 @@ public class Weapon : MonoBehaviour
 
     public void GetName()
     {
-        weaponName = modifier.gameObject.name + " " + hilt.gameObject.name + " " + blade.gameObject.name + " of " + effect.gameObject.name;
+        weaponName = hilt.gameObject.name.Substring(4,3) + blade.gameObject.name.Substring(5,4);
         name = weaponName;
     }
 
-    public void SetParts(GameObject h, GameObject b, GameObject e, GameObject m)
+    public void SetParts(GameObject h, GameObject b)
     {
         hilt = h.GetComponent<Hilt>();
         blade = b.GetComponent<Blade>();
-        modifier = m.GetComponent<Modifier>();
-        effect = e.GetComponent<Effect>();
-        
+
         GetStats();
         GetName();
     }
