@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         uimanager = FindObjectOfType<UIManager>();
 
         wp = FindObjectOfType<WeaponManager>();
-        weapon = wp.GenerateWeapon();
+        
 
         
         
