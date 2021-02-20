@@ -216,8 +216,6 @@ MonoBehaviour:
   uiPlayerWeaponText: {fileID: 6934318777383961864}
   uiRoomText: {fileID: 5903987526665543315}
   testSprite: {fileID: 21300000, guid: 6a1402e66e5ad694abae0b5a63e8827d, type: 3}
-  EnemyHealthBarOriginal: {fileID: 0}
-  debuggingEnemy: {fileID: 0}
 --- !u!1 &4243634383118772318
 GameObject:
   m_ObjectHideFlags: 0
