@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     public static WeaponManager wm;
+    public PlayerController pc;
     public GameObject playerWeapon;
     public GameObject blankWeapon;
     public GameObject[] modifiers, effects;
@@ -28,6 +29,7 @@ public class WeaponManager : MonoBehaviour
         effect.name = effect.name.Replace("(Clone)", "");
         effect.transform.localPosition = Vector3.zero;
 
+        weapon.gameObject.tag = "Sword";
         weapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
         weapon.transform.localPosition = new Vector3(0, 0.85f, 0);
     }
@@ -49,6 +51,7 @@ public class WeaponManager : MonoBehaviour
         effect.name = effect.name.Replace("(Clone)", "");
         effect.transform.localPosition = Vector3.zero;
 
+        weapon.gameObject.tag = "Hammer";
         weapon.transform.localPosition = new Vector3(0, 2.1f, 0);
         weapon.GetComponent<Weapon>().SetParts(handle, head, effect, modifier);
     }
@@ -63,6 +66,7 @@ public class WeaponManager : MonoBehaviour
 
     void Awake()
     {
+        pc = GameObject.FindObjectOfType<PlayerController>();
         wm = this;
     }
 
@@ -81,7 +85,7 @@ public class WeaponManager : MonoBehaviour
 
     public void ChooseWeaponType()
     {
-        int randWeapon = Random.RandomRange(0, 2);
+        int randWeapon = Random.Range(0, 2);
         if (randWeapon == 0)
         {
             GenerateSword(new Vector2(0, 0));

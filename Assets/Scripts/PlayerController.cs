@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float timeBetweenAttack = 0.6f;
     public float startTimeBetweenAttack;
     private bool swinging = false;
+    public Weapon weapon;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        weapon = GameObject.FindObjectOfType<Weapon>();
+        startTimeBetweenAttack = weapon.timeBetweenAttacks;
         Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0f);
         movement = movement.normalized * Time.deltaTime;
         transform.position += movement * moveSpeed;
@@ -45,8 +48,6 @@ public class PlayerController : MonoBehaviour
         }
         storedX = transform.position.x;
         storedY = transform.position.y;
-
-        myAnimator.SetFloat("Speed", rb.velocity.x);
     }
 
     void SetRunningAnimation()
@@ -61,17 +62,24 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator SwingWeapon()
     {
+        myAnimator.SetInteger("SwingSpeed", weapon.speed);
         if (timeBetweenAttack <= 0)
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
+                
+                myAnimator.SetFloat("Speed", weapon.speed);
                 myAnimator.SetBool("Swinging", true);
                 swinging = true;
-                yield return new WaitForSeconds(0.3f);
-                myAnimator.SetBool("Swinging", false);
-                yield return new WaitForSeconds(0.15f);
-                swinging = false;
+                if (weapon.speed == 0)
+                    yield return new WaitForSeconds(0.5f);
+                else if (weapon.speed == 1.0)
+                    yield return new WaitForSeconds(0.666666f);
+                else if (weapon.speed == 2.0)
+                    yield return new WaitForSeconds(0.3333333f);
                 timeBetweenAttack = startTimeBetweenAttack;
+                swinging = false;
+                myAnimator.SetBool("Swinging", false);
             }
         }
         else
