@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2423835107771021107}
   m_Layer: 0
   m_Name: Gold
-  m_TagString: Untagged
+  m_TagString: Blade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,8 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  speed: 0
-  knockback: 0
+  timeBetweenSwings: 0
 --- !u!60 &2423835107771021107
 PolygonCollider2D:
   m_ObjectHideFlags: 0

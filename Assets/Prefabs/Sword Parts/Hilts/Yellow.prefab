@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7328132684721336654}
   m_Layer: 0
   m_Name: Yellow
-  m_TagString: Untagged
+  m_TagString: Hilt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1faab1f8dba14bb8fd3ccc3f55f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
   speed: 0
   knockback: 0
 --- !u!114 &7328132684721336654
@@ -110,6 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1faab1f8dba14bb8fd3ccc3f55f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
   speed: 0
   knockback: 0

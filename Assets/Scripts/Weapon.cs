@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public float damage, speed, knockback;
+    public float damage, knockback, timeBetweenAttacks;
+    public int speed;
     public string weaponName;
     Hilt hilt;
     Blade blade;
@@ -13,14 +14,16 @@ public class Weapon : MonoBehaviour
 
     public void GetStats()
     {
-        damage = hilt.damage + blade.damage;
-        knockback = hilt.knockback + blade.knockback;
-        speed = hilt.speed + blade.speed;
+        knockback = hilt.knockback;
+        damage = blade.damage;
+        knockback = hilt.knockback;
+        speed = hilt.speed;
+        timeBetweenAttacks = blade.timeBetweenSwings;
     }
 
     public void GetName()
     {
-        weaponName = modifier.gameObject.name + " " + hilt.gameObject.name + " " + blade.gameObject.name + " of " + effect.gameObject.name;
+        weaponName = modifier.gameObject.name + " " + blade.gameObject.name + " " + this.tag + " of " + effect.gameObject.name;
         name = weaponName;
     }
 
