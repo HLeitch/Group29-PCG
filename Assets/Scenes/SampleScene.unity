@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 4243634382562633165, guid: e9acd706c7a829e42b9df57ed4ec88a8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4243634382562633165, guid: e9acd706c7a829e42b9df57ed4ec88a8,
         type: 3}
@@ -255,7 +255,7 @@ PrefabInstance:
     - target: {fileID: 8758686978942907083, guid: 1cfb8d1f2bb182b4582fa8148925a092,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8758686978942907083, guid: 1cfb8d1f2bb182b4582fa8148925a092,
         type: 3}
@@ -373,7 +373,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -487,20 +487,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9f7e19ab477184f98100115cbd22d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 0}
+  playerWeapon: {fileID: 0}
   blankWeapon: {fileID: 3745755359584254256, guid: a6422391ee716024fa3064c99d38a597,
     type: 3}
-  blades:
-  - {fileID: 667794817628257250, guid: 036cb1933f59a2e468a23fc8b9453d3f, type: 3}
-  - {fileID: 6004484841741123646, guid: a05b16139fc3aa840ab74240682514dc, type: 3}
-  - {fileID: 3063041947808566797, guid: 867db15ef57085648b05d1c368e0a12d, type: 3}
-  - {fileID: 6598872874403593726, guid: 281bc4618448b2d46aa6bf4a41f3786f, type: 3}
-  - {fileID: 6363277134017630006, guid: d1390798a97f6164dab8621ec49dd595, type: 3}
-  hilts:
-  - {fileID: 6722773833686140127, guid: 9c8ba7dac9f9a594890b8a4e6cd0dc94, type: 3}
-  - {fileID: 8324320936650637877, guid: 586aaa4cd342ece4e9062a4a9f8ade9e, type: 3}
-  - {fileID: 6552968818357477866, guid: e7fc4df35af77384b8c938d03978dbb2, type: 3}
-  - {fileID: 1684104600824031783, guid: d2f70f7bf4e0d2f4e889337c0ab5fe83, type: 3}
-  - {fileID: 7941621557462571418, guid: a06b092f12268e149bf5f40d8dd6b5b8, type: 3}
+  modifiers: []
+  effects: []
+  swordBlades: []
+  swordHilts: []
+  hammerHeads: []
+  hammerHandles: []
 --- !u!4 &1249500774
 Transform:
   m_ObjectHideFlags: 0
@@ -513,7 +509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1627888315
 PrefabInstance:
