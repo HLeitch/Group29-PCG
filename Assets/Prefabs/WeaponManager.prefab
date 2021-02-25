@@ -43,24 +43,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9f7e19ab477184f98100115cbd22d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 532219142156003585, guid: 8f46fdd0095e143419fb13c1b78959a5, type: 3}
   playerWeapon: {fileID: 0}
-  blankWeapon: {fileID: 0}
+  blankWeapon: {fileID: 3745755359584254256, guid: a6422391ee716024fa3064c99d38a597,
+    type: 3}
   modifiers:
   - {fileID: 495898068938159734, guid: bd7e1675a20b67b4a8cb74272b1b2fe5, type: 3}
   effects:
   - {fileID: 5656043857431888931, guid: d3a19fd77da11a543b5051698a806da2, type: 3}
   swordBlades:
-  - {fileID: 7545884622685190429, guid: 88ff9716be3a8884fa34f82cbbe7dfa3, type: 3}
-  - {fileID: 1454467727827516675, guid: d7dd9bfec6529d94398a8e3895005d0b, type: 3}
-  - {fileID: 8941940062460498304, guid: 895a0144f021ed749a65d466e2849bd1, type: 3}
-  - {fileID: 9215697156209847302, guid: 09790b7fe65bc94408e4a9c8bbba32c1, type: 3}
   - {fileID: 1844779747942326835, guid: cea60e498a72fc147b7656550bc280c7, type: 3}
+  - {fileID: 9215697156209847302, guid: 09790b7fe65bc94408e4a9c8bbba32c1, type: 3}
+  - {fileID: 8941940062460498304, guid: 895a0144f021ed749a65d466e2849bd1, type: 3}
+  - {fileID: 1454467727827516675, guid: d7dd9bfec6529d94398a8e3895005d0b, type: 3}
+  - {fileID: 7545884622685190429, guid: 88ff9716be3a8884fa34f82cbbe7dfa3, type: 3}
   swordHilts:
-  - {fileID: 7197493438264614607, guid: b988db1281a356141afb422a3c0512cd, type: 3}
-  - {fileID: 3978865479636488207, guid: bdaff4f5d5679fa45846061e7ff7b024, type: 3}
-  - {fileID: 7105803479080747371, guid: ee9a6aa501fa0d341a345b6133d530a9, type: 3}
-  - {fileID: 8842498677521867665, guid: 8ec581a2f218b814283f200e81c8aaa6, type: 3}
   - {fileID: 3474839214045509472, guid: a49b8a16557d6a44cae76e725f759d4c, type: 3}
+  - {fileID: 8842498677521867665, guid: 8ec581a2f218b814283f200e81c8aaa6, type: 3}
+  - {fileID: 7105803479080747371, guid: ee9a6aa501fa0d341a345b6133d530a9, type: 3}
+  - {fileID: 3978865479636488207, guid: bdaff4f5d5679fa45846061e7ff7b024, type: 3}
+  - {fileID: 7197493438264614607, guid: b988db1281a356141afb422a3c0512cd, type: 3}
   hammerHeads:
   - {fileID: 5423639314673854918, guid: bd39db6c272994347819ca083283ac2c, type: 3}
   hammerHandles:
