@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public GameObject weapon;
+    public Weapon weapon;
     public Transform weaponHoldPoint;
 
     public Rigidbody2D rigidbody;
@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
 
     UIManager uimanager;
     WeaponManager wp;
+    public RoomEnemiesManager rem;
 
     void Awake()
     {
@@ -34,8 +35,8 @@ public class Enemy : MonoBehaviour
         wp = FindObjectOfType<WeaponManager>();
 
         healthBar = uimanager.GiveEnemyHealthBar();
-        
-        
+
+        //weapon = rem.GiveWeapon();
     }
 
     // Update is called once per frame
