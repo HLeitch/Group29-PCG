@@ -247,6 +247,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23653185441034551, guid: 1cfb8d1f2bb182b4582fa8148925a092,
+        type: 3}
+      propertyPath: wm
+      value: 
+      objectReference: {fileID: 1249500773}
+    - target: {fileID: 4392583068320299198, guid: 1cfb8d1f2bb182b4582fa8148925a092,
+        type: 3}
+      propertyPath: pivot
+      value: 
+      objectReference: {fileID: 1227492158}
     - target: {fileID: 8758686978942907082, guid: 1cfb8d1f2bb182b4582fa8148925a092,
         type: 3}
       propertyPath: m_Name
@@ -458,6 +468,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &622449434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2036444443, guid: 1cfb8d1f2bb182b4582fa8148925a092,
+    type: 3}
+  m_PrefabInstance: {fileID: 117735390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac483da5480466d41816c545c12c5f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &622449436 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8758686978942907083, guid: 1cfb8d1f2bb182b4582fa8148925a092,
+    type: 3}
+  m_PrefabInstance: {fileID: 117735390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &736101096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736101097}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &736101097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736101096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1227492159}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1227492158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1227492159}
+  - component: {fileID: 1227492160}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1227492159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227492158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 736101097}
+  m_Father: {fileID: 622449436}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1227492160
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227492158}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4ac60a4f4129ee40947d9623d8a0f41, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1249500772
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,20 +596,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9f7e19ab477184f98100115cbd22d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 622449434}
+  playerWeapon: {fileID: 736101096}
   blankWeapon: {fileID: 3745755359584254256, guid: a6422391ee716024fa3064c99d38a597,
     type: 3}
-  blades:
-  - {fileID: 667794817628257250, guid: 036cb1933f59a2e468a23fc8b9453d3f, type: 3}
-  - {fileID: 6004484841741123646, guid: a05b16139fc3aa840ab74240682514dc, type: 3}
-  - {fileID: 3063041947808566797, guid: 867db15ef57085648b05d1c368e0a12d, type: 3}
-  - {fileID: 6598872874403593726, guid: 281bc4618448b2d46aa6bf4a41f3786f, type: 3}
-  - {fileID: 6363277134017630006, guid: d1390798a97f6164dab8621ec49dd595, type: 3}
-  hilts:
-  - {fileID: 6722773833686140127, guid: 9c8ba7dac9f9a594890b8a4e6cd0dc94, type: 3}
-  - {fileID: 8324320936650637877, guid: 586aaa4cd342ece4e9062a4a9f8ade9e, type: 3}
-  - {fileID: 6552968818357477866, guid: e7fc4df35af77384b8c938d03978dbb2, type: 3}
-  - {fileID: 1684104600824031783, guid: d2f70f7bf4e0d2f4e889337c0ab5fe83, type: 3}
-  - {fileID: 7941621557462571418, guid: a06b092f12268e149bf5f40d8dd6b5b8, type: 3}
+  modifiers:
+  - {fileID: 495898068938159734, guid: bd7e1675a20b67b4a8cb74272b1b2fe5, type: 3}
+  effects:
+  - {fileID: 5656043857431888931, guid: d3a19fd77da11a543b5051698a806da2, type: 3}
+  swordBlades:
+  - {fileID: 1844779747942326835, guid: cea60e498a72fc147b7656550bc280c7, type: 3}
+  - {fileID: 9215697156209847302, guid: 09790b7fe65bc94408e4a9c8bbba32c1, type: 3}
+  - {fileID: 8941940062460498304, guid: 895a0144f021ed749a65d466e2849bd1, type: 3}
+  - {fileID: 1454467727827516675, guid: d7dd9bfec6529d94398a8e3895005d0b, type: 3}
+  - {fileID: 7545884622685190429, guid: 88ff9716be3a8884fa34f82cbbe7dfa3, type: 3}
+  swordHilts:
+  - {fileID: 3474839214045509472, guid: a49b8a16557d6a44cae76e725f759d4c, type: 3}
+  - {fileID: 8842498677521867665, guid: 8ec581a2f218b814283f200e81c8aaa6, type: 3}
+  - {fileID: 7105803479080747371, guid: ee9a6aa501fa0d341a345b6133d530a9, type: 3}
+  - {fileID: 3978865479636488207, guid: bdaff4f5d5679fa45846061e7ff7b024, type: 3}
+  - {fileID: 7197493438264614607, guid: b988db1281a356141afb422a3c0512cd, type: 3}
+  hammerHeads:
+  - {fileID: 5423639314673854918, guid: bd39db6c272994347819ca083283ac2c, type: 3}
+  hammerHandles:
+  - {fileID: 3277219924047676125, guid: ea28bef3a875fe5428d3d20908b9020b, type: 3}
 --- !u!4 &1249500774
 Transform:
   m_ObjectHideFlags: 0
