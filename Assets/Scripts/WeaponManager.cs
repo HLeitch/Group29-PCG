@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     public static WeaponManager wm;
-    public PlayerController pc;
+    public PlayerMovement pc;
     public GameObject playerWeapon;
     public GameObject blankWeapon;
     public GameObject[] modifiers, effects;
@@ -30,11 +30,11 @@ public class WeaponManager : MonoBehaviour
         effect.transform.localPosition = Vector3.zero;
 
         weapon.gameObject.tag = "Sword";
+        weapon.transform.localPosition = new Vector3(0, 0.65f, 0);
         weapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
-        weapon.transform.localPosition = new Vector3(0, 0.85f, 0);
     }
 
-    public void GenerateHammer(Vector2 pos)
+    public void GenerateHammer()
     {
         DestroyWeapon();
         GameObject weapon = playerWeapon;
@@ -52,7 +52,7 @@ public class WeaponManager : MonoBehaviour
         effect.transform.localPosition = Vector3.zero;
 
         weapon.gameObject.tag = "Hammer";
-        weapon.transform.localPosition = new Vector3(0, 2.1f, 0);
+        weapon.transform.localPosition = new Vector3(0, 1.9f, 0);
         weapon.GetComponent<Weapon>().SetParts(handle, head, effect, modifier);
     }
 
@@ -66,7 +66,7 @@ public class WeaponManager : MonoBehaviour
 
     void Awake()
     {
-        pc = GameObject.FindObjectOfType<PlayerController>();
+        pc = GameObject.FindObjectOfType<PlayerMovement>();
         wm = this;
     }
 
@@ -77,10 +77,10 @@ public class WeaponManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            ChooseWeaponType();
-        }
+        //if (Input.GetKeyDown("space"))
+        //{
+        //    ChooseWeaponType();
+        //}
     }
 
     public void ChooseWeaponType()
@@ -92,7 +92,7 @@ public class WeaponManager : MonoBehaviour
         }
         else if (randWeapon == 1)
         {
-            GenerateHammer(new Vector2(0, 0));
+            GenerateHammer();
         }
     }
 }
