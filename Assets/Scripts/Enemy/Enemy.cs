@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     public float health;
     bool dying = false;
     float shrinkScale = 0;
+    Vector2 distanceToPlayer;
+    public bool usingWeapon = false;
 
     public float maxHealth = 50f;
 
@@ -24,6 +26,7 @@ public class Enemy : MonoBehaviour
     WeaponManager wp;
     public RoomEnemiesManager rem;
     GameObject player;
+    Animator animator;
 
     void Awake()
     {
@@ -38,6 +41,8 @@ public class Enemy : MonoBehaviour
         healthBar = uimanager.GiveEnemyHealthBar();
 
         player = FindObjectOfType<PlayerMovement>().gameObject;
+
+        animator = GetComponent<Animator>();
 
         //weapon = rem.GiveWeapon();
     }
@@ -62,6 +67,9 @@ public class Enemy : MonoBehaviour
 
 
         MoveEnemy();
+
+        
+
     }
 
 
@@ -107,20 +115,33 @@ public class Enemy : MonoBehaviour
 
     void MoveEnemy()
     {
-        Vector2 targetDestination = player.transform.position;
+        while (!usingWeapon)
+        {
+            Vector2 targetDestination = player.transform.position;
 
-        Vector2 currentLocation = gameObject.transform.position;
+            Vector2 currentLocation = gameObject.transform.position;
 
-        Vector2 distanceToTarget = targetDestination - currentLocation;
+            Vector2 distanceToTarget = targetDestination - currentLocation;
 
-        Vector2 directionToTarget = distanceToTarget.normalized;
+            Vector2 directionToTarget = distanceToTarget.normalized;
+            animator.SetFloat("MoveX", directionToTarget.x);
 
-        Vector2 movement = (directionToTarget * moveSpeed*Time.deltaTime);
+            Vector2 movement = (directionToTarget * moveSpeed * Time.deltaTime);
 
-        this.gameObject.transform.position += new Vector3(movement.x,movement.y,0f);
-
+            this.gameObject.transform.position += new Vector3(movement.x, movement.y, 0f);
+        }
     }
 
+    public void UseWeapon()
+    {
+
+        Debug.Log("ENEMY SWINGS WEAPON");
+        usingWeapon = true;
+    
+
+
+
+    }
 
     void Dead()
     {
