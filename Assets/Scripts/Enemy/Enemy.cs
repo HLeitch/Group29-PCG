@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     UIManager uimanager;
     WeaponManager wp;
     public RoomEnemiesManager rem;
+    GameObject player;
 
     void Awake()
     {
@@ -35,6 +36,8 @@ public class Enemy : MonoBehaviour
         wp = FindObjectOfType<WeaponManager>();
 
         healthBar = uimanager.GiveEnemyHealthBar();
+
+        player = FindObjectOfType<PlayerMovement>().gameObject;
 
         //weapon = rem.GiveWeapon();
     }
@@ -56,6 +59,9 @@ public class Enemy : MonoBehaviour
 
 
         if (dying) { dyingEffect(); }
+
+
+        MoveEnemy();
     }
 
 
@@ -97,6 +103,22 @@ public class Enemy : MonoBehaviour
             Dead();
 
         }
+    }
+
+    void MoveEnemy()
+    {
+        Vector2 targetDestination = player.transform.position;
+
+        Vector2 currentLocation = gameObject.transform.position;
+
+        Vector2 distanceToTarget = targetDestination - currentLocation;
+
+        Vector2 directionToTarget = distanceToTarget.normalized;
+
+        Vector2 movement = (directionToTarget * moveSpeed*Time.deltaTime);
+
+        this.gameObject.transform.position += new Vector3(movement.x,movement.y,0f);
+
     }
 
 

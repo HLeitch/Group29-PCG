@@ -262,8 +262,9 @@ MonoBehaviour:
   weapon: {fileID: 0}
   weaponHoldPoint: {fileID: 591047374}
   rigidbody: {fileID: 7820785350598984847}
-  moveSpeed: 0
+  moveSpeed: 0.02
   health: 0
   maxHealth: 50
   healthBar: {fileID: 0}
   healthBarPostitionTarget: {fileID: 1814828939}
+  rem: {fileID: 0}
