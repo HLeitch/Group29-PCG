@@ -101,6 +101,8 @@ public class Enemy : MonoBehaviour
 
     void dyingEffect()
     {
+        animator.enabled = false;
+
         gameObject.transform.localScale = new Vector3(1, transform.localScale.y - shrinkScale, 1);
 
         shrinkScale += (0.05f * Time.deltaTime);
@@ -115,7 +117,7 @@ public class Enemy : MonoBehaviour
 
     void MoveEnemy()
     {
-        while (!usingWeapon)
+        if (!usingWeapon)
         {
             Vector2 targetDestination = player.transform.position;
 

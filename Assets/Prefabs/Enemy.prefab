@@ -115,7 +115,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.5914974, y: 0.166358}
@@ -253,7 +253,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -261,7 +261,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &7820785352170741829
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,8 +311,9 @@ MonoBehaviour:
   weapon: {fileID: 0}
   weaponHoldPoint: {fileID: 591047374}
   rigidbody: {fileID: 7820785350598984847}
-  moveSpeed: 0.02
+  moveSpeed: 0.01
   health: 0
+  usingWeapon: 0
   maxHealth: 50
   healthBar: {fileID: 0}
   healthBarPostitionTarget: {fileID: 1814828939}
@@ -330,7 +331,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: ed72981580a879f43a36594d311cd308, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
