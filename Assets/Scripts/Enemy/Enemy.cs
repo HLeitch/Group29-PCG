@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        moveSpeed = 2;
+        
         health = maxHealth;
 
         uimanager = FindObjectOfType<UIManager>();
@@ -74,7 +74,13 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+
+        Weapon playerWeapon = null;
+        if ((collision.gameObject.tag == "Player") && collision.gameObject.TryGetComponent<Weapon>(out playerWeapon))
+        {
+
+            ChangeHealth(-playerWeapon.damage);
+        }
     }
 
 
