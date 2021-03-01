@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
 
         healthBar.moveHealthBar(healthBarPostitionTarget);
 
-        if (Input.GetKeyUp(("e")))
+        if (Input.GetKeyUp(("'")))
         {
 
 
@@ -72,19 +72,10 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-
-       
-        if ((collision.gameObject.tag == "Blade"))
-        {
-
-            ChangeHealth(-10);
-        }
-    }
 
 
-    void ChangeHealth(float Value)
+
+    public void ChangeHealth(float Value)
     {
 
         health += Value;

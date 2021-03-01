@@ -115,7 +115,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.5914974, y: 0.166358}
@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 7820785350598984846}
   - component: {fileID: 7820785350598984844}
   - component: {fileID: 7820785350598984847}
+  - component: {fileID: 3639180483856169690}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -225,7 +226,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -262,6 +263,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3639180483856169690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820785350598984840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768df7d8cefca424c98baebfff2cf349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEnemy: {fileID: 0}
 --- !u!1 &7820785352170741829
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 7820785352170741829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.60958, y: 0.60958, z: 0.60958}
   m_Children:
   - {fileID: 1814828939}
   - {fileID: 7820785350598984841}
@@ -311,7 +325,7 @@ MonoBehaviour:
   weapon: {fileID: 0}
   weaponHoldPoint: {fileID: 591047374}
   rigidbody: {fileID: 7820785350598984847}
-  moveSpeed: 0.005
+  moveSpeed: 1
   health: 0
   usingWeapon: 0
   maxHealth: 50
