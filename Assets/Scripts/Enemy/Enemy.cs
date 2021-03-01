@@ -75,11 +75,11 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        Weapon playerWeapon = null;
-        if ((collision.gameObject.tag == "Player") && collision.gameObject.TryGetComponent<Weapon>(out playerWeapon))
+       
+        if ((collision.gameObject.tag == "Blade"))
         {
 
-            ChangeHealth(-playerWeapon.damage);
+            ChangeHealth(-10);
         }
     }
 

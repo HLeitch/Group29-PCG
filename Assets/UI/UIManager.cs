@@ -78,28 +78,19 @@ public class UIManager : MonoBehaviour
 
         }
 
-        if (Input.GetKeyUp("p"))
-        {
-
-            enemySpawn();
-           
-        }
       
     }
+
 
     /// <summary>
     /// Assigns a health Bar to an enemy
     /// </summary>
-    /// <param name="e"></param>
-    public void enemySpawn()
+    public EnemyHealthBar GiveEnemyHealthBar()
     {
 
+        EnemyHealthBar newEnemyHealthBar = Instantiate<EnemyHealthBar>(EnemyHealthBarOriginal, uihealthbar.transform);
 
-        Enemy e = Instantiate<Enemy>(debuggingEnemy);
-
-        EnemyHealthBar newEnemyHealthBar = Instantiate<EnemyHealthBar>(EnemyHealthBarOriginal,uihealthbar.transform);
-
-        e.healthBar = newEnemyHealthBar;
+        return newEnemyHealthBar;
 
     }
 }
