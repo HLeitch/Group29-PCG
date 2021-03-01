@@ -15,7 +15,7 @@ public class EnemyWeaponRange : MonoBehaviour
         parentEnemy = FindObjectOfType<Enemy>();   
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         parentEnemy.UseWeapon();
     }

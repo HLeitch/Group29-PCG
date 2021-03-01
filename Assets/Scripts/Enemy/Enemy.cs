@@ -72,7 +72,10 @@ public class Enemy : MonoBehaviour
 
     }
 
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
 
 
     void ChangeHealth(float Value)
@@ -126,7 +129,7 @@ public class Enemy : MonoBehaviour
             Vector2 distanceToTarget = targetDestination - currentLocation;
 
             Vector2 directionToTarget = distanceToTarget.normalized;
-            animator.SetFloat("MoveX", directionToTarget.x);
+           animator.SetFloat("MoveX", directionToTarget.x);
 
             Vector2 movement = (directionToTarget * moveSpeed * Time.deltaTime);
 
@@ -136,10 +139,13 @@ public class Enemy : MonoBehaviour
 
     public void UseWeapon()
     {
+        if (!usingWeapon)
+        {
 
-        Debug.Log("ENEMY SWINGS WEAPON");
-        usingWeapon = true;
-    
+
+            Debug.Log("ENEMY SWINGS WEAPON");
+            usingWeapon = true;
+        }
 
 
 
