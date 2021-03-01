@@ -21,11 +21,12 @@ public class Shooting : MonoBehaviour
        
     public void Shoot()
     {
-        Quaternion rotation = Quaternion.Euler(0f, 0f, -90f);
+        //Quaternion rotation = Quaternion.Euler(0f, 0f, -90f);
         foreach (Transform x in firePoint)
         {
-            GameObject bullet = Instantiate(bulletPrefab, x.position, rotation);
+            GameObject bullet = Instantiate(bulletPrefab, x.position, x.rotation *Quaternion.Euler(0f, 0f, 180f));
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            
             rb.AddForce(x.up * bulletForce, ForceMode2D.Impulse);
         }
 

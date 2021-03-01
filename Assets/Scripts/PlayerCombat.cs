@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public int max_hp;
-    int hp;
+    public int hp;
     GameObject weapon;
     public WeaponManager wm;
     private float timeBetweenAttack;
@@ -42,8 +42,10 @@ public class PlayerCombat : MonoBehaviour
     public void TakeDamage(int value)
     {
         hp -= value;
+        Debug.Log($"Take damage: {value} ");
         if (hp < 0)
         {
+            Debug.Log("Dead");
             // TODO: Kill the player
         }
     }
@@ -57,14 +59,15 @@ public class PlayerCombat : MonoBehaviour
     {
         if (collision.CompareTag("Projectile"))
         {
-            // TODO: TakeDamage(collision.GetComponent<SCRIPTNAME>().damage); // Replace SCRIPTNAME with name of projectile script
-            // TODO: Emit particle effect?
+            TakeDamage(collision.GetComponent<Projectile>().damage);
             Destroy(collision.gameObject);
+            // TODO: Emit particle effect?
+            
         }
-        else if (collision.CompareTag("Weapon"))
+       /* else if (collision.CompareTag("Weapon"))
         {
 
-        }
+        }*/
     }
 
     IEnumerator SwingWeapon()

@@ -7,6 +7,11 @@ TagManager:
   - Blade
   - Hilt
   - Sword
+  - Plate
+  - Switch
+  - Spikes
+  - Projectile
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -16,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Walls
   - 
   - 
   - 
@@ -41,6 +46,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 4181618111
+    locked: 0
+  - name: Walls
+    uniqueID: 4022846231
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
