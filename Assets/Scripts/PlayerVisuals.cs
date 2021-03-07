@@ -35,11 +35,11 @@ public class PlayerVisuals : MonoBehaviour
         if (rb.velocity.magnitude < 1)
         {
             rb.velocity = Vector2.zero;
-            if (parts.isPlaying) parts.Stop();
+            if (parts.isPlaying) parts.Stop(false);
         }
         else
         {
-            if (!parts.isPlaying) parts.Play();
+            if (!parts.isPlaying) parts.Play(false);
         }
         anim.SetFloat("Velocity", rb.velocity.magnitude);
     }

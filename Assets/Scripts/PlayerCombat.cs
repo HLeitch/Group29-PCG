@@ -6,7 +6,7 @@ public class PlayerCombat : MonoBehaviour
 {
     public int max_hp;
     int hp;
-    GameObject weapon;
+    GameObject weapon; 
     public WeaponManager wm;
     private float timeBetweenAttack;
     public bool swinging = false;
@@ -75,7 +75,7 @@ public class PlayerCombat : MonoBehaviour
             {
                 weaponAnimator.SetBool("Swinging", true);
                 swinging = true;
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(0.3f); 
                 weaponAnimator.SetBool("Swinging", false);
                 yield return new WaitForSeconds(0.15f);
                 swinging = false;
