@@ -38,6 +38,6 @@ public class ChangeTile : MonoBehaviour
         spriteRenderer.sprite = newSprite;
 
         gameObject.GetComponent<Collider2D>().enabled = false;
-        //gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Below Player";
+        
     }
 }

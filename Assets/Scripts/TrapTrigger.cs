@@ -18,17 +18,21 @@ public class TrapTrigger : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        //if player touches spikes
         if (gameObject.tag == "Spikes" && collision.gameObject.name == "WallCollider")
         {
+            //take damage
             pc.TakeDamage(spikeTrapDamage);
             anim.SetBool("playertouch", true);
         }
 
+        //if player touches pressure plate
         if (gameObject.tag == "Plate" && collision.gameObject.name == "WallCollider")
         {
+            
             foreach(GameObject obj in firePoint)
             {
+                //shoot arrows
                 shooting = obj.GetComponent<Shooting>();
                 shooting.Shoot();
             }
@@ -36,7 +40,23 @@ public class TrapTrigger : MonoBehaviour
             anim.SetBool("playertouch", true);
         }
     }
-    
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //level 2 mechanism --> if player flips switch, shoot arrows
+        if (gameObject.tag == "Switch" && collision.gameObject.tag == "Player")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                foreach (GameObject obj in firePoint)
+                {
+                    shooting = obj.GetComponent<Shooting>();
+                    shooting.Shoot();
+                }
+            }
+        }
+    }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
