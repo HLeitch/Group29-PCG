@@ -6,7 +6,7 @@ public class Shooting : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    public Transform[] firePoint = new Transform[3];
+    public Transform[] firePoint = new Transform[1];
     public GameObject bulletPrefab;
 
     public float bulletForce = 20f;
@@ -15,7 +15,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        
+        firePoint[0] = transform;
     }
     
        
