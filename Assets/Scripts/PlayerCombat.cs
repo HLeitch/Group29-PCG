@@ -12,6 +12,7 @@ public class PlayerCombat : MonoBehaviour
     public bool swinging = false;
     public float startTimeBetweenAttack;
     private Animator weaponAnimator;
+    private UIManager ui;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,8 @@ public class PlayerCombat : MonoBehaviour
         hp = max_hp;
         startTimeBetweenAttack = timeBetweenAttack;
         weaponAnimator = transform.Find("Pivot").GetComponent<Animator>();
+        ui = FindObjectOfType<UIManager>();
+
     }
 
     // Update is called once per frame
@@ -41,7 +44,8 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(int value)
     {
-        hp -= value;
+      hp -= value;
+        healthChange();
         if (hp < 0)
         {
             // TODO: Kill the player
@@ -51,6 +55,7 @@ public class PlayerCombat : MonoBehaviour
     public void Heal(int value)
     {
         hp = Mathf.Clamp(hp+value, 0, max_hp);
+        healthChange();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -84,5 +89,14 @@ public class PlayerCombat : MonoBehaviour
         }
         else
             timeBetweenAttack -= Time.deltaTime;
+    }
+
+
+
+    void healthChange()
+    {
+        ui.changeHealthBar(hp / max_hp);
+
+
     }
 }
