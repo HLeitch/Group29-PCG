@@ -136,7 +136,7 @@ public class Enemy : MonoBehaviour
 
             Vector2 movement = (directionToTarget * moveSpeed * Time.deltaTime);
 
-            rb.AddForce(movement);
+            rb.MovePosition(movement);
         }
     }
 
