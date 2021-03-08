@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     public Weapon weapon;
     public Transform weaponHoldPoint;
 
-    public Rigidbody2D rigidbody;
+    [SerializeField]
+    public Rigidbody2D rb;
     public float moveSpeed;
     public float health;
     bool dying = false;
@@ -32,7 +33,7 @@ public class Enemy : MonoBehaviour
 
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        
         
         health = maxHealth;
 
@@ -126,7 +127,7 @@ public class Enemy : MonoBehaviour
         {
             Vector2 targetDestination = player.transform.position;
 
-            Vector2 currentLocation = gameObject.transform.position;
+            Vector2 currentLocation = rb.position;
 
             Vector2 distanceToTarget = targetDestination - currentLocation;
 
@@ -135,7 +136,7 @@ public class Enemy : MonoBehaviour
 
             Vector2 movement = (directionToTarget * moveSpeed * Time.deltaTime);
 
-            this.gameObject.transform.position += new Vector3(movement.x, movement.y, 0f);
+            rb.AddForce(movement);
         }
     }
 
