@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public int max_hp;
-    public int hp;
+    int hp;
     GameObject weapon;
     public WeaponManager wm;
     private float timeBetweenAttack;
     public bool swinging = false;
     public float startTimeBetweenAttack;
     private Animator weaponAnimator;
+    private UIManager ui;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,8 @@ public class PlayerCombat : MonoBehaviour
         hp = max_hp;
         startTimeBetweenAttack = timeBetweenAttack;
         weaponAnimator = transform.Find("Pivot").GetComponent<Animator>();
+        ui = FindObjectOfType<UIManager>();
+
     }
 
     // Update is called once per frame
@@ -41,11 +44,11 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(int value)
     {
-        hp -= value;
-        Debug.Log($"Take damage: {value} ");
+      hp -= value;
+        Debug.Log("Health value" + hp);
+        healthChange();
         if (hp < 0)
         {
-            Debug.Log("Dead");
             // TODO: Kill the player
         }
     }
@@ -53,21 +56,21 @@ public class PlayerCombat : MonoBehaviour
     public void Heal(int value)
     {
         hp = Mathf.Clamp(hp+value, 0, max_hp);
+        healthChange();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Projectile"))
         {
-            TakeDamage(collision.GetComponent<Projectile>().damage);
-            Destroy(collision.gameObject);
+            // TODO: TakeDamage(collision.GetComponent<SCRIPTNAME>().damage); // Replace SCRIPTNAME with name of projectile script
             // TODO: Emit particle effect?
-            
+            Destroy(collision.gameObject);
         }
-       /* else if (collision.CompareTag("Weapon"))
+        else if (collision.CompareTag("Weapon"))
         {
 
-        }*/
+        }
     }
 
     IEnumerator SwingWeapon()
@@ -87,5 +90,14 @@ public class PlayerCombat : MonoBehaviour
         }
         else
             timeBetweenAttack -= Time.deltaTime;
+    }
+
+
+
+    void healthChange()
+    {
+        ui.changeHealthBar(hp / max_hp);
+
+
     }
 }

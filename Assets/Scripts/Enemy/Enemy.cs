@@ -5,55 +5,83 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public GameObject weapon;
+    public Weapon weapon;
     public Transform weaponHoldPoint;
 
-    public Rigidbody2D rigidbody;
+    [SerializeField]
+    public Rigidbody2D rb;
     public float moveSpeed;
     public float health;
+    bool dying = false;
+    float shrinkScale = 0;
+    Vector2 distanceToPlayer;
+    public bool usingWeapon = false;
 
     public float maxHealth = 50f;
 
     public EnemyHealthBar healthBar;
 
-    public Transform healthBarPostitionSet;
+    public Transform healthBarPostitionTarget;
 
     UIManager uimanager;
-    WeaponManager wp;
-    // Start is called before the first frame update
-    void Start()
+    WeaponManager weaponManager;
+    public RoomEnemiesManager rem;
+    GameObject player;
+    Animator animator;
+    [SerializeField]
+    Animator weaponAnimator;
+
+    void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        moveSpeed = 2;
+        
+        
         health = maxHealth;
 
         uimanager = FindObjectOfType<UIManager>();
 
-        wp = FindObjectOfType<WeaponManager>();
-        
-        
+        weaponManager = FindObjectOfType<WeaponManager>();
+
+        healthBar = uimanager.GiveEnemyHealthBar();
+
+        player = FindObjectOfType<PlayerMovement>().gameObject;
+
+        animator = GetComponent<Animator>();
+
+
+
+        weaponManager.GiveWeapon(weapon);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        healthBar.targetPosition = healthBarPostitionSet;
+        healthBar.moveHealthBar(healthBarPostitionTarget);
 
-        if (Input.GetKeyUp(("e")))
+        if (Input.GetKeyUp(("'")))
         {
 
 
             ChangeHealth(-10f);
         }
 
-        weapon.transform.position = weaponHoldPoint.transform.position;
+        //weapon.transform.position = weaponHoldPoint.transform.position;
+
+
+        if (dying) { dyingEffect(); }
+
+
+        MoveEnemy();
+
+        
+
     }
 
 
 
 
-    void ChangeHealth(float Value)
+    public void ChangeHealth(float Value)
     {
 
         health += Value;
@@ -62,11 +90,75 @@ public class Enemy : MonoBehaviour
         if (health <=0)
         {
 
-            //Die();
+            Kill();
 
         }
 
 
     }
 
+    public void Kill()
+    { 
+        dying = true;
+        dyingEffect();
+
+
+    }
+
+    void dyingEffect()
+    {
+        animator.enabled = false;
+
+        gameObject.transform.localScale = new Vector3(1, transform.localScale.y - shrinkScale, 1);
+
+        shrinkScale += (0.05f * Time.deltaTime);
+        Mathf.Clamp(shrinkScale, 0.0f, 0.5f);
+
+        if(transform.localScale.y < 0.1)
+        {
+            Dead();
+
+        }
+    }
+
+    void MoveEnemy()
+    {
+        if (!usingWeapon)
+        {
+            Vector2 targetDestination = player.transform.position;
+
+            Vector2 currentLocation = rb.position;
+
+            Vector2 distanceToTarget = targetDestination - currentLocation;
+
+            Vector2 directionToTarget = distanceToTarget.normalized;
+           animator.SetFloat("MoveX", directionToTarget.x);
+
+            Vector2 movement = (directionToTarget * moveSpeed * Time.deltaTime);
+
+            rb.AddForce(movement);
+        }
+    }
+
+    public void UseWeapon()
+    {
+        if (!usingWeapon)
+        {
+            weaponAnimator.Play("SwingSword");
+
+            Debug.Log("ENEMY SWINGS WEAPON");
+            usingWeapon = true;
+        }
+
+
+
+    }
+
+    void Dead()
+    {
+        Destroy(healthBar.gameObject);
+        Destroy(this.gameObject);
+
+
+    }
 }
