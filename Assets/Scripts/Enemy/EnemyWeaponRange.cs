@@ -12,12 +12,17 @@ public class EnemyWeaponRange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        parentEnemy = FindObjectOfType<Enemy>();   
+        parentEnemy = GetComponentInParent<Enemy>();   
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        parentEnemy.UseWeapon();
+        if(collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Player Collided with");
+
+            parentEnemy.UseWeapon();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

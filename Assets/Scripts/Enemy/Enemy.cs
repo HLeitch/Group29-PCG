@@ -23,10 +23,12 @@ public class Enemy : MonoBehaviour
     public Transform healthBarPostitionTarget;
 
     UIManager uimanager;
-    WeaponManager wp;
+    WeaponManager weaponManager;
     public RoomEnemiesManager rem;
     GameObject player;
     Animator animator;
+    [SerializeField]
+    Animator weaponAnimator;
 
     void Awake()
     {
@@ -36,7 +38,7 @@ public class Enemy : MonoBehaviour
 
         uimanager = FindObjectOfType<UIManager>();
 
-        wp = FindObjectOfType<WeaponManager>();
+        weaponManager = FindObjectOfType<WeaponManager>();
 
         healthBar = uimanager.GiveEnemyHealthBar();
 
@@ -44,7 +46,10 @@ public class Enemy : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
-        //weapon = rem.GiveWeapon();
+
+
+        weaponManager.GiveWeapon(weapon);
+
     }
 
     // Update is called once per frame
@@ -138,7 +143,7 @@ public class Enemy : MonoBehaviour
     {
         if (!usingWeapon)
         {
-
+            weaponAnimator.Play("SwingSword");
 
             Debug.Log("ENEMY SWINGS WEAPON");
             usingWeapon = true;

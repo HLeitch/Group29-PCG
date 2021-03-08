@@ -7,6 +7,12 @@ TagManager:
   - Blade
   - Hilt
   - Sword
+  - Walls
+  - Plate
+  - Switch
+  - Spikes
+  - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -16,8 +22,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
