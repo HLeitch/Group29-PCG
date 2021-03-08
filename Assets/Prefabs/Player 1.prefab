@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 532219141291702573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 532219141798555899}
   - component: {fileID: 532219141798555780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 9146750488640456294}
   - component: {fileID: 9146750488640456295}
   - component: {fileID: 532219140900870254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,9 +197,9 @@ GameObject:
   - component: {fileID: 519842566908835117}
   - component: {fileID: 532219140553263683}
   - component: {fileID: 532219140553263680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ca02d3979675644ab752f502236a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_hp: 10
+  max_hp: 50
   wm: {fileID: 0}
   swinging: 0
   startTimeBetweenAttack: 0
@@ -5019,9 +5019,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9146750489773046183}
   - component: {fileID: 3884969459691497484}
-  m_Layer: 0
+  - component: {fileID: 1938831650}
+  m_Layer: 8
   m_Name: HitCollider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5082,6 +5083,18 @@ PolygonCollider2D:
       - {x: 0.435685, y: -0.14094517}
       - {x: 0.4335255, y: 0.20618962}
       - {x: 0.41505468, y: 0.37701738}
+--- !u!114 &1938831650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146750489773046182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26faf2ad9e738014a918769ab821b5d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9146750490199285500
 GameObject:
   m_ObjectHideFlags: 0
@@ -5092,9 +5105,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9146750490199285501}
   - component: {fileID: 9146750490199285502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallCollider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
