@@ -45,6 +45,7 @@ public class PlayerCombat : MonoBehaviour
     public void TakeDamage(int value)
     {
       hp -= value;
+        Debug.Log("Health value" + hp);
         healthChange();
         if (hp < 0)
         {
