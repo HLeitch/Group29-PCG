@@ -249,7 +249,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7820785350598984841}
   - component: {fileID: 7820785350598984844}
-  - component: {fileID: 7820785350598984847}
   - component: {fileID: 3639180483856169690}
   m_Layer: 9
   m_Name: Collider
@@ -300,27 +299,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3095024, y: 1.6190368}
   m_EdgeRadius: 0
---- !u!50 &7820785350598984847
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7820785350598984840}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &3639180483856169690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +323,7 @@ GameObject:
   - component: {fileID: 7820785352170741849}
   - component: {fileID: 7820785352170741850}
   - component: {fileID: 5320538496354845839}
+  - component: {fileID: 3206511436781495523}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
@@ -384,11 +363,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 643973386864744487}
   weaponHoldPoint: {fileID: 591047374}
-  rb: {fileID: 7820785350598984847}
-  moveSpeed: 65
+  rb: {fileID: 3206511436781495523}
+  moveSpeed: 1
   health: 0
   usingWeapon: 0
-  maxHealth: 50
+  maxHealth: 20
   healthBar: {fileID: 0}
   healthBarPostitionTarget: {fileID: 1814828939}
   rem: {fileID: 0}
@@ -412,6 +391,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &3206511436781495523
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820785352170741829}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &8362673042780118776
 GameObject:
   m_ObjectHideFlags: 0

@@ -72,10 +72,15 @@ public class Enemy : MonoBehaviour
         if (dying) { dyingEffect(); }
 
 
-        MoveEnemy();
+        
 
         
 
+    }
+
+    private void FixedUpdate()
+    {
+        MoveEnemy();
     }
 
 
@@ -134,9 +139,11 @@ public class Enemy : MonoBehaviour
             Vector2 directionToTarget = distanceToTarget.normalized;
            animator.SetFloat("MoveX", directionToTarget.x);
 
-            Vector2 movement = (directionToTarget * moveSpeed * Time.deltaTime);
+            Vector2 movement = (directionToTarget * moveSpeed );
 
-            rb.AddForce(movement);
+            Vector2 newPosition = rb.position + movement;
+
+            rb.velocity = movement;
         }
     }
 

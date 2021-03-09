@@ -28,8 +28,10 @@ TagManager:
   - 
   - 
   - Player
+  - Enemy
   - Walls
-  - 
+  - Player
+  - Walls
   - 
   - 
   - 

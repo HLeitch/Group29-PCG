@@ -78,6 +78,7 @@ public class WeaponManager : MonoBehaviour
 
 
         targetWeapon.gameObject.tag = "Sword";
+        
         targetWeapon.transform.localPosition = new Vector3(0, 0.65f, 0);
         targetWeapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
 
