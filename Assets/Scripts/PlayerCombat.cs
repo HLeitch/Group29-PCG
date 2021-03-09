@@ -49,7 +49,7 @@ public class PlayerCombat : MonoBehaviour
         healthChange();
         if (hp < 0)
         {
-            // TODO: Kill the player
+            Application.Quit(0);
         }
     }
 
