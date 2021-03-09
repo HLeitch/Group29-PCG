@@ -49,7 +49,7 @@ public class PlayerCombat : MonoBehaviour
         healthChange();
         if (hp < 0)
         {
-            Application.Quit(0);
+            
         }
     }
 

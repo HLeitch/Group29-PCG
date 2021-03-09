@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac483da5480466d41816c545c12c5f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 150
   drag: 0.875
   weapon_weight: 0
 --- !u!114 &4293977160246295716
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ca02d3979675644ab752f502236a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_hp: 50
+  max_hp: 80
   wm: {fileID: 0}
   swinging: 0
   startTimeBetweenAttack: 0

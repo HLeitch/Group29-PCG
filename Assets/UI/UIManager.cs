@@ -48,18 +48,7 @@ public class UIManager : MonoBehaviour
     {
         //Debugging
         //w key shows or removes a test sprite
-        if (Input.GetKeyUp("w"))
-        {
-            newAbility(testSprite);
-
-
-        }
-        if (Input.GetKeyUp("s"))
-        {
-
-            uiabilities.ClearSprite();
-
-        }
+        
         if (Input.GetKeyUp("space"))
         {
             changeHealthBar(0.6f);
