@@ -67,10 +67,7 @@ public class PlayerCombat : MonoBehaviour
             // TODO: Emit particle effect?
             Destroy(collision.gameObject);
         }
-        else if (collision.CompareTag("Weapon"))
-        {
 
-        }
     }
 
     IEnumerator SwingWeapon()
