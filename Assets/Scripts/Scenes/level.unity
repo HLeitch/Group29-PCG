@@ -23978,7 +23978,7 @@ GameObject:
   - component: {fileID: 1876948782}
   - component: {fileID: 1876948781}
   - component: {fileID: 1876948786}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Walls
   m_TagString: Walls
   m_Icon: {fileID: 0}
@@ -35761,6 +35761,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7820785350598984847, guid: 96fa78feb0cd41c499b05be79023b30d,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7820785352170741829, guid: 96fa78feb0cd41c499b05be79023b30d,
         type: 3}
       propertyPath: m_Name

@@ -96,8 +96,12 @@ public class PlayerCombat : MonoBehaviour
 
     void healthChange()
     {
-        ui.changeHealthBar(hp / max_hp);
+        float percentage;
 
+        percentage = (float) hp / (float) max_hp;
+
+        ui.changeHealthBar(percentage);
+     
 
     }
 }
