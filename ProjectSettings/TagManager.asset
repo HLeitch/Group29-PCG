@@ -13,6 +13,7 @@ TagManager:
   - Spikes
   - Plate
   - Walls
+  - Hammer
   layers:
   - Default
   - TransparentFX

@@ -9,16 +9,15 @@ public class Projectile : MonoBehaviour
     //Trigger
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name == "Walls")
-            Destroy(gameObject);
+        
 
     }
 
     //Collision
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Destroy when hits wall
-       // 
+        if (collision.gameObject.CompareTag("Walls"))
+            Destroy(gameObject);
 
     }
 

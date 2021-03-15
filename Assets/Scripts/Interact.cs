@@ -14,18 +14,17 @@ public class Interact : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.CompareTag("Player"))
         {
-            
-            tile.ChangeSprite();           
+            tile.ChangeSprite();
         }
-
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        
+        if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.CompareTag("Player"))
+        {
+            tile.ChangeSprite();
+        }
     }
 }
