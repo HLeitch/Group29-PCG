@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChangeTile : MonoBehaviour
 {
 
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
     public Sprite newSprite;
     
     // Start is called before the first frame update
@@ -14,22 +14,26 @@ public class ChangeTile : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
-    {
-        
-    }
-
-    void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (gameObject.CompareTag("Switch"))
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-
                 ChangeSprite();
             }
         }
+    }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (gameObject.CompareTag("Switch"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                ChangeSprite();
+            }
+        }
     }
 
     // Update is called once per frame

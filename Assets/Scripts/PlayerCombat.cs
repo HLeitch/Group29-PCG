@@ -44,12 +44,12 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(int value)
     {
-      hp -= value;
+        hp -= value;
         Debug.Log("Health value" + hp);
         healthChange();
         if (hp < 0)
         {
-            Application.Quit(0);
+            
         }
     }
 
@@ -67,9 +67,17 @@ public class PlayerCombat : MonoBehaviour
             // TODO: Emit particle effect?
             Destroy(collision.gameObject);
         }
-        else if (collision.CompareTag("Weapon"))
-        {
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage); // Replace SCRIPTNAME with name of projectile script
+            // TODO: Emit particle effect?
+            Debug.Log("HIT");
+            Destroy(collision.gameObject);
         }
     }
 

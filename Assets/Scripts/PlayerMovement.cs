@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         //combat = GetComponent<PlayerCombat>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // Assign axis data to vector
         movement.x = Input.GetAxisRaw("Horizontal");
