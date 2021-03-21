@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_hp: 80
-  wm: {fileID: 6801795290172702317, guid: a41ef017ec60b7f42b1e903aabe03094, type: 3}
+  wm: {fileID: 0}
   swinging: 0
   startTimeBetweenAttack: 0
 --- !u!199 &532219140553263683

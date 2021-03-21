@@ -5,20 +5,22 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public int max_hp;
+    public static WeaponGeneration wg;
     int hp;
     GameObject weapon;
     public WeaponManager wm;
-    private float timeBetweenAttack;
+    public float timeBetweenAttack;
     public bool swinging = false;
     public float startTimeBetweenAttack;
     private Animator weaponAnimator;
     private UIManager ui;
-
+    
     // Start is called before the first frame update
     void Start()
     {
+        wg = FindObjectOfType<WeaponGeneration>();
         hp = max_hp;
-        startTimeBetweenAttack = timeBetweenAttack;
+        startTimeBetweenAttack = 1f;
         weaponAnimator = transform.Find("Pivot").GetComponent<Animator>();
         ui = FindObjectOfType<UIManager>();
 
@@ -32,6 +34,14 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKeyDown("m"))
         {
             GetNewWeapon();
+        }
+
+        if (timeBetweenAttack <= 0)
+        {
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                wg.UpdateSwingsTook();
+            }
         }
     }
 
@@ -63,23 +73,14 @@ public class PlayerCombat : MonoBehaviour
     {
         if (collision.CompareTag("Projectile"))
         {
-            // TODO: TakeDamage(collision.GetComponent<SCRIPTNAME>().damage); // Replace SCRIPTNAME with name of projectile script
+            TakeDamage(collision.GetComponent<Projectile>().damage);
+
             // TODO: Emit particle effect?
             Destroy(collision.gameObject);
         }
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Projectile"))
-        {
-            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage); // Replace SCRIPTNAME with name of projectile script
-            // TODO: Emit particle effect?
-            Debug.Log("HIT");
-            Destroy(collision.gameObject);
-        }
-    }
 
     IEnumerator SwingWeapon()
     {
@@ -87,13 +88,15 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
+                wg.UpdateSwingsTook();
+                timeBetweenAttack = startTimeBetweenAttack;
                 weaponAnimator.SetBool("Swinging", true);
                 swinging = true;
                 yield return new WaitForSeconds(0.3f);
                 weaponAnimator.SetBool("Swinging", false);
                 yield return new WaitForSeconds(0.15f);
                 swinging = false;
-                timeBetweenAttack = startTimeBetweenAttack;
+                
             }
         }
         else

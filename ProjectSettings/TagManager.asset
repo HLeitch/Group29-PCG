@@ -19,6 +19,7 @@ TagManager:
   - Projectile
   - Walls
   - Hammer
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -32,8 +33,6 @@ TagManager:
   - Enemy
   - Walls
   - Player
-  - Walls
-  - 
   - 
   - 
   - 

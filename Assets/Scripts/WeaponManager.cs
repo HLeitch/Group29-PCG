@@ -5,12 +5,15 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     public static WeaponManager wm;
+    public static WeaponGeneration wg;
     public PlayerMovement pc;
     public GameObject playerWeapon;
     public GameObject blankWeapon;
     public GameObject[] modifiers, effects;
     public GameObject[] swordBlades, swordHilts;
     public GameObject[] hammerHeads, hammerHandles;
+    public GameObject[] daggerBlades, daggerHilts;
+    public GameObject[] breakerBlades, breakerHilts;
 
     public void GenerateSword(Vector2 pos)
     {
@@ -55,6 +58,51 @@ public class WeaponManager : MonoBehaviour
         weapon.transform.localPosition = new Vector3(0, 1.9f, 0);
         weapon.GetComponent<Weapon>().SetParts(handle, head, effect, modifier);
     }
+
+    public void GenerateDagger()
+    {
+        DestroyWeapon();
+        GameObject weapon = playerWeapon;
+        GameObject hilt = Instantiate(daggerHilts[Random.Range(0, daggerHilts.Length)], weapon.transform);
+        hilt.name = hilt.name.Replace("(Clone)", "");
+        hilt.transform.localPosition = Vector3.zero;
+        GameObject blade = Instantiate(daggerBlades[Random.Range(0, daggerBlades.Length)], weapon.transform);
+        blade.name = blade.name.Replace("(Clone)", "");
+        blade.transform.localPosition = Vector3.zero;
+        GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], weapon.transform);
+        modifier.name = modifier.name.Replace("(Clone)", "");
+        modifier.transform.localPosition = Vector3.zero;
+        GameObject effect = Instantiate(effects[Random.Range(0, effects.Length)], weapon.transform);
+        effect.name = effect.name.Replace("(Clone)", "");
+        effect.transform.localPosition = Vector3.zero;
+
+        weapon.gameObject.tag = "Dagger";
+        weapon.transform.localPosition = new Vector3(0, 0.65f, 0);
+        weapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
+    }
+
+    public void GenerateBreaker()
+    {
+        DestroyWeapon();
+        GameObject weapon = playerWeapon;
+        GameObject hilt = Instantiate(breakerHilts[Random.Range(0, breakerHilts.Length)], weapon.transform);
+        hilt.name = hilt.name.Replace("(Clone)", "");
+        hilt.transform.localPosition = Vector3.zero;
+        GameObject blade = Instantiate(breakerBlades[Random.Range(0, breakerBlades.Length)], weapon.transform);
+        blade.name = blade.name.Replace("(Clone)", "");
+        blade.transform.localPosition = Vector3.zero;
+        GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], weapon.transform);
+        modifier.name = modifier.name.Replace("(Clone)", "");
+        modifier.transform.localPosition = Vector3.zero;
+        GameObject effect = Instantiate(effects[Random.Range(0, effects.Length)], weapon.transform);
+        effect.name = effect.name.Replace("(Clone)", "");
+        effect.transform.localPosition = Vector3.zero;
+
+        weapon.gameObject.tag = "Breaker";
+        weapon.transform.localPosition = new Vector3(0, 0.65f, 0);
+        weapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
+    }
+
     public void GiveWeapon(Weapon targetWeapon)
     {
         //FOR SWORD ONLY
@@ -99,6 +147,7 @@ public class WeaponManager : MonoBehaviour
     {
         pc = GameObject.FindObjectOfType<PlayerMovement>();
         wm = this;
+        wg = GameObject.FindObjectOfType<WeaponGeneration>();
     }
 
     private void Start()
@@ -116,7 +165,8 @@ public class WeaponManager : MonoBehaviour
 
     public void ChooseWeaponType()
     {
-        int randWeapon = Random.Range(0, 2);
+        wg.UpdateSwitchTime();
+        int randWeapon = Random.Range(0, 4);
         if (randWeapon == 0)
         {
             GenerateSword(new Vector2(0, 0));
@@ -125,5 +175,14 @@ public class WeaponManager : MonoBehaviour
         {
             GenerateHammer();
         }
+        else if (randWeapon == 2)
+        {
+            GenerateDagger();
+        }
+        else if (randWeapon == 3)
+        {
+            GenerateBreaker();
+        }
+
     }
 }
