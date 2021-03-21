@@ -15,6 +15,7 @@ TagManager:
   - Walls
   - Hammer
   - Dagger
+  - Breaker
   layers:
   - Default
   - TransparentFX

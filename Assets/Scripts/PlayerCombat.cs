@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public int max_hp;
+    public static WeaponGeneration wg;
     int hp;
     GameObject weapon;
     public WeaponManager wm;
-    private float timeBetweenAttack;
+    public float timeBetweenAttack;
     public bool swinging = false;
     public float startTimeBetweenAttack;
     private Animator weaponAnimator;
@@ -17,8 +18,9 @@ public class PlayerCombat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        wg = FindObjectOfType<WeaponGeneration>();
         hp = max_hp;
-        startTimeBetweenAttack = timeBetweenAttack;
+        startTimeBetweenAttack = 1f;
         weaponAnimator = transform.Find("Pivot").GetComponent<Animator>();
         ui = FindObjectOfType<UIManager>();
 
@@ -32,6 +34,14 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKeyDown("m"))
         {
             GetNewWeapon();
+        }
+
+        if (timeBetweenAttack <= 0)
+        {
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                wg.UpdateSwingsTook();
+            }
         }
     }
 
@@ -87,13 +97,15 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
+                wg.UpdateSwingsTook();
+                timeBetweenAttack = startTimeBetweenAttack;
                 weaponAnimator.SetBool("Swinging", true);
                 swinging = true;
                 yield return new WaitForSeconds(0.3f);
                 weaponAnimator.SetBool("Swinging", false);
                 yield return new WaitForSeconds(0.15f);
                 swinging = false;
-                timeBetweenAttack = startTimeBetweenAttack;
+                
             }
         }
         else

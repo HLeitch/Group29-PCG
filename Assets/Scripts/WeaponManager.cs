@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     public static WeaponManager wm;
+    public static WeaponGeneration wg;
     public PlayerMovement pc;
     public GameObject playerWeapon;
     public GameObject blankWeapon;
@@ -146,6 +147,7 @@ public class WeaponManager : MonoBehaviour
     {
         pc = GameObject.FindObjectOfType<PlayerMovement>();
         wm = this;
+        wg = GameObject.FindObjectOfType<WeaponGeneration>();
     }
 
     private void Start()
@@ -163,6 +165,7 @@ public class WeaponManager : MonoBehaviour
 
     public void ChooseWeaponType()
     {
+        wg.UpdateSwitchTime();
         int randWeapon = Random.Range(0, 4);
         if (randWeapon == 0)
         {
