@@ -15,7 +15,8 @@ public class FogOfWar : MonoBehaviour
 
     [Tooltip("Manually Click And Drag All Enemies In Room Into This List")]
     [SerializeField]
-    private List<GameObject> enemies;
+    //private List<GameObject> enemies;
+    public List<Enemy> enemies;
 
     private enum roomType { None, Corridoor, Room};
     [Header("Read Only")]
@@ -54,9 +55,9 @@ public class FogOfWar : MonoBehaviour
 
         if (!explored) // If the room is hidden to the player at the start,
         {
-            foreach (GameObject enemy in enemies) // Iterate through each enemy,
+            foreach (Enemy enemy in enemies) // Iterate through each enemy,
             {
-                if (enemy != null) enemy.SetActive(false); // And deactivate them. This makes them invisible and pauses their AI
+                if (enemy != null) enemy.gameObject.SetActive(false); // And deactivate them. This makes them invisible and pauses their AI
             }
         }
         else // If the room is visable to the player at the start, 
@@ -205,9 +206,9 @@ public class FogOfWar : MonoBehaviour
     void explore()
     {
         explored = true; 
-        foreach (GameObject enemy in enemies) // For each enemy which starts in the room,
+        foreach (Enemy enemy in enemies) // For each enemy which starts in the room,
         {
-            if (enemy != null) enemy.SetActive(true); // Activate it.
+            if (enemy != null) enemy.gameObject.SetActive(true); // Activate it.
         }
 
         StartCoroutine(decreaseOpacity()); // Begin the coroutine to remove the fog of war effect.
