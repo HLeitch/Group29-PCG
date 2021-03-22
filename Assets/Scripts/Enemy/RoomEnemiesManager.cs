@@ -6,13 +6,14 @@ using UnityEngine;
 public class RoomEnemiesManager : MonoBehaviour
 {
 
-    public Enemy[] enemiesInRoom;
+    public List<Enemy> enemiesInRoom;
     public WeaponManager weaponManager;
     public bool active = false;
-    public bool roomExplored = fale;
+    public bool roomExplored = false;
     public float timeTakenToClearRoom = 0;
     public int enemiesRemaining;
-    RoomsManager myRoomManager;
+    RoomEnemyDataGatherer myDataGatherer;
+    FogOfWar fogOfWarComponent;
 
 
 
@@ -20,9 +21,11 @@ public class RoomEnemiesManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemiesInRoom = GetComponentsInChildren<Enemy>();
-        myRoomManager = GetComponentInParent<RoomsManager>();
         
+        myDataGatherer = GetComponentInParent<RoomEnemyDataGatherer>();
+        fogOfWarComponent = GetComponent<FogOfWar>();
+        enemiesInRoom = fogOfWarComponent.enemies;
+
         foreach (Enemy e in enemiesInRoom)
         {
             e.rem = this;
@@ -51,8 +54,8 @@ public class RoomEnemiesManager : MonoBehaviour
         if (counter == 0)
         {
             active = false;
-            myRoomManager.timeTakenToClearLastRoom = timeTakenToClearRoom;
-            myRoomManager.enemiesKilledPerSecondInLastRoom = enemiesInRoom.Length / timeTakenToClearRoom;
+            myDataGatherer.timeTakenToClearLastRoom = timeTakenToClearRoom;
+            myDataGatherer.enemiesKilledPerSecondInLastRoom = enemiesInRoom.Count / timeTakenToClearRoom;
             enemiesRemaining = 0;
 
         }
@@ -95,7 +98,7 @@ public class RoomEnemiesManager : MonoBehaviour
 
     public void EnemyDamaged(float damageTaken)
     {
-        myRoomManager.enemyDamaged(damageTaken);
+        myDataGatherer.enemyDamaged(damageTaken);
 
     }
 

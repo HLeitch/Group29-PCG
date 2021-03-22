@@ -61,7 +61,7 @@ public class RoomsManager : MonoBehaviour
         foreach (RoomEnemiesManager r in roomEnemyObjects)
         {
 
-            { totalEnemies += r.enemiesInRoom.Length; }
+            { totalEnemies += r.enemiesInRoom.Count; }
 
 
         }
