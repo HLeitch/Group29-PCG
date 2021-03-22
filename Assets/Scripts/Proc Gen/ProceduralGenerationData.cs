@@ -6,7 +6,7 @@ public class ProceduralGenerationData : MonoBehaviour
 {
 
     [SerializeField]
-    RoomsManager roomsManager;
+    RoomEnemyDataGatherer roomsDataGatherer;
     
 
 
@@ -22,37 +22,37 @@ public class ProceduralGenerationData : MonoBehaviour
 
     public int TotalActiveEnemies()
     {
-        return roomsManager.TotalActiveEnemies();
+        return roomsDataGatherer.TotalActiveEnemies();
     }
    
     public int TotalEnemiesInLevel()
     {
-        return roomsManager.total;
+        return roomsDataGatherer.totalEnemiesInLevel;
     }
     
     public float PercentageEnemiesKilled()
     {
-        return roomsManager.PercentageEnemiesKilled();
+        return roomsDataGatherer.PercentageEnemiesKilled();
     }
     public float TimeTakenToCompleteLastRoom()
     {
 
-        return roomsManager.timeTakenToClearLastRoom;
+        return roomsDataGatherer.timeTakenToClearLastRoom;
     }
 
     public float RateOfEnemyKillInLastRoom()
     {
-        return roomsManager.enemiesKilledPerSecondInLastRoom;
+        return roomsDataGatherer.enemiesKilledPerSecondInLastRoom;
     }
 
     public float RateOfEnemiesKilled()
     {
-        return roomsManager.EnemiesKilledPerSecond();
+        return roomsDataGatherer.EnemiesKilledPerSecond();
     }
 
     public float EnemyDamageInLastPeriodOfTime()
     {
-        return roomsManager.damageInLast20Seconds;
+        return roomsDataGatherer.damageInLast20Seconds;
     }
 
     //Enemy Data Ends////////

@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour
 
     public Weapon weapon;
     public Transform weaponHoldPoint;
-    public static WeaponGeneration wg;
 
     [SerializeField]
     public Rigidbody2D rb;
@@ -48,7 +47,7 @@ public class Enemy : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
-        wg = FindObjectOfType<WeaponGeneration>();
+
 
         weaponManager.GiveWeapon(weapon);
 
@@ -95,7 +94,7 @@ public class Enemy : MonoBehaviour
 
         if (health <=0)
         {
-            wg.UpdateEnemiesKilled();
+
             Kill();
 
         }
