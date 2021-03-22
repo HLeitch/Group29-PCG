@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9f7e19ab477184f98100115cbd22d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 0}
   playerWeapon: {fileID: 0}
   blankWeapon: {fileID: 0}
   modifiers:
@@ -62,6 +63,38 @@ MonoBehaviour:
   - {fileID: 8842498677521867665, guid: 8ec581a2f218b814283f200e81c8aaa6, type: 3}
   - {fileID: 3474839214045509472, guid: a49b8a16557d6a44cae76e725f759d4c, type: 3}
   hammerHeads:
-  - {fileID: 5423639314673854918, guid: bd39db6c272994347819ca083283ac2c, type: 3}
+  - {fileID: 1243217811619915058, guid: bdb1ff9b19261fc4a86a8d0303b07834, type: 3}
+  - {fileID: 6102679695501035905, guid: aa6d95143707c764e84b09e3ad0c9666, type: 3}
+  - {fileID: 9149338340300224086, guid: 4e84d753838cf0142864599f424f7039, type: 3}
+  - {fileID: 5167710334521740092, guid: 4e188b2bd4c3bf14ba692c437d18b61a, type: 3}
+  - {fileID: 6373201435357169814, guid: 9a9df31c4b1cc934b8e4226e5a682e58, type: 3}
   hammerHandles:
+  - {fileID: 6688292165818863758, guid: d0df8cb4794f3ae4eb0ff73ecbfecacb, type: 3}
+  - {fileID: 2993938152445270967, guid: 90f5f148b5a6c8249a2fb5ab54a22eee, type: 3}
+  - {fileID: 2366489660516275667, guid: 376b9fd8600e76d4b91bee95b30adcac, type: 3}
+  - {fileID: 898976401991303958, guid: 1a94b9f3bab5db94784d93c4dba39664, type: 3}
   - {fileID: 3277219924047676125, guid: ea28bef3a875fe5428d3d20908b9020b, type: 3}
+  daggerBlades:
+  - {fileID: 7595899863201021986, guid: 848b8893d462858428c5634eca92251a, type: 3}
+  - {fileID: 4973859671110057395, guid: d992733f35dd3614381d0d766bc9dddd, type: 3}
+  - {fileID: 2211530999199126467, guid: 887d545d145d550429759a7a738487fe, type: 3}
+  - {fileID: 3915070890207451271, guid: 364ec1d3dff2df8468b018f92959ce20, type: 3}
+  - {fileID: 1452706991058618315, guid: 78980d9111b70a143a362f49a0fdc94c, type: 3}
+  daggerHilts:
+  - {fileID: 1010843870989642679, guid: 07b39783469bd7d4baeb9c7a69cb5a6f, type: 3}
+  - {fileID: 2083850220064306290, guid: c476f2b57d9ef9040998d94ca7612ea9, type: 3}
+  - {fileID: 8748484948830683199, guid: 4a0e47c714aeb2d45a2031dfbc693d8a, type: 3}
+  - {fileID: 6495798309860681146, guid: 7f4b7e1c94f853d4a83a53ad9ee32365, type: 3}
+  - {fileID: 455124612241618892, guid: b1be63d2de1e14e48be83878bf0a5b56, type: 3}
+  breakerBlades:
+  - {fileID: 4498142097088053895, guid: f82acfe3a5a3767469749a9835d90989, type: 3}
+  - {fileID: 2832240329076658906, guid: 8d2b54d01ae827748a675b1b7c4dacfc, type: 3}
+  - {fileID: 1858858440482606539, guid: 5c175f5aa9bc29340a8cb5c2671b87c9, type: 3}
+  - {fileID: 2820287005830780000, guid: 1dbb8ba575a7605439319cc5a29499cd, type: 3}
+  - {fileID: 7979735098136139529, guid: 88be7fccc31234c4a88b568acddbc078, type: 3}
+  breakerHilts:
+  - {fileID: 5258324146855388038, guid: 8d39305bd83fe5347b11d7a2359a44f1, type: 3}
+  - {fileID: 5047543316145425720, guid: 6732ebb72f910b1468d37ab09c93c6f6, type: 3}
+  - {fileID: 907387857700679375, guid: b5eb761841e1bdb4d936c1cca9dc52c6, type: 3}
+  - {fileID: 5589259897674692960, guid: f779ed8172eb31d4b90c3e752b06e193, type: 3}
+  - {fileID: 1611653023047334347, guid: b8f480a04eaca8a49935e87da536854c, type: 3}
