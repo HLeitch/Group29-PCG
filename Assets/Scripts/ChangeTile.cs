@@ -23,19 +23,25 @@ public class ChangeTile : MonoBehaviour
                 ChangeSprite();
             }
         }
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (gameObject.CompareTag("Switch"))
+        if (collision.gameObject.name == "WallCollider")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (gameObject.name == "AboveLayer")
             {
-                ChangeSprite();
+                gameObject.GetComponentInParent<SpriteRenderer>().sortingLayerName = "Weapon";
+                gameObject.GetComponentInParent<SpriteRenderer>().sortingOrder = 10;
+                Debug.Log("interact above");
+            }
+
+            if (gameObject.name == "BelowLayer")
+            {
+                gameObject.GetComponentInParent<SpriteRenderer>().sortingLayerName = "Walls";
+
             }
         }
+        
     }
 
+  
     // Update is called once per frame
     public void ChangeSprite()
     {
