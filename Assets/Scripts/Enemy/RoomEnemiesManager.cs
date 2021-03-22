@@ -8,13 +8,20 @@ public class RoomEnemiesManager : MonoBehaviour
 
     public Enemy[] enemiesInRoom;
     public WeaponManager weaponManager;
+    public bool active = false;
+    public bool roomExplored = fale;
+    public float timeTakenToClearRoom = 0;
+    public int enemiesRemaining;
+    RoomsManager myRoomManager;
+
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        enemiesInRoom = GetComponentsInChildren<Enemy>(); 
+        enemiesInRoom = GetComponentsInChildren<Enemy>();
+        myRoomManager = GetComponentInParent<RoomsManager>();
         
         foreach (Enemy e in enemiesInRoom)
         {
@@ -22,6 +29,10 @@ public class RoomEnemiesManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Total Enemies not dead
+    /// </summary>
+    /// <returns></returns>
     public int currentEnemyCount()
     {
 
@@ -36,9 +47,36 @@ public class RoomEnemiesManager : MonoBehaviour
 
 
         }
-        return counter;
+
+        if (counter == 0)
+        {
+            active = false;
+            myRoomManager.timeTakenToClearLastRoom = timeTakenToClearRoom;
+            myRoomManager.enemiesKilledPerSecondInLastRoom = enemiesInRoom.Length / timeTakenToClearRoom;
+            enemiesRemaining = 0;
+
+        }
+         return counter;
 
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //player enters room
+        if(other.gameObject.layer == 8)
+        {
+            active = true;
+            roomExplored = true;
+            foreach(Enemy e in enemiesInRoom)
+            {
+                e.gameObject.SetActive(true);
+                
+
+            }
+
+        }
+    }
+
 
     public void EnemyDied(Enemy enemy)
     {
@@ -52,6 +90,12 @@ public class RoomEnemiesManager : MonoBehaviour
         }
 
 
+
+    }
+
+    public void EnemyDamaged(float damageTaken)
+    {
+        myRoomManager.enemyDamaged(damageTaken);
 
     }
 
@@ -74,7 +118,11 @@ public class RoomEnemiesManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("ENEMIES ON SCREEN =" + currentEnemyCount());
+        if(active)
+        {
+            timeTakenToClearRoom += Time.deltaTime;
+            enemiesRemaining = currentEnemyCount();
+        }
     }
 
 
