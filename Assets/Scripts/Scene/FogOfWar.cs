@@ -43,6 +43,10 @@ public class FogOfWar : MonoBehaviour
     [SerializeField]
     private float darknessOpacity;
 
+    [Tooltip("How fast rooms fade from black.")]
+    [SerializeField]
+    private float darknessOpacitySpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +66,7 @@ public class FogOfWar : MonoBehaviour
         }
         else // If the room is visable to the player at the start, 
         {
-            transform.parent.GetComponent<RoomManager>().setCurrentRoom(gameObject); // Assume it is the starting room and set the current room var accordingly
+            transform.parent.GetComponent<RoomManager>().setCurrentRoom(this); // Assume it is the starting room and set the current room var accordingly
         }
     }
 
@@ -167,7 +171,7 @@ public class FogOfWar : MonoBehaviour
             if (col.bounds.Contains(GameObject.FindGameObjectWithTag("Player").transform.position))
             {
                 if (!explored) explore(); // If the room has not been explored, explore it (remove the fog and enable the enemies),
-                if (roomManager.getCurrentRoom() != gameObject) roomManager.setCurrentRoom(gameObject); // And set the current room to this one.
+                if (roomManager.getCurrentRoom() != gameObject) roomManager.setCurrentRoom(this); // And set the current room to this one.
                 break;
             }
         }
@@ -219,7 +223,7 @@ public class FogOfWar : MonoBehaviour
     /// </summary>
     private IEnumerator decreaseOpacity()
     {
-        for (float i = renderers[0].color.a; i >= 0; i -= Time.deltaTime) // Repeat many times for a smooth fade,
+        for (float i = renderers[0].color.a; i >= 0; i -= darknessOpacitySpeed * Time.deltaTime) // Repeat many times for a smooth fade,
         {
             foreach (SpriteRenderer renderer in renderers) // For each renderer in the room,
             {

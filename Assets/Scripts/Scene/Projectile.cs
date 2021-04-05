@@ -10,15 +10,14 @@ public class Projectile : MonoBehaviour
     {
         PC = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();
     }
+
     //Trigger
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Walls"))
         {
             Destroy(gameObject);
         }
-            
-
     }
 
     private void Update()
