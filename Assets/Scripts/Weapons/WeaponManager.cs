@@ -6,6 +6,7 @@ public class WeaponManager : MonoBehaviour
 {
     public static WeaponManager wm;
     public static WeaponGeneration wg;
+    public static ProceduralGenerationData pgd;
     public PlayerMovement pc;
     public GameObject playerWeapon;
     public GameObject blankWeapon;
@@ -148,6 +149,7 @@ public class WeaponManager : MonoBehaviour
         pc = GameObject.FindObjectOfType<PlayerMovement>();
         wm = this;
         wg = GameObject.FindObjectOfType<WeaponGeneration>();
+        pgd = FindObjectOfType<ProceduralGenerationData>();
     }
 
     private void Start()
@@ -183,6 +185,11 @@ public class WeaponManager : MonoBehaviour
         {
             GenerateBreaker();
         }
+
+
+       /// pgd.playerPerformance();
+
+
 
     }
 }

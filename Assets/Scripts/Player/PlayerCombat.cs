@@ -124,4 +124,9 @@ public class PlayerCombat : MonoBehaviour
      
 
     }
+
+    public int getHealth()
+    {
+        return hp;
+    }
 }
