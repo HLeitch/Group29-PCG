@@ -95,8 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a510050fd4d2304b961af359284decf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  timeBetweenSwings: 0
+  damage: 7
+  timeBetweenSwings: 0.4
+  bladeValue: 0.4
 --- !u!60 &5813694909302311264
 PolygonCollider2D:
   m_ObjectHideFlags: 0

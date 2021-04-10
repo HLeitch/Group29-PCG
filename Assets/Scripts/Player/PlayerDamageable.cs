@@ -45,7 +45,14 @@ public class PlayerDamageable : MonoBehaviour,IDamageable
                     invunerable = true;
                     invunerableTime = maxInvunerableTime;
 
-
+                    Debug.Log("Starting Knockback");
+                    var playerMov = FindObjectOfType<PlayerMovement>();
+                    playerMov.playerKnockback = collision.GetComponentInParent<Weapon>().knockback;
+                    if (collision.GetComponentInParent<Enemy>().transform.position.x < transform.position.x)
+                        playerMov.knockFromRight = true;
+                    else
+                        playerMov.knockFromRight = false;
+                    playerMov.playerKnockBackCount = playerMov.playerKnockbackLength;
                 }
 
             }

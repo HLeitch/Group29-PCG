@@ -5668,6 +5668,31 @@ PrefabInstance:
       propertyPath: ColorModule.gradient.maxGradient.m_NumColorKeys
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 532219142156003585, guid: 8f46fdd0095e143419fb13c1b78959a5,
+        type: 3}
+      propertyPath: drag
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 532219142156003585, guid: 8f46fdd0095e143419fb13c1b78959a5,
+        type: 3}
+      propertyPath: speed
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 532219142156003585, guid: 8f46fdd0095e143419fb13c1b78959a5,
+        type: 3}
+      propertyPath: knockFromRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 532219142156003585, guid: 8f46fdd0095e143419fb13c1b78959a5,
+        type: 3}
+      propertyPath: playerKnockback
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 532219142156003585, guid: 8f46fdd0095e143419fb13c1b78959a5,
+        type: 3}
+      propertyPath: playerKnockbackLength
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 9146750489386661584, guid: 8f46fdd0095e143419fb13c1b78959a5,
         type: 3}
       propertyPath: m_Name
