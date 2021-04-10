@@ -16,6 +16,7 @@ TagManager:
   - Hammer
   - Dagger
   - Breaker
+  - Door
   layers:
   - Default
   - TransparentFX
