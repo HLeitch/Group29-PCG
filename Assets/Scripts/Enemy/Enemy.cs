@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
 
     public float maxHealth = 50f;
 
+    float weaponSpeed;
+
     public EnemyHealthBar healthBar;
 
     public Transform healthBarPostitionTarget;
@@ -59,6 +61,9 @@ public class Enemy : MonoBehaviour
         enemyKnockbackLength = 0.2f;
         enemyKnockback = 2;
 
+        ///Should fix weapon speed///
+        weaponSpeed = weapon.speed;
+        animator.speed = weaponSpeed;
     }
 
     // Update is called once per frame
@@ -175,6 +180,8 @@ public class Enemy : MonoBehaviour
     {
         if (!usingWeapon)
         {
+
+
             weaponAnimator.Play("SwingSword");
 
             Debug.Log("ENEMY SWINGS WEAPON");
