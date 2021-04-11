@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour
 
     public Weapon weapon;
     public Transform weaponHoldPoint;
-    public static WeaponGeneration wg;
 
     [SerializeField]
     public Rigidbody2D rb;
@@ -32,6 +31,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     Animator weaponAnimator;
 
+    public float enemyKnockback;
+    public float enemyKnockbackLength;
+    public float enemyKnockBackCount;
+    public bool knockFromRight;
+
     void Awake()
     {
         
@@ -48,9 +52,12 @@ public class Enemy : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
-        wg = FindObjectOfType<WeaponGeneration>();
+
 
         weaponManager.GiveWeapon(weapon);
+
+        enemyKnockbackLength = 0.2f;
+        enemyKnockback = 2;
 
     }
 
@@ -95,7 +102,7 @@ public class Enemy : MonoBehaviour
 
         if (health <=0)
         {
-            wg.UpdateEnemiesKilled();
+
             Kill();
 
         }
@@ -129,22 +136,37 @@ public class Enemy : MonoBehaviour
 
     void MoveEnemy()
     {
-        if (!usingWeapon)
+        if (enemyKnockBackCount <= 0)
         {
-            Vector2 targetDestination = player.transform.position;
+            if (!usingWeapon)
+            {
+                Vector2 targetDestination = player.transform.position;
 
-            Vector2 currentLocation = rb.position;
+                Vector2 currentLocation = rb.position;
 
-            Vector2 distanceToTarget = targetDestination - currentLocation;
+                Vector2 distanceToTarget = targetDestination - currentLocation;
 
-            Vector2 directionToTarget = distanceToTarget.normalized;
-           animator.SetFloat("MoveX", directionToTarget.x);
+                Vector2 directionToTarget = distanceToTarget.normalized;
+                animator.SetFloat("MoveX", directionToTarget.x);
 
-            Vector2 movement = (directionToTarget * moveSpeed );
+                Vector2 movement = (directionToTarget * moveSpeed);
 
-            Vector2 newPosition = rb.position + movement;
+                Vector2 newPosition = rb.position + movement;
 
-            rb.velocity = movement;
+                rb.velocity = movement;
+            }
+        }
+        else
+        {
+            if (knockFromRight)
+            {
+                rb.velocity = new Vector2(enemyKnockback, rb.velocity.y);
+            }
+            if (!knockFromRight)
+            {
+                rb.velocity = new Vector2(-enemyKnockback, rb.velocity.y);
+            }
+            enemyKnockBackCount -= Time.deltaTime;
         }
     }
 

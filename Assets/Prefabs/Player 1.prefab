@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 532219141291702573}
+  - component: {fileID: 1530003362}
   m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
@@ -30,6 +31,23 @@ Transform:
   m_Father: {fileID: 532219141798555899}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530003362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532219141291702572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0b8f88856c2ef4abe8f7a12373925c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  knockback: 0
+  timeBetweenAttacks: 0
+  speed: 0
+  weaponName: 
 --- !u!1 &532219141798555898
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_hp: 80
   wm: {fileID: 0}
+  timeBetweenAttack: 0
   swinging: 0
   startTimeBetweenAttack: 0
 --- !u!199 &532219140553263683
@@ -539,9 +558,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
-      minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      minMaxState: 2
+      minColor: {r: 0.45098042, g: 0.3647059, b: 0.32156864, a: 1}
+      maxColor: {r: 0.12941177, g: 0.1254902, b: 0.12941177, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1622,9 +1641,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.31132078, g: 0.10753826, b: 0, a: 1}
-        key1: {r: 0.30980393, g: 0.10588236, b: 0, a: 0}
-        key2: {r: 1, g: 1, b: 1, a: 0}
+        key0: {r: 0.45098042, g: 0.3647059, b: 0.32156864, a: 1}
+        key1: {r: 0.30980393, g: 0.10588236, b: 0, a: 0.6}
+        key2: {r: 0.30980393, g: 0.10588236, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -1639,7 +1658,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
+        atime1: 54934
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -1648,7 +1667,7 @@ ParticleSystem:
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 2
+        m_NumAlphaKeys: 3
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

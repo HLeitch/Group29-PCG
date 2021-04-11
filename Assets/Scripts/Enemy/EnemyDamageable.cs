@@ -43,6 +43,15 @@ public class EnemyDamageable : MonoBehaviour,IDamageable
             ChangeHealth(-collision.gameObject.GetComponent<Blade>().damage);
 
             Debug.Log("HEALTH TAKEN BY: " + collision.gameObject.name);
+
+            Debug.Log("Starting Knockback");
+            var enemyMov = gameObject.GetComponentInParent<Enemy>();
+            enemyMov.enemyKnockback = collision.GetComponentInParent<Weapon>().knockback;
+            if (collision.GetComponentInParent<PlayerMovement>().transform.position.x < transform.position.x)
+                enemyMov.knockFromRight = true;
+            else
+                enemyMov.knockFromRight = false;
+            enemyMov.enemyKnockBackCount = enemyMov.enemyKnockbackLength;
         }
     }
 

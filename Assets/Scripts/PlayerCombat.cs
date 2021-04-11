@@ -15,6 +15,7 @@ public class PlayerCombat : MonoBehaviour
     private Animator weaponAnimator;
     private UIManager ui;
     
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,14 +74,23 @@ public class PlayerCombat : MonoBehaviour
     {
         if (collision.CompareTag("Projectile"))
         {
-            TakeDamage(collision.GetComponent<Projectile>().damage);
-
+            // TODO: TakeDamage(collision.GetComponent<SCRIPTNAME>().damage); // Replace SCRIPTNAME with name of projectile script
             // TODO: Emit particle effect?
             Destroy(collision.gameObject);
         }
 
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage); // Replace SCRIPTNAME with name of projectile script
+            // TODO: Emit particle effect?
+            Debug.Log("HIT");
+            Destroy(collision.gameObject);
+        }
+    }
 
     IEnumerator SwingWeapon()
     {

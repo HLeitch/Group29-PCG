@@ -20,4 +20,11 @@ public class Interact : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (Input.GetKeyDown(KeyCode.E) && collision.gameObject.CompareTag("Player"))
+        {
+            tile.ChangeSprite();
+        }
+    }
 }
