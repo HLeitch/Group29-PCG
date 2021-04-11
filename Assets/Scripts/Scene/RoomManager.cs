@@ -7,13 +7,13 @@ using UnityEngine;
 /// </summary>
 public class RoomManager : MonoBehaviour
 {
-    private GameObject current_room;
+    private FogOfWar current_room;
 
     /// <summary>
     /// Updates the current room.
     /// </summary>
     /// <param name="room">The GameObject of the room the player has entered.</param>
-    public void setCurrentRoom(GameObject room)
+    public void setCurrentRoom(FogOfWar room)
     {
         current_room = room;
     }
@@ -24,7 +24,7 @@ public class RoomManager : MonoBehaviour
     /// <returns>
     /// A GameObject which contains data about the current room (data is in the FogOfWar component).
     /// </returns>
-    public GameObject getCurrentRoom()
+    public FogOfWar getCurrentRoom()
     {
         return current_room;
     }

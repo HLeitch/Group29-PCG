@@ -14,6 +14,7 @@ public class PlayerCombat : MonoBehaviour
     public float startTimeBetweenAttack;
     private Animator weaponAnimator;
     private UIManager ui;
+    
 
     // Start is called before the first frame update
     void Start()

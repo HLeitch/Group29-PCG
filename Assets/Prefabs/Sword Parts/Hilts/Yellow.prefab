@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8479041026505279010}
   - component: {fileID: 4346170084933070583}
   - component: {fileID: 7208179623707733272}
-  - component: {fileID: 7328132684721336654}
   m_Layer: 0
   m_Name: Yellow
   m_TagString: Hilt
@@ -95,19 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a1faab1f8dba14bb8fd3ccc3f55f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  knockback: 0
---- !u!114 &7328132684721336654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3474839214045509472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a1faab1f8dba14bb8fd3ccc3f55f50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  knockback: 0
+  knockback: 4
+  speed: 1
+  hiltValue: 0.6

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public float damage, knockback, timeBetweenAttacks;
-    public int speed;
+    public float damage, knockback, timeBetweenAttacks, speed, weaponValue;
     public string weaponName;
     Hilt hilt;
     Blade blade;
@@ -19,6 +18,7 @@ public class Weapon : MonoBehaviour
         knockback = hilt.knockback;
         speed = hilt.speed;
         timeBetweenAttacks = blade.timeBetweenSwings;
+        weaponValue = (hilt.hiltValue + blade.bladeValue) / 2;
     }
 
     public void GetName()
