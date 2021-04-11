@@ -91,6 +91,7 @@ public class Enemy : MonoBehaviour
 
         health += Value;
         healthBar.ChangeHealth(health/maxHealth);
+  rem.EnemyDamaged(Value);
 
         if (health <=0)
         {

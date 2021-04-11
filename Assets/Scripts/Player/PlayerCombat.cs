@@ -70,7 +70,7 @@ public class PlayerCombat : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+   {
         if (collision.CompareTag("Projectile"))
         {
             // TODO: TakeDamage(collision.GetComponent<SCRIPTNAME>().damage); // Replace SCRIPTNAME with name of projectile script

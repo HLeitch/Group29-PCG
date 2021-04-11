@@ -7,6 +7,7 @@ public class RoomEnemyDataGatherer : MonoBehaviour
     [SerializeField]
     RoomEnemiesManager[] roomEnemyObjects;
     PlayerCombat pc;
+    public ProceduralGenerationData pg;
 
     public int totalEnemiesInLevel;
     float startTime;
@@ -46,6 +47,7 @@ public class RoomEnemyDataGatherer : MonoBehaviour
     public void enemyDamaged(float damageTaken)
     {
         damageCounter -= damageTaken;
+        Debug.Log("enemyDamaged");
 
     }
 
@@ -56,12 +58,14 @@ public class RoomEnemyDataGatherer : MonoBehaviour
 
         foreach (RoomEnemiesManager r in roomEnemyObjects)
         {
-            
-             { stillLiving += r.currentEnemyCount(); 
-            
+            if (r.active)
+            {
+                {
+                    stillLiving += r.currentEnemyCount();
+
+                }
             }
-
-
+            
         }
         return totalEnemiesInLevel - stillLiving;
 
@@ -153,6 +157,8 @@ public class RoomEnemyDataGatherer : MonoBehaviour
             enemiesKilledBeforeThisPeriod = enemiesKilledinLastPeriod;
 
             playerHealthChangeLastPeriod = playerHealthLastPeriod - pc.getHealth();
+
+            pg.newData();
         }
 
         if(Input.GetKeyDown("l"))
@@ -162,4 +168,7 @@ public class RoomEnemyDataGatherer : MonoBehaviour
         }
 
     }
+
+ 
+
 }

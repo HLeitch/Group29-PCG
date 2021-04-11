@@ -13,12 +13,18 @@ public class ProceduralGenerationData : MonoBehaviour
 
     
     float sumOfPerformances = 0;
-    int weaponChanges= 0;
+    int numOfPerfSamples= 0;
 
+
+    float testTimer = 0.0f;
+    public float maxTestTimer;
+    
 
 
     private void Awake()
     {
+        roomsDataGatherer.pg = this;
+
         rm = FindObjectOfType<RoomManager>();
         wg = FindObjectOfType<WeaponGeneration>();
     }
@@ -71,24 +77,32 @@ public class ProceduralGenerationData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     float TypePlayerPerformance()
     {
         float playerPerformance = 0;
 
-        float damageGivenPerformance = Mathf.Clamp(EnemyDamageInLastPeriodOfTime() / 100f, 0f, 1f);
+        float damageGivenPerformance = Mathf.Clamp(EnemyDamageInLastPeriodOfTime() / 50f, 0f, 1f);
 
         float enemiesKilledPerformance = Mathf.Clamp(roomsDataGatherer.enemiesKilledinLastPeriod / 10f, 0, 1);
 
-        float playerhealthPerformance = Mathf.Clamp(roomsDataGatherer.playerHealthChangeLastPeriod / 10f, 0, 1);
+        float playerhealthPerformance = Mathf.Clamp(roomsDataGatherer.playerHealthChangeLastPeriod / 15f, 0, 1);
 
         playerPerformance = damageGivenPerformance + enemiesKilledPerformance - playerhealthPerformance;
 
-        averagePlayerPerformance
+        //Debug.Log("performance (last) = " + playerPerformance);
+        //Debug.Log("DamageGivenPerformance = " + damageGivenPerformance);
 
-        return playerPerformance;
+        sumOfPerformances += playerPerformance;
+
+        float avgPerformance = sumOfPerformances / numOfPerfSamples;
+
+        //Debug.Log("avgPerformance (overall) = " + avgPerformance);
+
+        numOfPerfSamples++;
+        return avgPerformance;
     }
 
     float HiltPlayerPerformance()
@@ -96,13 +110,19 @@ public class ProceduralGenerationData : MonoBehaviour
         float performance = 0;
 
         //enemy count//
-        //float timePerformance = TimeTakenToCompleteLastRoom()/(5*roomsDataGatherer.;
-        
-        float enemiesKilledPerformance = Mathf.Clamp(roomsDataGatherer.enemiesKilledPerSecondInLastRoom / 10f, 0, 1);
+        float timePerformance = Mathf.Clamp(TimeTakenToCompleteLastRoom()/roomsDataGatherer.enemiesKilledPerSecondInLastRoom * 10f,0f,1f);
+        Debug.Log("timePerformance = " + timePerformance);
+
+
+        float enemiesKilledPerformance = Mathf.Clamp(roomsDataGatherer.enemiesKilledPerSecondInLastRoom, 0f, 1f);
+        Debug.Log("enemiesKilledPerformance = " + enemiesKilledPerformance);
 
         float damageGivenPerformance = Mathf.Clamp(EnemyDamageInLastPeriodOfTime() / 100f, 0f, 1f);
+        Debug.Log("damageGivenPerformance = " + damageGivenPerformance);
 
-        performance = enemiesKilledPerformance + damageGivenPerformance;
+        performance = enemiesKilledPerformance + damageGivenPerformance + timePerformance;
+
+        Debug.Log("enemy Based Performance (hilt) = " + performance);
 
         return performance;
 
@@ -114,12 +134,23 @@ public class ProceduralGenerationData : MonoBehaviour
 
         float damageGivenPerformance = Mathf.Clamp(EnemyDamageInLastPeriodOfTime() / 100f, 0f, 1f);
 
-    float successfulSwings = wg.swingsTook;
-        return 0;
+    //float successfulSwings = wg.swingsTook;
+
+
+        performance = damageGivenPerformance;
+        Debug.Log("damageGivenPerformance = " + damageGivenPerformance);
+ 
+        return performance;
     }
 
-    public float averagePlayerPerformance()
+    public  void newData()
     {
-         
+        TypePlayerPerformance();
+
+        HiltPlayerPerformance();
+
+        BladePlayerPerformance();
+
     }
+
 }
