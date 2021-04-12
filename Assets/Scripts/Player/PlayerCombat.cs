@@ -7,7 +7,7 @@ public class PlayerCombat : MonoBehaviour
     public int max_hp;
     public static WeaponGeneration wg;
     int hp;
-    GameObject weapon;
+    public Weapon weapon;
     public WeaponManager wm;
     public float timeBetweenAttack;
     public bool swinging = false;
@@ -24,6 +24,8 @@ public class PlayerCombat : MonoBehaviour
         startTimeBetweenAttack = 1f;
         weaponAnimator = transform.Find("Pivot").GetComponent<Animator>();
         ui = FindObjectOfType<UIManager>();
+        timeBetweenAttack = weapon.timeBetweenAttacks;
+      
 
     }
 
@@ -102,8 +104,10 @@ public class PlayerCombat : MonoBehaviour
                 timeBetweenAttack = startTimeBetweenAttack;
                 weaponAnimator.SetBool("Swinging", true);
                 swinging = true;
+                weapon.bladeCollider.enabled = true;
                 yield return new WaitForSeconds(0.3f);
                 weaponAnimator.SetBool("Swinging", false);
+                weapon.bladeCollider.enabled = false;
                 yield return new WaitForSeconds(0.15f);
                 swinging = false;
                 
