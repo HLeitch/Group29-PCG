@@ -33,10 +33,15 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     Animator weaponAnimator;
 
+    public Collider2D myBladeCollider;
+    public float maxTimeBetweenAttacks;
+    float timerBetweenAttacks = -1;
+
     public float enemyKnockback;
     public float enemyKnockbackLength;
     public float enemyKnockBackCount;
     public bool knockFromRight;
+
 
     void Awake()
     {
@@ -61,6 +66,10 @@ public class Enemy : MonoBehaviour
         enemyKnockbackLength = 0.2f;
         enemyKnockback = 2;
 
+        myBladeCollider = weapon.bladeCollider;
+
+        maxTimeBetweenAttacks = weapon.timeBetweenAttacks;
+
         ///Should fix weapon speed///
         weaponSpeed = weapon.speed;
         animator.speed = weaponSpeed;
@@ -84,7 +93,23 @@ public class Enemy : MonoBehaviour
 
         if (dying) { dyingEffect(); }
 
+        if(timerBetweenAttacks >=0)
+        {
+            timerBetweenAttacks -= Time.deltaTime;
 
+            if(timerBetweenAttacks < maxTimeBetweenAttacks/2)
+            {
+                myBladeCollider.enabled = false;
+            }
+
+            if(timerBetweenAttacks <0)
+            {
+                usingWeapon = false;
+
+
+            }
+
+        }
         
 
         
@@ -178,14 +203,15 @@ public class Enemy : MonoBehaviour
 
     public void UseWeapon()
     {
-        if (!usingWeapon)
+        if (!usingWeapon && timerBetweenAttacks < 0)
         {
-
+            myBladeCollider.enabled = true;
 
             weaponAnimator.Play("SwingSword");
 
             Debug.Log("ENEMY SWINGS WEAPON");
             usingWeapon = true;
+            timerBetweenAttacks = maxTimeBetweenAttacks;
         }
 
 

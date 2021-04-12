@@ -11,6 +11,14 @@ public class Weapon : MonoBehaviour
     Modifier modifier;
     Effect effect;
 
+    public Collider2D bladeCollider;
+
+
+    private void Awake()
+    {
+        
+    }
+
     public void GetStats()
     {
         knockback = hilt.knockback;
@@ -19,6 +27,7 @@ public class Weapon : MonoBehaviour
         speed = hilt.speed;
         timeBetweenAttacks = blade.timeBetweenSwings;
         weaponValue = (hilt.hiltValue + blade.bladeValue) / 2;
+
     }
 
     public void GetName()
