@@ -7,7 +7,7 @@ public class PlayerCombat : MonoBehaviour
     public int max_hp;
     public static WeaponGeneration wg;
     int hp;
-    GameObject weapon;
+    Weapon weapon;
     public WeaponManager wm;
     public float timeBetweenAttack;
     public bool swinging = false;
@@ -25,6 +25,7 @@ public class PlayerCombat : MonoBehaviour
         weaponAnimator = transform.Find("Pivot").GetComponent<Animator>();
         ui = FindObjectOfType<UIManager>();
 
+        weapon = GetComponentInChildren<Weapon>();
     }
 
     // Update is called once per frame
@@ -51,6 +52,7 @@ public class PlayerCombat : MonoBehaviour
         // TODO: Use 'WeaponManager' to generate a new weapon and add it as a child to the player, and reference it with the 'weapon' variable
         wm.ChooseWeaponType();
         Physics2D.IgnoreCollision(transform.Find("HitCollider").GetComponent<Collider2D>(), weapon.GetComponent<Collider2D>()); // Stop the player colliding with their own weapon
+        ui.NewPlayerWeapon(weapon.name);
     }
 
     public void TakeDamage(int value)
@@ -106,7 +108,8 @@ public class PlayerCombat : MonoBehaviour
                 weaponAnimator.SetBool("Swinging", false);
                 yield return new WaitForSeconds(0.15f);
                 swinging = false;
-                
+
+                weapon.blade.myCollider.enabled = true;
             }
         }
         else

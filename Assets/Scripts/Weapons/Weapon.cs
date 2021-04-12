@@ -7,7 +7,8 @@ public class Weapon : MonoBehaviour
     public float damage, knockback, timeBetweenAttacks, speed, weaponValue;
     public string weaponName;
     Hilt hilt;
-    Blade blade;
+    [HideInInspector]
+    public Blade blade;
     Modifier modifier;
     Effect effect;
 
