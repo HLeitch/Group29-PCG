@@ -92,14 +92,14 @@ public class ProceduralGenerationData : MonoBehaviour
 
         playerPerformance = damageGivenPerformance + enemiesKilledPerformance - playerhealthPerformance;
 
-       Debug.Log("performance (last) = " + playerPerformance);
+        //Debug.Log("performance (last) = " + playerPerformance);
         //Debug.Log("DamageGivenPerformance = " + damageGivenPerformance);
 
         sumOfPerformances += playerPerformance;
 
         float avgPerformance = sumOfPerformances / numOfPerfSamples;
 
-        Debug.Log("avgPerformance (overall) = " + avgPerformance);
+        //Debug.Log("avgPerformance (overall) = " + avgPerformance);
 
         numOfPerfSamples++;
         return avgPerformance;

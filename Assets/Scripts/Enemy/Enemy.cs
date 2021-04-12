@@ -38,9 +38,6 @@ public class Enemy : MonoBehaviour
     public float enemyKnockBackCount;
     public bool knockFromRight;
 
-    float timerBetweenSwings = 0.0f;
-    float maxTimeBetweenSwings = -1f;
-
     void Awake()
     {
         
@@ -63,8 +60,6 @@ public class Enemy : MonoBehaviour
 
         enemyKnockbackLength = 0.2f;
         enemyKnockback = 2;
-
-        maxTimeBetweenSwings = weapon.timeBetweenAttacks;
 
         ///Should fix weapon speed///
         weaponSpeed = weapon.speed;
@@ -90,7 +85,7 @@ public class Enemy : MonoBehaviour
         if (dying) { dyingEffect(); }
 
 
-        timerBetweenSwings -= Time.deltaTime;
+        
 
         
 
@@ -183,16 +178,14 @@ public class Enemy : MonoBehaviour
 
     public void UseWeapon()
     {
-        if ((!usingWeapon) && (timerBetweenSwings <0))
+        if (!usingWeapon)
         {
-            weapon.blade.myCollider.enabled = true;
-            weaponAnimator.speed = weapon.speed;
-            
+
+
             weaponAnimator.Play("SwingSword");
 
             Debug.Log("ENEMY SWINGS WEAPON");
             usingWeapon = true;
-            timerBetweenSwings = maxTimeBetweenSwings;
         }
 
 

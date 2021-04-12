@@ -213,7 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a73f86a1363f443b85e129375d3845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reactionTime: 0.3
 --- !u!61 &982870753675664711
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -373,10 +372,6 @@ MonoBehaviour:
   healthBarPostitionTarget: {fileID: 1814828939}
   rem: {fileID: 0}
   weaponAnimator: {fileID: 1453437072}
-  enemyKnockback: 0
-  enemyKnockbackLength: 0
-  enemyKnockBackCount: 0
-  knockFromRight: 0
 --- !u!95 &5320538496354845839
 Animator:
   serializedVersion: 3
