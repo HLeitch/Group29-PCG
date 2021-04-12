@@ -160,6 +160,7 @@ MonoBehaviour:
   corridoorRatio: 2.6
   gizmoOpacity: 0.763
   darknessOpacity: 0.935
+  darknessOpacitySpeed: 7
 --- !u!50 &1324927194338184013
 Rigidbody2D:
   serializedVersion: 4
