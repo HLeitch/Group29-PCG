@@ -480,54 +480,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2100346140}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &107070426 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236870601780, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &107070430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107070426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
---- !u!1 &120807560 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236850374300, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &120807564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120807560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!4 &136461840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8354067717060810300, guid: a35847e46aa86f94d81cda1933203290,
@@ -572,30 +524,6 @@ Transform:
   m_Father: {fileID: 1641263077}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &203055428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004235760489221, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &203055432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203055428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!114 &206332106 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3183586572548617569, guid: ca8f92f8d3915934aba4d694e356d83b,
@@ -889,7 +817,7 @@ PrefabInstance:
     - target: {fileID: 7820785352170741849, guid: 96fa78feb0cd41c499b05be79023b30d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7820785352170741849, guid: 96fa78feb0cd41c499b05be79023b30d,
         type: 3}
@@ -1274,7 +1202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomsDataGatherer: {fileID: 206332106}
-  maxTestTimer: 0
 --- !u!4 &330841096
 Transform:
   m_ObjectHideFlags: 0
@@ -1839,30 +1766,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1770182436}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &482507745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236804453784, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &482507749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482507745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!1 &488840810
 GameObject:
   m_ObjectHideFlags: 0
@@ -4715,54 +4618,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &523994648 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236872069896, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &523994652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523994648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
---- !u!1 &535994776 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236712657993, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &535994780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535994776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!114 &538100667 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7820785352170741850, guid: 96fa78feb0cd41c499b05be79023b30d,
@@ -5519,54 +5374,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 760929645}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &767312016 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236216879321, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &767312020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767312016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
---- !u!1 &774904976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236222167528, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &774904981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774904976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!1 &790283119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 286351325520958455, guid: 1250f564829608b40a3d7c2c3419ea21,
@@ -5609,7 +5416,7 @@ Transform:
   - {fileID: 476174833}
   - {fileID: 820988913}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &820988913 stripped
 Transform:
@@ -24194,30 +24001,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2106112548}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1114305279 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004235278529398, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1114305283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114305279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!1 &1125241047
 GameObject:
   m_ObjectHideFlags: 0
@@ -24541,24 +24324,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4298325911790787158, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
-      propertyPath: enemies.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4298325911790787158, guid: ca8f92f8d3915934aba4d694e356d83b,
-        type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
       objectReference: {fileID: 271270483}
-    - target: {fileID: 4298325911790787158, guid: ca8f92f8d3915934aba4d694e356d83b,
-        type: 3}
-      propertyPath: enemies.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4298325911790787158, guid: ca8f92f8d3915934aba4d694e356d83b,
-        type: 3}
-      propertyPath: enemies.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4298325911844209130, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
       propertyPath: m_Color.a
@@ -24704,32 +24472,23 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.935
       objectReference: {fileID: 0}
+    - target: {fileID: 4298325912447550947, guid: ca8f92f8d3915934aba4d694e356d83b,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298325912883250101, guid: ca8f92f8d3915934aba4d694e356d83b,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298325913135860091, guid: ca8f92f8d3915934aba4d694e356d83b,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.34
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca8f92f8d3915934aba4d694e356d83b, type: 3}
---- !u!1 &1178663510 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236831523170, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1178663514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178663510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!4 &1203944529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -24958,30 +24717,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2181b8275cfe614bb22e57fa82e8da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1322555332 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004237415327480, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1322555336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1322555332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!4 &1379010271 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 286351325520958448, guid: 1250f564829608b40a3d7c2c3419ea21,
@@ -25023,30 +24758,6 @@ Transform:
   m_Father: {fileID: 1616825590}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1399273448 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236609673672, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1399273452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399273448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!1001 &1426138936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25148,30 +24859,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 923395857}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1515663201 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004235715692435, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1515663205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515663201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!1 &1528859417
 GameObject:
   m_ObjectHideFlags: 0
@@ -25416,7 +25103,7 @@ Transform:
   - {fileID: 285425349}
   - {fileID: 2054835090}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1631240207 stripped
 Transform:
@@ -37588,30 +37275,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1250f564829608b40a3d7c2c3419ea21, type: 3}
---- !u!1 &2030056548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004237021604212, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2030056552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030056548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!1001 &2039961972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37837,7 +37500,7 @@ PrefabInstance:
     - target: {fileID: 7820785352170741849, guid: 96fa78feb0cd41c499b05be79023b30d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7820785352170741849, guid: 96fa78feb0cd41c499b05be79023b30d,
         type: 3}
@@ -38279,54 +37942,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8842f770d7db5ea46abb442b58214d12, type: 3}
---- !u!1 &2119948798 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236658935214, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2119948802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119948798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
---- !u!1 &2142643361 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3010004236736597342, guid: ca8f92f8d3915934aba4d694e356d83b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1126198066}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2142643365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142643361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRoom: []
-  weaponManager: {fileID: 0}
-  active: 0
-  roomExplored: 0
-  timeTakenToClearRoom: 0
-  enemiesRemaining: 0
 --- !u!1 &2147278376
 GameObject:
   m_ObjectHideFlags: 0
