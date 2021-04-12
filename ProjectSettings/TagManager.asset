@@ -13,7 +13,13 @@ TagManager:
   - Spikes
   - Plate
   - Walls
+  - Plate
+  - Switch
+  - Spikes
+  - Projectile
+  - Walls
   - Hammer
+  - Door
   - Dagger
   - Breaker
   layers:
@@ -28,7 +34,7 @@ TagManager:
   - Player
   - Enemy
   - Walls
-  - 
+  - Player
   - 
   - 
   - 
@@ -56,9 +62,15 @@ TagManager:
   - name: Walls
     uniqueID: 2816102071
     locked: 0
-  - name: Weapon
-    uniqueID: 3404529641
+  - name: Floor
+    uniqueID: 4181618111
+    locked: 0
+  - name: Walls
+    uniqueID: 4022846231
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Weapon
+    uniqueID: 3404529641
     locked: 0
