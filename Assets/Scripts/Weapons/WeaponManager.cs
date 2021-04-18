@@ -8,7 +8,7 @@ public class WeaponManager : MonoBehaviour
     public static WeaponGeneration wg;
     public static ProceduralGenerationData pgd;
     public PlayerMovement pc;
-    public GameObject playerWeapon;
+    public Weapon playerWeapon;
     public GameObject blankWeapon;
     public GameObject[] modifiers, effects;
     public GameObject[] swordBlades, swordHilts;
@@ -253,6 +253,107 @@ public class WeaponManager : MonoBehaviour
 
        /// pgd.playerPerformance();
 
+
+
+    }
+
+    /// <summary>
+    /// Relies on correct order of componants in Weapon manager instance
+    /// </summary>
+    /// <param name="typePerf"></param>
+    /// <param name="bladePerf"></param>
+    /// <param name="hiltPerf"></param>
+    public void GiveWeapon(float typePerf,float bladePerf, float hiltPerf)
+    {
+
+        //int typeLocation = Mathf.Clamp(((typePerf / 2f) * 10f), 0f, 4f);
+
+
+       Weapon targetWeapon = playerWeapon;
+        //FOR SWORD ONLY
+        //TODO: Add more weapon types
+        //enemyAnimator = targetWeapon.GetComponentInParent<Animator>();
+
+        int randWeapon = Random.Range(0, 4);
+        if (randWeapon == 0)
+        {
+            GameObject hilt = Instantiate(swordHilts[Random.Range(0, swordHilts.Length)], targetWeapon.transform);
+            hilt.name = hilt.name.Replace("(Clone)", "");
+            hilt.transform.localPosition = Vector3.zero;
+            GameObject blade = Instantiate(swordBlades[Random.Range(0, swordBlades.Length)], targetWeapon.transform);
+            blade.name = blade.name.Replace("(Clone)", "");
+            blade.transform.localPosition = Vector3.zero;
+            GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], targetWeapon.transform);
+            modifier.name = modifier.name.Replace("(Clone)", "");
+            modifier.transform.localPosition = Vector3.zero;
+            GameObject effect = Instantiate(effects[Random.Range(0, effects.Length)], targetWeapon.transform);
+            effect.name = effect.name.Replace("(Clone)", "");
+            effect.transform.localPosition = Vector3.zero;
+            targetWeapon.gameObject.tag = "Sword";
+            enemyAnimator.speed = hilt.GetComponent<Hilt>().speed;
+            targetWeapon.transform.localPosition = new Vector3(0, 0.65f, 0);
+            targetWeapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
+        }
+        else if (randWeapon == 1)
+        {
+            GameObject handle = Instantiate(hammerHandles[Random.Range(0, hammerHandles.Length)], targetWeapon.transform);
+            handle.name = handle.name.Replace("(Clone)", "");
+            handle.transform.localPosition = Vector3.zero;
+            GameObject head = Instantiate(hammerHeads[Random.Range(0, hammerHeads.Length)], targetWeapon.transform);
+            head.name = head.name.Replace("(Clone)", "");
+            head.transform.localPosition = Vector3.zero;
+            GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], targetWeapon.transform);
+            modifier.name = modifier.name.Replace("(Clone)", "");
+            modifier.transform.localPosition = Vector3.zero;
+            GameObject effect = Instantiate(effects[Random.Range(0, effects.Length)], targetWeapon.transform);
+            effect.name = effect.name.Replace("(Clone)", "");
+            effect.transform.localPosition = Vector3.zero;
+
+            enemyAnimator.speed = handle.GetComponent<Hilt>().speed;
+            targetWeapon.gameObject.tag = "Hammer";
+            targetWeapon.transform.localPosition = new Vector3(0, 1.9f, 0);
+            targetWeapon.GetComponent<Weapon>().SetParts(handle, head, effect, modifier);
+        }
+        else if (randWeapon == 2)
+        {
+            GameObject hilt = Instantiate(daggerHilts[Random.Range(0, daggerHilts.Length)], targetWeapon.transform);
+            hilt.name = hilt.name.Replace("(Clone)", "");
+            hilt.transform.localPosition = Vector3.zero;
+            GameObject blade = Instantiate(daggerBlades[Random.Range(0, daggerBlades.Length)], targetWeapon.transform);
+            blade.name = blade.name.Replace("(Clone)", "");
+            blade.transform.localPosition = Vector3.zero;
+            GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], targetWeapon.transform);
+            modifier.name = modifier.name.Replace("(Clone)", "");
+            modifier.transform.localPosition = Vector3.zero;
+            GameObject effect = Instantiate(effects[Random.Range(0, effects.Length)], targetWeapon.transform);
+            effect.name = effect.name.Replace("(Clone)", "");
+            effect.transform.localPosition = Vector3.zero;
+
+            enemyAnimator.speed = hilt.GetComponent<Hilt>().speed;
+            targetWeapon.gameObject.tag = "Dagger";
+            targetWeapon.transform.localPosition = new Vector3(0, 0.65f, 0);
+            targetWeapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
+        }
+        else if (randWeapon == 3)
+        {
+            GameObject hilt = Instantiate(breakerHilts[Random.Range(0, breakerHilts.Length)], targetWeapon.transform);
+            hilt.name = hilt.name.Replace("(Clone)", "");
+            hilt.transform.localPosition = Vector3.zero;
+            GameObject blade = Instantiate(breakerBlades[Random.Range(0, breakerBlades.Length)], targetWeapon.transform);
+            blade.name = blade.name.Replace("(Clone)", "");
+            blade.transform.localPosition = Vector3.zero;
+            GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], targetWeapon.transform);
+            modifier.name = modifier.name.Replace("(Clone)", "");
+            modifier.transform.localPosition = Vector3.zero;
+            GameObject effect = Instantiate(effects[Random.Range(0, effects.Length)], targetWeapon.transform);
+            effect.name = effect.name.Replace("(Clone)", "");
+            effect.transform.localPosition = Vector3.zero;
+
+            enemyAnimator.speed = hilt.GetComponent<Hilt>().speed;
+            targetWeapon.gameObject.tag = "Breaker";
+            targetWeapon.transform.localPosition = new Vector3(0, 0.65f, 0);
+            targetWeapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
+        }
 
 
     }
