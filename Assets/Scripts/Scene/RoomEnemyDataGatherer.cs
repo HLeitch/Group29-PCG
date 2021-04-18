@@ -144,8 +144,10 @@ public class RoomEnemyDataGatherer : MonoBehaviour
     void Update()
     {
 
+        if(TotalActiveEnemies()  > 0)
+        { periodTimer -= Time.deltaTime; }
 
-        periodTimer -= Time.deltaTime;
+       
         if(periodTimer <= 0)
         {
             periodTimer = maxPeriodTimer;

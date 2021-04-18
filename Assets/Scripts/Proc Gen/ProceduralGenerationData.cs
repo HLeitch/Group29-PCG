@@ -102,7 +102,14 @@ public class ProceduralGenerationData : MonoBehaviour
         //Debug.Log("avgPerformance (overall) = " + avgPerformance);
 
         numOfPerfSamples++;
-        return avgPerformance;
+
+
+        if (numOfPerfSamples > 2)
+        { return avgPerformance;
+    }
+        else
+        { return numOfPerfSamples / 2f; }
+        
     }
 
     float HiltPlayerPerformance()
@@ -134,8 +141,6 @@ public class ProceduralGenerationData : MonoBehaviour
 
         float damageGivenPerformance = Mathf.Clamp(EnemyDamageInLastPeriodOfTime() / 100f, 0f, 1f);
 
-    //float successfulSwings = wg.swingsTook;
-
 
         performance = damageGivenPerformance;
         Debug.Log("damageGivenPerformance = " + damageGivenPerformance);
@@ -143,7 +148,7 @@ public class ProceduralGenerationData : MonoBehaviour
         return performance;
     }
 
-    public  void newData()
+    public void newData()
     {
         TypePlayerPerformance();
 
