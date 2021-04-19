@@ -47,7 +47,9 @@ MonoBehaviour:
   knockback: 0
   timeBetweenAttacks: 0
   speed: 0
+  weaponValue: 0
   weaponName: 
+  bladeCollider: {fileID: 0}
 --- !u!1 &532219141798555898
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +278,10 @@ MonoBehaviour:
   speed: 75
   drag: 0.875
   weapon_weight: 0
+  playerKnockback: 0
+  playerKnockbackLength: 0.2
+  playerKnockBackCount: 0
+  knockFromRight: 0
 --- !u!114 &4293977160246295716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_hp: 80
+  weapon: {fileID: 1530003362}
   wm: {fileID: 0}
   timeBetweenAttack: 0
   swinging: 0
