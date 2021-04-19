@@ -103,6 +103,7 @@ public class PlayerCombat : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
+                Debug.Log("Swinging weapon");
                 wg.UpdateSwingsTook();
                 timeBetweenAttack = startTimeBetweenAttack;
                 weaponAnimator.SetBool("Swinging", true);
