@@ -37,6 +37,7 @@ public class PlayerCombat : MonoBehaviour
         if (Input.GetKeyDown("m"))
         {
             GetNewWeapon();
+            
         }
 
         if (timeBetweenAttack <= 0)
@@ -52,7 +53,9 @@ public class PlayerCombat : MonoBehaviour
     {
         // TODO: Use 'WeaponManager' to generate a new weapon and add it as a child to the player, and reference it with the 'weapon' variable
         wm.ChooseWeaponType();
+    DisplayWeaponName();
         Physics2D.IgnoreCollision(transform.Find("HitCollider").GetComponent<Collider2D>(), weapon.GetComponent<Collider2D>()); // Stop the player colliding with their own weapon
+        
     }
 
     public void TakeDamage(int value)
@@ -107,10 +110,10 @@ public class PlayerCombat : MonoBehaviour
                 weapon.bladeCollider.enabled = true;
                 yield return new WaitForSeconds(0.3f);
                 weaponAnimator.SetBool("Swinging", false);
-                weapon.bladeCollider.enabled = false;
+                
                 yield return new WaitForSeconds(0.15f);
                 swinging = false;
-                
+                weapon.bladeCollider.enabled = false;
             }
         }
         else
@@ -133,5 +136,10 @@ public class PlayerCombat : MonoBehaviour
     public int getHealth()
     {
         return hp;
+    }
+
+    public void DisplayWeaponName()
+    {
+        ui.NewPlayerWeapon(weapon.GetName());
     }
 }

@@ -30,10 +30,11 @@ public class Weapon : MonoBehaviour
 
     }
 
-    public void GetName()
+    public string GetName()
     {
         weaponName = modifier.gameObject.name + " " + blade.gameObject.name + " " + this.tag + " of " + effect.gameObject.name;
         name = weaponName;
+        return weaponName;
     }
 
     public void SetParts(GameObject h, GameObject b, GameObject e, GameObject m)

@@ -9,6 +9,7 @@ public class RoomEnemyDataGatherer : MonoBehaviour
     PlayerCombat pc;
     public ProceduralGenerationData pg;
 
+
     public int totalEnemiesInLevel;
     float startTime;
     public float timeTakenToClearLastRoom=999.9f;
@@ -161,6 +162,8 @@ public class RoomEnemyDataGatherer : MonoBehaviour
             playerHealthChangeLastPeriod = playerHealthLastPeriod - pc.getHealth();
 
             pg.newData();
+
+            
         }
 
         if(Input.GetKeyDown("l"))

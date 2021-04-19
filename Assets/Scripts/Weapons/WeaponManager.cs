@@ -7,8 +7,10 @@ public class WeaponManager : MonoBehaviour
     public static WeaponManager wm;
     public static WeaponGeneration wg;
     public static ProceduralGenerationData pgd;
+    public PlayerCombat playerCombat;
     public PlayerMovement pc;
-    public Weapon playerWeapon;
+    public GameObject playerWeapon;
+    public Weapon playerWeaponComponent;
     public GameObject blankWeapon;
     public GameObject[] modifiers, effects;
     public GameObject[] swordBlades, swordHilts;
@@ -199,6 +201,10 @@ public class WeaponManager : MonoBehaviour
 
 
     }
+
+   /// <summary>
+   /// Destroy player Weapon 
+   /// </summary>
     public void DestroyWeapon()
     {
         foreach (Transform child in playerWeapon.transform)
@@ -214,11 +220,14 @@ public class WeaponManager : MonoBehaviour
         wg = GameObject.FindObjectOfType<WeaponGeneration>();
         myAnimator = playerWeapon.GetComponentInParent<Animator>();
         pgd = FindObjectOfType<ProceduralGenerationData>();
+        playerCombat = FindObjectOfType<PlayerCombat>();
     }
 
     private void Start()
     {
         ChooseWeaponType();
+        playerWeaponComponent = playerWeaponComponent.GetComponent<Weapon>();
+        playerCombat.DisplayWeaponName();
     }
 
     void Update()
@@ -265,22 +274,29 @@ public class WeaponManager : MonoBehaviour
     /// <param name="hiltPerf"></param>
     public void GiveWeapon(float typePerf,float bladePerf, float hiltPerf)
     {
+        DestroyWeapon();
 
-        //int typeLocation = Mathf.Clamp(((typePerf / 2f) * 10f), 0f, 4f);
+        int typeOfWeapon = (int)((typePerf / 2f) * 10f);
 
+        int typeOfHilt = Mathf.Clamp((int)((hiltPerf/2)*10),0,4);
 
-       Weapon targetWeapon = playerWeapon;
+        int typeOfBlade = Mathf.Clamp((int)((bladePerf/2)*10),0,4);
+
+        Debug.Log("Type of weapon = " + typeOfWeapon + "\n" +
+            "type of hilt = " + typeOfHilt + "\n" +
+            "type of blade = " + typeOfBlade + "\n" );
+
         //FOR SWORD ONLY
         //TODO: Add more weapon types
         //enemyAnimator = targetWeapon.GetComponentInParent<Animator>();
-
-        int randWeapon = Random.Range(0, 4);
-        if (randWeapon == 0)
+        Weapon targetWeapon = playerWeaponComponent;
+        
+        if (typeOfWeapon == 0)
         {
-            GameObject hilt = Instantiate(swordHilts[Random.Range(0, swordHilts.Length)], targetWeapon.transform);
+            GameObject hilt = Instantiate(swordHilts[typeOfHilt], targetWeapon.transform);
             hilt.name = hilt.name.Replace("(Clone)", "");
             hilt.transform.localPosition = Vector3.zero;
-            GameObject blade = Instantiate(swordBlades[Random.Range(0, swordBlades.Length)], targetWeapon.transform);
+            GameObject blade = Instantiate(swordBlades[typeOfBlade], targetWeapon.transform);
             blade.name = blade.name.Replace("(Clone)", "");
             blade.transform.localPosition = Vector3.zero;
             GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], targetWeapon.transform);
@@ -290,16 +306,16 @@ public class WeaponManager : MonoBehaviour
             effect.name = effect.name.Replace("(Clone)", "");
             effect.transform.localPosition = Vector3.zero;
             targetWeapon.gameObject.tag = "Sword";
-            enemyAnimator.speed = hilt.GetComponent<Hilt>().speed;
+            myAnimator.speed = hilt.GetComponent<Hilt>().speed;
             targetWeapon.transform.localPosition = new Vector3(0, 0.65f, 0);
             targetWeapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
         }
-        else if (randWeapon == 1)
+        else if (typeOfWeapon == 1)
         {
-            GameObject handle = Instantiate(hammerHandles[Random.Range(0, hammerHandles.Length)], targetWeapon.transform);
+            GameObject handle = Instantiate(hammerHandles[typeOfHilt], targetWeapon.transform);
             handle.name = handle.name.Replace("(Clone)", "");
             handle.transform.localPosition = Vector3.zero;
-            GameObject head = Instantiate(hammerHeads[Random.Range(0, hammerHeads.Length)], targetWeapon.transform);
+            GameObject head = Instantiate(hammerHeads[typeOfBlade], targetWeapon.transform);
             head.name = head.name.Replace("(Clone)", "");
             head.transform.localPosition = Vector3.zero;
             GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], targetWeapon.transform);
@@ -309,17 +325,17 @@ public class WeaponManager : MonoBehaviour
             effect.name = effect.name.Replace("(Clone)", "");
             effect.transform.localPosition = Vector3.zero;
 
-            enemyAnimator.speed = handle.GetComponent<Hilt>().speed;
+            myAnimator.speed = handle.GetComponent<Hilt>().speed;
             targetWeapon.gameObject.tag = "Hammer";
             targetWeapon.transform.localPosition = new Vector3(0, 1.9f, 0);
             targetWeapon.GetComponent<Weapon>().SetParts(handle, head, effect, modifier);
         }
-        else if (randWeapon == 2)
+        else if (typeOfWeapon == 2)
         {
-            GameObject hilt = Instantiate(daggerHilts[Random.Range(0, daggerHilts.Length)], targetWeapon.transform);
+            GameObject hilt = Instantiate(daggerHilts[typeOfHilt], targetWeapon.transform);
             hilt.name = hilt.name.Replace("(Clone)", "");
             hilt.transform.localPosition = Vector3.zero;
-            GameObject blade = Instantiate(daggerBlades[Random.Range(0, daggerBlades.Length)], targetWeapon.transform);
+            GameObject blade = Instantiate(daggerBlades[typeOfBlade], targetWeapon.transform);
             blade.name = blade.name.Replace("(Clone)", "");
             blade.transform.localPosition = Vector3.zero;
             GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], targetWeapon.transform);
@@ -329,17 +345,17 @@ public class WeaponManager : MonoBehaviour
             effect.name = effect.name.Replace("(Clone)", "");
             effect.transform.localPosition = Vector3.zero;
 
-            enemyAnimator.speed = hilt.GetComponent<Hilt>().speed;
+            myAnimator.speed = hilt.GetComponent<Hilt>().speed;
             targetWeapon.gameObject.tag = "Dagger";
             targetWeapon.transform.localPosition = new Vector3(0, 0.65f, 0);
             targetWeapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
         }
-        else if (randWeapon == 3)
+        else if (typeOfWeapon >= 3)
         {
-            GameObject hilt = Instantiate(breakerHilts[Random.Range(0, breakerHilts.Length)], targetWeapon.transform);
+            GameObject hilt = Instantiate(breakerHilts[typeOfHilt], targetWeapon.transform);
             hilt.name = hilt.name.Replace("(Clone)", "");
             hilt.transform.localPosition = Vector3.zero;
-            GameObject blade = Instantiate(breakerBlades[Random.Range(0, breakerBlades.Length)], targetWeapon.transform);
+            GameObject blade = Instantiate(breakerBlades[typeOfBlade], targetWeapon.transform);
             blade.name = blade.name.Replace("(Clone)", "");
             blade.transform.localPosition = Vector3.zero;
             GameObject modifier = Instantiate(modifiers[Random.Range(0, modifiers.Length)], targetWeapon.transform);
@@ -349,12 +365,14 @@ public class WeaponManager : MonoBehaviour
             effect.name = effect.name.Replace("(Clone)", "");
             effect.transform.localPosition = Vector3.zero;
 
-            enemyAnimator.speed = hilt.GetComponent<Hilt>().speed;
+            myAnimator.speed = hilt.GetComponent<Hilt>().speed;
             targetWeapon.gameObject.tag = "Breaker";
             targetWeapon.transform.localPosition = new Vector3(0, 0.65f, 0);
             targetWeapon.GetComponent<Weapon>().SetParts(hilt, blade, effect, modifier);
         }
 
-
+        playerCombat.DisplayWeaponName();
+        Debug.Log("new player weapon name = " + playerWeaponComponent.GetName());
     }
+   
 }

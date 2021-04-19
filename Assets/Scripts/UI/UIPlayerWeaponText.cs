@@ -70,6 +70,7 @@ public class UIPlayerWeaponText : MonoBehaviour
     {
         typing = true;
         newWeapon = true;
+        textMesh.text = "";
         this.weaponName = weaponName;
 
     }

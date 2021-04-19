@@ -10,6 +10,7 @@ public class ProceduralGenerationData : MonoBehaviour
     RoomEnemyDataGatherer roomsDataGatherer;
     RoomManager rm;
     WeaponGeneration wg;
+    WeaponManager weaponManager;
 
     
     float sumOfPerformances = 0;
@@ -27,6 +28,7 @@ public class ProceduralGenerationData : MonoBehaviour
 
         rm = FindObjectOfType<RoomManager>();
         wg = FindObjectOfType<WeaponGeneration>();
+        weaponManager = FindObjectOfType<WeaponManager>();
     }
 
 
@@ -88,9 +90,9 @@ public class ProceduralGenerationData : MonoBehaviour
 
         float enemiesKilledPerformance = Mathf.Clamp(roomsDataGatherer.enemiesKilledinLastPeriod / 10f, 0, 1);
 
-        float playerhealthPerformance = Mathf.Clamp(roomsDataGatherer.playerHealthChangeLastPeriod / 15f, 0, 1);
+        float playerhealthPerformance = Mathf.Clamp(roomsDataGatherer.playerHealthChangeLastPeriod / 30f, 0, 1);
 
-        playerPerformance = damageGivenPerformance + enemiesKilledPerformance - playerhealthPerformance;
+        playerPerformance =Mathf.Clamp((damageGivenPerformance + enemiesKilledPerformance - playerhealthPerformance),0,1);
 
         //Debug.Log("performance (last) = " + playerPerformance);
         //Debug.Log("DamageGivenPerformance = " + damageGivenPerformance);
@@ -99,16 +101,16 @@ public class ProceduralGenerationData : MonoBehaviour
 
         float avgPerformance = sumOfPerformances / numOfPerfSamples;
 
-        //Debug.Log("avgPerformance (overall) = " + avgPerformance);
+        Debug.Log("avgPerformance for type of weapon (overall) = " + avgPerformance);
 
         numOfPerfSamples++;
 
 
-        if (numOfPerfSamples > 2)
+        if (numOfPerfSamples > 1)
         { return avgPerformance;
     }
         else
-        { return numOfPerfSamples / 2f; }
+        { return 0; }
         
     }
 
@@ -131,7 +133,7 @@ public class ProceduralGenerationData : MonoBehaviour
 
         Debug.Log("enemy Based Performance (hilt) = " + performance);
 
-        return performance;
+        return Mathf.Clamp(performance,0,1);
 
     }
 
@@ -150,11 +152,12 @@ public class ProceduralGenerationData : MonoBehaviour
 
     public void newData()
     {
-        TypePlayerPerformance();
 
-        HiltPlayerPerformance();
 
-        BladePlayerPerformance();
+
+
+
+        weaponManager.GiveWeapon(TypePlayerPerformance(), BladePlayerPerformance(), HiltPlayerPerformance());
 
     }
 
