@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 532219142156003585}
   - component: {fileID: 4293977160246295716}
   - component: {fileID: 519842566908835117}
+  - component: {fileID: 6735963919108396744}
   - component: {fileID: 532219140553263683}
   - component: {fileID: 532219140553263680}
   m_Layer: 8
@@ -313,6 +314,19 @@ MonoBehaviour:
   timeBetweenAttack: 0
   swinging: 0
   startTimeBetweenAttack: 0
+--- !u!114 &6735963919108396744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146750489386661584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847e6c8785d3fb34cb20d285971a88a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCombat: {fileID: 519842566908835117}
 --- !u!199 &532219140553263683
 ParticleSystemRenderer:
   serializedVersion: 6

@@ -15,10 +15,10 @@ public class Fade : MonoBehaviour
     void Start()
     {
         image = GetComponent<Image>();
-        StartCoroutine(toClear());
-    }
+        StartCoroutine(toClear((finished1) => { }));
+        }
 
-    public IEnumerator toClear()
+    public IEnumerator toClear(System.Action<bool> callback) // Callback allows for returning of variable (in this case, whether or not the coroutine has finished)
     {
         for (float i = image.color.a; i >= 0; i -= speed * Time.deltaTime) // Repeat many times for a smooth fade,
         {
@@ -29,6 +29,7 @@ public class Fade : MonoBehaviour
 
             yield return null;
         }
+        callback(true); // Return true (coroutine has finished)
     }
 
     public IEnumerator toBlack(System.Action<bool> callback) // Callback allows for returning of variable (in this case, whether or not the coroutine has finished)
