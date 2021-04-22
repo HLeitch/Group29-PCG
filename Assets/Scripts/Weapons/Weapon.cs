@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
 
     public string GetName()
     {
-        weaponName = modifier.gameObject.name + " " + blade.gameObject.name + " " + this.tag + " of " + effect.gameObject.name;
+        weaponName = /*modifier.gameObject.name + " " + */blade.gameObject.name + " " + this.tag/* + " of " + effect.gameObject.name*/;
         name = weaponName;
         return weaponName;
     }
