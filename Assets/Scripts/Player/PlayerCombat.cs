@@ -108,7 +108,7 @@ public class PlayerCombat : MonoBehaviour
                 timeBetweenAttack = startTimeBetweenAttack;
                 weaponAnimator.SetBool("Swinging", true);
                 swinging = true;
-                weapon.bladeCollider.enabled = true;
+              weapon.bladeCollider.enabled = true;
                 yield return new WaitForSeconds(0.3f);
                 weaponAnimator.SetBool("Swinging", false);
                 
