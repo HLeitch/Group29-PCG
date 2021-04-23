@@ -32,6 +32,12 @@ public class RoomEnemiesManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        
+
+    }
+
     /// <summary>
     /// Total Enemies not dead
     /// </summary>
