@@ -66,9 +66,9 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 93420fc10ad1daf4a82c91fbcb19c0d2, type: 3}
-    m_FontSize: 14
+    m_FontSize: 58
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
     m_Alignment: 4
@@ -222,4 +222,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44903f293b4cfcc499a51c5dd15dd725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneStartInteractionDelay: 1

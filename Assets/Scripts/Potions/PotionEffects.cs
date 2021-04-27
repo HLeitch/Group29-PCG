@@ -8,7 +8,7 @@ public class PotionEffects : MonoBehaviour
     private PlayerMovement movement;
 
     [SerializeField]
-    private Weapon weapon;
+    private GameObject weapon;
 
     [SerializeField]
     private GameObject particles_prefab;
@@ -27,6 +27,8 @@ public class PotionEffects : MonoBehaviour
         ParticleSystem parts = particles(Color.red);
         combat.Heal(amount);
         yield return new WaitForSeconds(3);
+        parts.Stop();
+        yield return new WaitForSeconds(1);
         Destroy(parts.gameObject);
     }
 
@@ -35,6 +37,8 @@ public class PotionEffects : MonoBehaviour
         ParticleSystem parts = particles(Color.green);
         movement.speed += amount;
         yield return new WaitForSeconds(effect_time);
+        parts.Stop();
+        yield return new WaitForSeconds(effect_time / 10);
         movement.speed -= amount;
         Destroy(parts.gameObject);
     }
@@ -42,18 +46,22 @@ public class PotionEffects : MonoBehaviour
     private IEnumerator damageCoroutine(float amount)
     {
         ParticleSystem parts = particles(Color.blue);
-        weapon.damage += amount;
+        weapon.GetComponentInChildren<Blade>().damage += amount;
         yield return new WaitForSeconds(effect_time);
-        weapon.damage -= amount;
+        parts.Stop();
+        yield return new WaitForSeconds(effect_time / 10);
+        weapon.GetComponentInChildren<Blade>().damage -= amount;
         Destroy(parts.gameObject);
     }
 
     private IEnumerator attackSpeedCoroutine(int amount)
     {
         ParticleSystem parts = particles(Color.yellow);
-        weapon.speed -= amount;
+        weapon.GetComponent<Weapon>().speed += amount;
         yield return new WaitForSeconds(effect_time);
-        weapon.speed -= amount;
+        parts.Stop();
+        yield return new WaitForSeconds(effect_time/10);
+        weapon.GetComponent<Weapon>().speed -= amount;
         Destroy(parts.gameObject);
     }
 

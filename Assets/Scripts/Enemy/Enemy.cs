@@ -129,7 +129,7 @@ public class Enemy : MonoBehaviour
 
         health += Value;
         healthBar.ChangeHealth(health/maxHealth);
-  rem.EnemyDamaged(Value);
+        rem.EnemyDamaged(Value);
 
         if (health <=0)
         {
@@ -220,6 +220,8 @@ public class Enemy : MonoBehaviour
 
     void Dead()
     {
+        GetComponent<PotionDrop>().drop();
+        player.GetComponent<PlayerWin>().kill();
         Destroy(healthBar.gameObject);
         Destroy(this.gameObject);
 

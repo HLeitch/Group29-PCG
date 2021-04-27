@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 22572860}
   - component: {fileID: 22572862}
   - component: {fileID: 22572861}
+  - component: {fileID: 22572863}
   m_Layer: 0
   m_Name: Room 12
   m_TagString: Untagged
@@ -321,178 +322,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
---- !u!1 &24319319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 24319320}
-  - component: {fileID: 24319323}
-  - component: {fileID: 24319322}
-  - component: {fileID: 24319321}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &24319320
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24319319}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 420221784}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -233.8, y: -32}
-  m_SizeDelta: {x: 239.59497, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &24319321
+--- !u!114 &22572863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24319319}
+  m_GameObject: {fileID: 22572859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d2ad6f5712502438259e09e59eed55, type: 3}
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMesh: {fileID: 0}
-  timer: 0
-  descriptorText: Time
---- !u!114 &24319322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24319319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: TIME
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_outlineColor:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_textAlignment: 2052
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
-  m_linkedTextComponent: {fileID: 0}
-  m_isLinkedTextComponent: 0
-  m_isTextTruncated: 0
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_ignoreRectMaskCulling: 0
-  m_ignoreCulling: 1
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_VertexBufferAutoSizeReduction: 1
-  m_firstVisibleCharacter: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: -123.918816, y: 0, z: 97.113075, w: 0}
-  m_textInfo:
-    textComponent: {fileID: 24319322}
-    characterCount: 4
-    spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
-    linkCount: 0
-    lineCount: 1
-    pageCount: 1
-    materialCount: 1
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
-  m_subTextObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &24319323
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24319319}
-  m_CullTransparentMesh: 0
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &43637632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1026,6 +873,7 @@ GameObject:
   - component: {fileID: 71854675}
   - component: {fileID: 71854677}
   - component: {fileID: 71854676}
+  - component: {fileID: 71854678}
   m_Layer: 0
   m_Name: Room 27
   m_TagString: Untagged
@@ -1090,6 +938,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &71854678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71854674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &76820902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -1311,6 +1177,7 @@ GameObject:
   - component: {fileID: 87258535}
   - component: {fileID: 87258537}
   - component: {fileID: 87258536}
+  - component: {fileID: 87258538}
   m_Layer: 0
   m_Name: Room 51
   m_TagString: Untagged
@@ -1375,6 +1242,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &87258538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87258534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &87639031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1526,6 +1411,7 @@ GameObject:
   - component: {fileID: 97757248}
   - component: {fileID: 97757250}
   - component: {fileID: 97757249}
+  - component: {fileID: 97757251}
   m_Layer: 0
   m_Name: Room 32
   m_TagString: Untagged
@@ -1589,6 +1475,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &97757251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97757247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &98890601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1504,7 @@ GameObject:
   - component: {fileID: 98890602}
   - component: {fileID: 98890604}
   - component: {fileID: 98890603}
+  - component: {fileID: 98890605}
   m_Layer: 0
   m_Name: Room 9
   m_TagString: Untagged
@@ -1663,6 +1568,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &98890605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98890601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &98907832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,6 +2122,7 @@ GameObject:
   - component: {fileID: 123859726}
   - component: {fileID: 123859728}
   - component: {fileID: 123859727}
+  - component: {fileID: 123859729}
   m_Layer: 0
   m_Name: Room 31
   m_TagString: Untagged
@@ -2262,6 +2186,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &123859729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123859725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &124086725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -3644,7 +3586,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1478865225
-  m_SortingLayer: -3
+  m_SortingLayer: -2
   m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -5063,6 +5005,7 @@ GameObject:
   - component: {fileID: 139033338}
   - component: {fileID: 139033340}
   - component: {fileID: 139033339}
+  - component: {fileID: 139033341}
   m_Layer: 0
   m_Name: Room 30
   m_TagString: Untagged
@@ -5126,6 +5069,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &139033341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139033337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &140745021
 GameObject:
   m_ObjectHideFlags: 0
@@ -5679,6 +5640,7 @@ GameObject:
   - component: {fileID: 161639387}
   - component: {fileID: 161639389}
   - component: {fileID: 161639388}
+  - component: {fileID: 161639390}
   m_Layer: 0
   m_Name: Room 47
   m_TagString: Untagged
@@ -5742,6 +5704,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &161639390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161639386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &162097671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6733,6 +6713,7 @@ GameObject:
   - component: {fileID: 237686254}
   - component: {fileID: 237686256}
   - component: {fileID: 237686255}
+  - component: {fileID: 237686257}
   m_Layer: 0
   m_Name: Room 11
   m_TagString: Untagged
@@ -6796,6 +6777,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &237686257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237686253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &238023363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6891,6 +6890,7 @@ GameObject:
   - component: {fileID: 242410690}
   - component: {fileID: 242410692}
   - component: {fileID: 242410691}
+  - component: {fileID: 242410693}
   m_Layer: 0
   m_Name: Room 29
   m_TagString: Untagged
@@ -6954,6 +6954,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &242410693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242410689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &252890991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7519,6 +7537,7 @@ GameObject:
   - component: {fileID: 281919067}
   - component: {fileID: 281919069}
   - component: {fileID: 281919068}
+  - component: {fileID: 281919070}
   m_Layer: 0
   m_Name: Room 26
   m_TagString: Untagged
@@ -7582,6 +7601,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &281919070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281919066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &286856785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10071,7 +10108,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1478865225
-  m_SortingLayer: -3
+  m_SortingLayer: -2
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -23035,6 +23072,7 @@ GameObject:
   - component: {fileID: 307946299}
   - component: {fileID: 307946301}
   - component: {fileID: 307946300}
+  - component: {fileID: 307946302}
   m_Layer: 0
   m_Name: Room 40
   m_TagString: Untagged
@@ -23098,6 +23136,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &307946302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307946298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &308028833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23676,6 +23732,7 @@ GameObject:
   - component: {fileID: 354505765}
   - component: {fileID: 354505767}
   - component: {fileID: 354505766}
+  - component: {fileID: 354505768}
   m_Layer: 0
   m_Name: Room 36
   m_TagString: Untagged
@@ -23739,6 +23796,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &354505768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354505764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &358589454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -24053,6 +24128,7 @@ GameObject:
   - component: {fileID: 385422660}
   - component: {fileID: 385422663}
   - component: {fileID: 385422662}
+  - component: {fileID: 385422664}
   m_Layer: 0
   m_Name: Room 2
   m_TagString: Untagged
@@ -24101,6 +24177,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &385422664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385422661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &392901671
 GameObject:
   m_ObjectHideFlags: 0
@@ -24112,6 +24206,7 @@ GameObject:
   - component: {fileID: 392901672}
   - component: {fileID: 392901674}
   - component: {fileID: 392901673}
+  - component: {fileID: 392901675}
   m_Layer: 0
   m_Name: Room 15
   m_TagString: Untagged
@@ -24175,6 +24270,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &392901675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392901671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &393319264
 GameObject:
   m_ObjectHideFlags: 0
@@ -24352,7 +24465,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 847536713
-  m_SortingLayer: -4
+  m_SortingLayer: -3
   m_SortingOrder: -10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -42943,6 +43056,7 @@ GameObject:
   - component: {fileID: 414095134}
   - component: {fileID: 414095136}
   - component: {fileID: 414095135}
+  - component: {fileID: 414095137}
   m_Layer: 0
   m_Name: Room 13
   m_TagString: Untagged
@@ -43006,6 +43120,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &414095137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414095133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &414468251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43367,11 +43499,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4243634382233421807, guid: e9acd706c7a829e42b9df57ed4ec88a8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 67.8999
-      objectReference: {fileID: 0}
     - target: {fileID: 4243634382562633161, guid: e9acd706c7a829e42b9df57ed4ec88a8,
         type: 3}
       propertyPath: m_Name
@@ -43482,34 +43609,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5856025457551776701, guid: e9acd706c7a829e42b9df57ed4ec88a8,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856025457551776701, guid: e9acd706c7a829e42b9df57ed4ec88a8,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856025457551776701, guid: e9acd706c7a829e42b9df57ed4ec88a8,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856025457551776701, guid: e9acd706c7a829e42b9df57ed4ec88a8,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9acd706c7a829e42b9df57ed4ec88a8, type: 3}
---- !u!224 &420221784 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4243634383118772257, guid: e9acd706c7a829e42b9df57ed4ec88a8,
-    type: 3}
-  m_PrefabInstance: {fileID: 420221783}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &421763277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -43550,6 +43651,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9f7e19ab477184f98100115cbd22d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &422002620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422002617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5661356572018e44d8df38b75623c838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomsDataGatherer: {fileID: 785742082}
+  maxTestTimer: 0
 --- !u!1 &425735609
 GameObject:
   m_ObjectHideFlags: 0
@@ -44178,6 +44293,11 @@ PrefabInstance:
       propertyPath: playerKnockbackLength
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 6106651768012389615, guid: 8f46fdd0095e143419fb13c1b78959a5,
+        type: 3}
+      propertyPath: noOfEnemies
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 9146750489386661584, guid: 8f46fdd0095e143419fb13c1b78959a5,
         type: 3}
       propertyPath: m_Name
@@ -44545,6 +44665,7 @@ GameObject:
   - component: {fileID: 482601525}
   - component: {fileID: 482601527}
   - component: {fileID: 482601526}
+  - component: {fileID: 482601528}
   m_Layer: 0
   m_Name: Room 49
   m_TagString: Untagged
@@ -44608,6 +44729,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &482601528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482601524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &486428494
 GameObject:
   m_ObjectHideFlags: 0
@@ -45077,6 +45216,7 @@ GameObject:
   - component: {fileID: 508819580}
   - component: {fileID: 508819582}
   - component: {fileID: 508819581}
+  - component: {fileID: 508819583}
   m_Layer: 0
   m_Name: Room 38
   m_TagString: Untagged
@@ -45141,6 +45281,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &508819583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508819579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &510884923
 GameObject:
   m_ObjectHideFlags: 0
@@ -45439,6 +45597,7 @@ GameObject:
   - component: {fileID: 522438725}
   - component: {fileID: 522438727}
   - component: {fileID: 522438726}
+  - component: {fileID: 522438728}
   m_Layer: 0
   m_Name: Room 52
   m_TagString: Untagged
@@ -45502,6 +45661,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &522438728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522438724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &523943754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45762,6 +45939,7 @@ GameObject:
   - component: {fileID: 561432417}
   - component: {fileID: 561432416}
   - component: {fileID: 561432415}
+  - component: {fileID: 561432418}
   m_Layer: 0
   m_Name: Room 1
   m_TagString: Untagged
@@ -45843,6 +46021,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &561432418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561432413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &564276168
 GameObject:
   m_ObjectHideFlags: 0
@@ -46070,6 +46266,7 @@ GameObject:
   - component: {fileID: 569471014}
   - component: {fileID: 569471016}
   - component: {fileID: 569471015}
+  - component: {fileID: 569471017}
   m_Layer: 0
   m_Name: Room 41
   m_TagString: Untagged
@@ -46134,6 +46331,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &569471017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569471013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &574963925
 GameObject:
   m_ObjectHideFlags: 0
@@ -46671,6 +46886,7 @@ GameObject:
   - component: {fileID: 619373920}
   - component: {fileID: 619373922}
   - component: {fileID: 619373921}
+  - component: {fileID: 619373923}
   m_Layer: 0
   m_Name: Room 33
   m_TagString: Untagged
@@ -46735,6 +46951,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &619373923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619373919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &622416510
 GameObject:
   m_ObjectHideFlags: 0
@@ -46746,6 +46980,7 @@ GameObject:
   - component: {fileID: 622416511}
   - component: {fileID: 622416513}
   - component: {fileID: 622416512}
+  - component: {fileID: 622416514}
   m_Layer: 0
   m_Name: Room 34
   m_TagString: Untagged
@@ -46809,6 +47044,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &622416514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622416510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &630040431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47126,6 +47379,7 @@ GameObject:
   - component: {fileID: 650235739}
   - component: {fileID: 650235741}
   - component: {fileID: 650235740}
+  - component: {fileID: 650235742}
   m_Layer: 0
   m_Name: Room 21
   m_TagString: Untagged
@@ -47191,6 +47445,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &650235742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650235738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &654632101
 GameObject:
   m_ObjectHideFlags: 0
@@ -47432,6 +47704,7 @@ GameObject:
   - component: {fileID: 667213975}
   - component: {fileID: 667213977}
   - component: {fileID: 667213976}
+  - component: {fileID: 667213978}
   m_Layer: 0
   m_Name: Room 4
   m_TagString: Untagged
@@ -47495,6 +47768,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &667213978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667213974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &673122250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47878,6 +48169,7 @@ GameObject:
   - component: {fileID: 708856502}
   - component: {fileID: 708856504}
   - component: {fileID: 708856503}
+  - component: {fileID: 708856505}
   m_Layer: 0
   m_Name: Room 25
   m_TagString: Untagged
@@ -47944,6 +48236,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &708856505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708856501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &710233212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48658,11 +48968,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomEnemyObjects: []
+  pg: {fileID: 0}
   totalEnemiesInLevel: 0
   timeTakenToClearLastRoom: 999.9
   enemiesKilledPerSecondInLastRoom: 999.9
-  damageInLast20Seconds: 0
-  maxDamageTimer: 20
+  playerHealthChangeLastPeriod: 0
+  enemiesKilledinLastPeriod: 0
+  damageInLastPeriod: 0
+  maxPeriodTimer: 20
 --- !u!114 &785742083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48760,6 +49073,7 @@ GameObject:
   - component: {fileID: 788725022}
   - component: {fileID: 788725024}
   - component: {fileID: 788725023}
+  - component: {fileID: 788725025}
   m_Layer: 0
   m_Name: Room 16
   m_TagString: Untagged
@@ -48825,6 +49139,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &788725025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788725021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &799939697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -49200,6 +49532,7 @@ GameObject:
   - component: {fileID: 826049391}
   - component: {fileID: 826049393}
   - component: {fileID: 826049392}
+  - component: {fileID: 826049394}
   m_Layer: 0
   m_Name: Room 6
   m_TagString: Untagged
@@ -49263,6 +49596,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &826049394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826049390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &827311476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50561,6 +50912,7 @@ GameObject:
   - component: {fileID: 905517525}
   - component: {fileID: 905517527}
   - component: {fileID: 905517526}
+  - component: {fileID: 905517528}
   m_Layer: 0
   m_Name: Room 44
   m_TagString: Untagged
@@ -50625,6 +50977,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &905517528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905517524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!114 &912267590 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7820785352170741850, guid: 96fa78feb0cd41c499b05be79023b30d,
@@ -51120,6 +51490,7 @@ GameObject:
   - component: {fileID: 947377680}
   - component: {fileID: 947377682}
   - component: {fileID: 947377681}
+  - component: {fileID: 947377683}
   m_Layer: 0
   m_Name: Room 46
   m_TagString: Untagged
@@ -51183,6 +51554,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &947377683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947377679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &948127115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8354067717060810303, guid: a35847e46aa86f94d81cda1933203290,
@@ -52387,6 +52776,7 @@ GameObject:
   - component: {fileID: 1067885147}
   - component: {fileID: 1067885149}
   - component: {fileID: 1067885148}
+  - component: {fileID: 1067885150}
   m_Layer: 0
   m_Name: Room 45
   m_TagString: Untagged
@@ -52450,6 +52840,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1067885150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067885146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &1071363105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54557,6 +54965,7 @@ GameObject:
   - component: {fileID: 1175213833}
   - component: {fileID: 1175213835}
   - component: {fileID: 1175213834}
+  - component: {fileID: 1175213836}
   m_Layer: 0
   m_Name: Room 54
   m_TagString: Untagged
@@ -54623,6 +55032,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1175213836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175213832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &1181010688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -55367,7 +55794,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1478865225
-  m_SortingLayer: -3
+  m_SortingLayer: -2
   m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -57236,6 +57663,7 @@ GameObject:
   - component: {fileID: 1319053631}
   - component: {fileID: 1319053633}
   - component: {fileID: 1319053632}
+  - component: {fileID: 1319053634}
   m_Layer: 0
   m_Name: Room 48
   m_TagString: Untagged
@@ -57301,6 +57729,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1319053634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319053630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &1322637238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -57318,6 +57764,7 @@ GameObject:
   - component: {fileID: 1326802001}
   - component: {fileID: 1326802003}
   - component: {fileID: 1326802002}
+  - component: {fileID: 1326802004}
   m_Layer: 0
   m_Name: Room 42
   m_TagString: Untagged
@@ -57381,6 +57828,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1326802004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326802000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &1330513074
 GameObject:
   m_ObjectHideFlags: 0
@@ -57392,6 +57857,7 @@ GameObject:
   - component: {fileID: 1330513075}
   - component: {fileID: 1330513077}
   - component: {fileID: 1330513076}
+  - component: {fileID: 1330513078}
   m_Layer: 0
   m_Name: Room 17
   m_TagString: Untagged
@@ -57456,6 +57922,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1330513078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330513074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &1346279143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -57695,6 +58179,7 @@ GameObject:
   - component: {fileID: 1376569179}
   - component: {fileID: 1376569181}
   - component: {fileID: 1376569180}
+  - component: {fileID: 1376569182}
   m_Layer: 0
   m_Name: Room 39
   m_TagString: Untagged
@@ -57758,6 +58243,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1376569182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376569178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &1383905474 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6808892744624295603, guid: 0eb69e7bbf424f24bbf97fb393ff3e00,
@@ -58145,6 +58648,7 @@ GameObject:
   - component: {fileID: 1452543608}
   - component: {fileID: 1452543610}
   - component: {fileID: 1452543609}
+  - component: {fileID: 1452543611}
   m_Layer: 0
   m_Name: Room 28
   m_TagString: Untagged
@@ -58209,6 +58713,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1452543611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452543607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &1459947478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58509,6 +59031,7 @@ GameObject:
   - component: {fileID: 1478535236}
   - component: {fileID: 1478535238}
   - component: {fileID: 1478535237}
+  - component: {fileID: 1478535239}
   m_Layer: 0
   m_Name: Room 7
   m_TagString: Untagged
@@ -58573,6 +59096,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1478535239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478535235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &1483315015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58669,6 +59210,7 @@ GameObject:
   - component: {fileID: 1496888321}
   - component: {fileID: 1496888323}
   - component: {fileID: 1496888322}
+  - component: {fileID: 1496888324}
   m_Layer: 0
   m_Name: Room 43
   m_TagString: Untagged
@@ -58732,6 +59274,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1496888324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496888320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &1497275496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58887,6 +59447,7 @@ GameObject:
   - component: {fileID: 1510016904}
   - component: {fileID: 1510016906}
   - component: {fileID: 1510016905}
+  - component: {fileID: 1510016907}
   m_Layer: 0
   m_Name: Room 18
   m_TagString: Untagged
@@ -58950,6 +59511,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1510016907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510016903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &1513453943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -59250,6 +59829,7 @@ GameObject:
   - component: {fileID: 1536648139}
   - component: {fileID: 1536648141}
   - component: {fileID: 1536648140}
+  - component: {fileID: 1536648142}
   m_Layer: 0
   m_Name: Room 24
   m_TagString: Untagged
@@ -59313,6 +59893,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1536648142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536648138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &1551053787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 286351325520958455, guid: 1250f564829608b40a3d7c2c3419ea21,
@@ -59510,6 +60108,7 @@ GameObject:
   - component: {fileID: 1555799114}
   - component: {fileID: 1555799116}
   - component: {fileID: 1555799115}
+  - component: {fileID: 1555799117}
   m_Layer: 0
   m_Name: Room 10
   m_TagString: Untagged
@@ -59576,6 +60175,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1555799117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555799113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &1558128546
 GameObject:
   m_ObjectHideFlags: 0
@@ -59587,6 +60204,7 @@ GameObject:
   - component: {fileID: 1558128547}
   - component: {fileID: 1558128549}
   - component: {fileID: 1558128548}
+  - component: {fileID: 1558128550}
   m_Layer: 0
   m_Name: Room 22
   m_TagString: Untagged
@@ -59650,6 +60268,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1558128550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558128546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &1579559868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -60065,6 +60701,7 @@ GameObject:
   - component: {fileID: 1599422738}
   - component: {fileID: 1599422740}
   - component: {fileID: 1599422739}
+  - component: {fileID: 1599422741}
   m_Layer: 0
   m_Name: Room 37
   m_TagString: Untagged
@@ -60129,6 +60766,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1599422741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599422737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &1602949823
 GameObject:
   m_ObjectHideFlags: 0
@@ -60188,6 +60843,7 @@ GameObject:
   - component: {fileID: 1614589877}
   - component: {fileID: 1614589879}
   - component: {fileID: 1614589878}
+  - component: {fileID: 1614589880}
   m_Layer: 0
   m_Name: Room 20
   m_TagString: Untagged
@@ -60251,6 +60907,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1614589880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614589876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &1614695585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8354067717060810303, guid: a35847e46aa86f94d81cda1933203290,
@@ -61826,6 +62500,7 @@ GameObject:
   - component: {fileID: 1766797506}
   - component: {fileID: 1766797508}
   - component: {fileID: 1766797507}
+  - component: {fileID: 1766797509}
   m_Layer: 0
   m_Name: Room 19
   m_TagString: Untagged
@@ -61890,6 +62565,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1766797509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766797505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &1769129358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62730,6 +63423,7 @@ GameObject:
   - component: {fileID: 1875458568}
   - component: {fileID: 1875458570}
   - component: {fileID: 1875458569}
+  - component: {fileID: 1875458571}
   m_Layer: 0
   m_Name: Room 3
   m_TagString: Untagged
@@ -62793,6 +63487,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1875458571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875458567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &1877700880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -62996,6 +63708,7 @@ GameObject:
   - component: {fileID: 1890936635}
   - component: {fileID: 1890936637}
   - component: {fileID: 1890936636}
+  - component: {fileID: 1890936638}
   m_Layer: 0
   m_Name: Room 5
   m_TagString: Untagged
@@ -63059,6 +63772,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1890936638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890936634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &1892259453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63154,6 +63885,7 @@ GameObject:
   - component: {fileID: 1900892783}
   - component: {fileID: 1900892785}
   - component: {fileID: 1900892784}
+  - component: {fileID: 1900892786}
   m_Layer: 0
   m_Name: Room 23
   m_TagString: Untagged
@@ -63217,6 +63949,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1900892786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900892782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1 &1901951378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8354067717060810303, guid: a35847e46aa86f94d81cda1933203290,
@@ -63258,6 +64008,7 @@ GameObject:
   - component: {fileID: 1910664881}
   - component: {fileID: 1910664883}
   - component: {fileID: 1910664882}
+  - component: {fileID: 1910664884}
   m_Layer: 0
   m_Name: Room 8
   m_TagString: Untagged
@@ -63321,6 +64072,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1910664884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910664880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &1914421818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6808892744624295603, guid: 0eb69e7bbf424f24bbf97fb393ff3e00,
@@ -63847,6 +64616,7 @@ GameObject:
   - component: {fileID: 1955917795}
   - component: {fileID: 1955917797}
   - component: {fileID: 1955917796}
+  - component: {fileID: 1955917798}
   m_Layer: 0
   m_Name: Room 35
   m_TagString: Untagged
@@ -63912,6 +64682,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1955917798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955917794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &1957314961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64411,6 +65199,7 @@ GameObject:
   - component: {fileID: 1995536693}
   - component: {fileID: 1995536695}
   - component: {fileID: 1995536694}
+  - component: {fileID: 1995536696}
   m_Layer: 0
   m_Name: Room 50
   m_TagString: Untagged
@@ -64474,6 +65263,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &1995536696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995536692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!1001 &1996787691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65175,7 +65982,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 9a32a0ff8d74be248ae871ecabd090e8, type: 3}
-  m_Color: {r: 0.10588236, g: 0.06666667, b: 0.09411766, a: 0.935}
+  m_Color: {r: 0.10588236, g: 0.06666667, b: 0.09411766, a: 0.012912042}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -66186,6 +66993,7 @@ GameObject:
   - component: {fileID: 2109538331}
   - component: {fileID: 2109538333}
   - component: {fileID: 2109538332}
+  - component: {fileID: 2109538334}
   m_Layer: 0
   m_Name: Room 53
   m_TagString: Untagged
@@ -66249,6 +67057,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &2109538334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109538330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &2116685588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
@@ -66314,6 +67140,7 @@ GameObject:
   - component: {fileID: 2120898381}
   - component: {fileID: 2120898383}
   - component: {fileID: 2120898382}
+  - component: {fileID: 2120898384}
   m_Layer: 0
   m_Name: Room 14
   m_TagString: Untagged
@@ -66377,6 +67204,24 @@ MonoBehaviour:
   gizmoOpacity: 0.3
   darknessOpacity: 0.935
   darknessOpacitySpeed: 10
+--- !u!114 &2120898384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120898380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a131e552ba674db72e4b92ed414af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRoom: []
+  weaponManager: {fileID: 0}
+  active: 0
+  roomExplored: 0
+  timeTakenToClearRoom: 0
+  enemiesRemaining: 0
 --- !u!4 &2127658119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 286351325520958448, guid: 1250f564829608b40a3d7c2c3419ea21,

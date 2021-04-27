@@ -5,15 +5,15 @@ using UnityEngine.Events;
 
 public class Potion : MonoBehaviour
 {
-    [SerializeField]
-    private UnityEvent effect;
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // TODO: Add particle & sound effects
         if (collision.gameObject.CompareTag("Player"))
         {
-            effect.Invoke();
+            PotionEffects effects = collision.gameObject.GetComponent<PotionEffects>();
+            if (name.Contains("Health")) effects.health(1000);
+            if (name.Contains("Damage")) effects.damageBoost(10);
+            if (name.Contains("Speed")) effects.speed(50);
+            if (name.Contains("Attack")) effects.attackSpeed(10);
             Destroy(gameObject);
         }
     }
