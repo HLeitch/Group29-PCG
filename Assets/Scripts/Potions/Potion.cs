@@ -9,6 +9,8 @@ public class Potion : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            SoundManager.playSound("potion_sound");
+
             PotionEffects effects = collision.gameObject.GetComponent<PotionEffects>();
             if (name.Contains("Health")) effects.health(1000);
             if (name.Contains("Damage")) effects.damageBoost(10);

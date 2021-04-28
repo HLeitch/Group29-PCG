@@ -34,6 +34,8 @@ public class SoundSlider : MonoBehaviour
                 audioSource.volume = PlayerPrefs.GetFloat("Sound");
             }
         }
+
+        SoundManager.playSound("ui_sound", 1, 1, false, false);
     }
 
     private void setValueText(float value)

@@ -36,10 +36,12 @@ public class PlayerVisuals : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             if (parts.isPlaying) parts.Stop();
+            SoundManager.stopSoundLoop("player_walk_sound");
         }
         else
         {
             if (!parts.isPlaying) parts.Play();
+            SoundManager.playSound("player_walk_sound", 0.1f, Random.Range(0.75f, 1.25f), true, false);
         }
         anim.SetFloat("Velocity", rb.velocity.magnitude);
     }

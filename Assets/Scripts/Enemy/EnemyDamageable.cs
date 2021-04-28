@@ -39,6 +39,7 @@ public class EnemyDamageable : MonoBehaviour,IDamageable
 
        if ((collision.gameObject.tag == "Blade")&&(collision.gameObject.layer != 9))
         {
+            SoundManager.playSound("hit_sound", 1, collision.GetComponent<Blade>().damage/10);
 
             ChangeHealth(-collision.gameObject.GetComponent<Blade>().damage);
 

@@ -29,6 +29,8 @@ public class PlayerDeath : MonoBehaviour
 
     private void killPlayer()
     {
+        SoundManager.playSound("player_death_sound", 1, 1, false, false);
+
         StartCoroutine(fade.toBlack((finished1) => {            // Start a coroutine to fade the screen to black.
 
             StartCoroutine(deathImage.toBlack((finished2) => {   // When it finishes, fade the death image in,

@@ -151,6 +151,8 @@ public class Enemy : MonoBehaviour
 
     void dyingEffect()
     {
+        SoundManager.playSound("enemy_death_sound", 1, 1, false, false);
+
         animator.enabled = false;
 
         gameObject.transform.localScale = new Vector3(1, transform.localScale.y - shrinkScale, 1);

@@ -278,8 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac483da5480466d41816c545c12c5f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 75
-  drag: 0.875
+  speed: 100
+  drag: 0.75
   weapon_weight: 0
   playerKnockback: 0
   playerKnockbackLength: 0.2
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da610924db9e5f42a24bede65b80667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateTime: 3
+  noOfEnemies: 0
 --- !u!114 &6735963919108396744
 MonoBehaviour:
   m_ObjectHideFlags: 0
