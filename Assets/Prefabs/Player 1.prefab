@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da610924db9e5f42a24bede65b80667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noOfEnemies: 0
+  noOfEnemies: 19
 --- !u!114 &6735963919108396744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5166,6 +5166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26faf2ad9e738014a918769ab821b5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSprite: {fileID: 9146750488640456295}
 --- !u!1 &9146750490199285500
 GameObject:
   m_ObjectHideFlags: 0

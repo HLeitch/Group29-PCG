@@ -12,6 +12,8 @@ public class PlayerDamageable : MonoBehaviour,IDamageable
     float maxInvunerableTime = 0.2f;
     bool invunerable = false;
     PlayerCombat myPlayer;
+    [SerializeField]
+    SpriteRenderer playerSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,8 @@ public class PlayerDamageable : MonoBehaviour,IDamageable
                     ChangeHealth(collision.GetComponent<Blade>().damage);
                     invunerable = true;
                     invunerableTime = maxInvunerableTime;
+                    StartCoroutine(Flash());
+                    
 
                     Debug.Log("Starting Knockback");
                     var playerMov = FindObjectOfType<PlayerMovement>();
@@ -66,4 +70,16 @@ public class PlayerDamageable : MonoBehaviour,IDamageable
         myPlayer.TakeDamage(Mathf.RoundToInt(amount));
 
     }
+
+
+    IEnumerator Flash()
+    {
+        while (invunerable)
+        {
+            playerSprite.color = Color.red;
+            yield return new WaitForSeconds(0.1f);
+            playerSprite.color = Color.white;
+        }
+    }
+
 }

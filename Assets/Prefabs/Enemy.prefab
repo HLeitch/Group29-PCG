@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEnemy: {fileID: 7820785352170741850}
+  enemySprite: {fileID: 2710120142710116028}
 --- !u!1 &7820785352170741829
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7820785352170741849
 Transform:
   m_ObjectHideFlags: 0
