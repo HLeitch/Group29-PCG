@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myEnemy: {fileID: 7820785352170741850}
+  enemySprite: {fileID: 2710120142710116028}
 --- !u!1 &7820785352170741829
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7820785352170741849}
   - component: {fileID: 7820785352170741850}
+  - component: {fileID: 2891568376629370410}
   - component: {fileID: 5320538496354845839}
   - component: {fileID: 3206511436781495523}
   m_Layer: 9
@@ -330,7 +332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7820785352170741849
 Transform:
   m_ObjectHideFlags: 0
@@ -372,6 +374,29 @@ MonoBehaviour:
   healthBarPostitionTarget: {fileID: 1814828939}
   rem: {fileID: 0}
   weaponAnimator: {fileID: 1453437072}
+  myBladeCollider: {fileID: 0}
+  maxTimeBetweenAttacks: 0
+  enemyKnockback: 0
+  enemyKnockbackLength: 0
+  enemyKnockBackCount: 0
+  knockFromRight: 0
+--- !u!114 &2891568376629370410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820785352170741829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd085a24be15b8429ea8e3206311c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potions:
+  - {fileID: 6925540200807008743, guid: dbcb442b4c521f545b643db5bacab817, type: 3}
+  - {fileID: 6569526857582771689, guid: 12b25981aee40374f9b82bd0fc60e43f, type: 3}
+  - {fileID: 4996038157991673264, guid: 7c6a40121bdf55042b45e19e680a54cf, type: 3}
+  - {fileID: 1580081935757120676, guid: de6a588b606a7454ca7025c3ade923ad, type: 3}
 --- !u!95 &5320538496354845839
 Animator:
   serializedVersion: 3

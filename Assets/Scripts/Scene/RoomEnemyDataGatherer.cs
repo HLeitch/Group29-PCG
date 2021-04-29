@@ -6,16 +6,27 @@ public class RoomEnemyDataGatherer : MonoBehaviour
 {
     [SerializeField]
     RoomEnemiesManager[] roomEnemyObjects;
+    PlayerCombat pc;
+    public ProceduralGenerationData pg;
+
 
     public int totalEnemiesInLevel;
     float startTime;
     public float timeTakenToClearLastRoom=999.9f;
     public float enemiesKilledPerSecondInLastRoom = 999.9f;
 
-    public float damageInLast20Seconds;
+    int EnemiesKilledInLastPeriod = 0;
+
+     int playerHealthLastPeriod = 0;
+   public int playerHealthChangeLastPeriod = 0;
+
+    public int enemiesKilledinLastPeriod;
+    int enemiesKilledBeforeThisPeriod;
+
+    public float damageInLastPeriod;
     float damageCounter = 0;
-    float damageTimer;
-    public float maxDamageTimer = 20f;
+    float periodTimer;
+    public float maxPeriodTimer = 20f;
 
 
     // Start is called before the first frame update
@@ -26,7 +37,10 @@ public class RoomEnemyDataGatherer : MonoBehaviour
         totalEnemiesInLevel = TotalEnemies();
 
         startTime = Time.time;
-        damageTimer = maxDamageTimer;
+        periodTimer = maxPeriodTimer;
+
+        pc = FindObjectOfType<PlayerCombat>();
+        playerHealthLastPeriod = pc.getHealth();
 
         Debug.Log("Time " + startTime);
     }
@@ -34,6 +48,7 @@ public class RoomEnemyDataGatherer : MonoBehaviour
     public void enemyDamaged(float damageTaken)
     {
         damageCounter -= damageTaken;
+        Debug.Log("enemyDamaged");
 
     }
 
@@ -44,12 +59,14 @@ public class RoomEnemyDataGatherer : MonoBehaviour
 
         foreach (RoomEnemiesManager r in roomEnemyObjects)
         {
-            
-             { stillLiving += r.currentEnemyCount(); 
-            
+            if (r.active)
+            {
+                {
+                    stillLiving += r.currentEnemyCount();
+
+                }
             }
-
-
+            
         }
         return totalEnemiesInLevel - stillLiving;
 
@@ -117,7 +134,7 @@ public class RoomEnemyDataGatherer : MonoBehaviour
             "\n Rate of Enemies Killed : " + EnemiesKilledPerSecond() +
             "\n Time taken in last room: " + timeTakenToClearLastRoom +
             "\n Rate of enemy kill in last room" + enemiesKilledPerSecondInLastRoom +
-            "\n Enemy damage in last 20 seconds: " + damageInLast20Seconds);
+            "\n Enemy damage in last 20 seconds: " + damageInLastPeriod);
 
 
     }
@@ -128,14 +145,25 @@ public class RoomEnemyDataGatherer : MonoBehaviour
     void Update()
     {
 
+        if(TotalActiveEnemies()  > 0)
+        { periodTimer -= Time.deltaTime; }
 
-        damageTimer -= Time.deltaTime;
-        if(damageTimer <= 0)
+       
+        if(periodTimer <= 0)
         {
-            damageTimer = maxDamageTimer;
-            damageInLast20Seconds = damageCounter;
+            periodTimer = maxPeriodTimer;
+            damageInLastPeriod = damageCounter;
             damageCounter = 0;
 
+            enemiesKilledinLastPeriod = (EnemiesKilled() - enemiesKilledBeforeThisPeriod);
+
+            enemiesKilledBeforeThisPeriod = enemiesKilledinLastPeriod;
+
+            playerHealthChangeLastPeriod = playerHealthLastPeriod - pc.getHealth();
+
+            pg.newData();
+
+            
         }
 
         if(Input.GetKeyDown("l"))
@@ -145,4 +173,7 @@ public class RoomEnemyDataGatherer : MonoBehaviour
         }
 
     }
+
+ 
+
 }

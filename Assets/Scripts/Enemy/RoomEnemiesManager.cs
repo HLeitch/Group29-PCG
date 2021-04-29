@@ -32,6 +32,12 @@ public class RoomEnemiesManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        
+
+    }
+
     /// <summary>
     /// Total Enemies not dead
     /// </summary>
@@ -55,7 +61,7 @@ public class RoomEnemiesManager : MonoBehaviour
         {
             active = false;
             myDataGatherer.timeTakenToClearLastRoom = timeTakenToClearRoom;
-            myDataGatherer.enemiesKilledPerSecondInLastRoom = enemiesInRoom.Count / timeTakenToClearRoom;
+         myDataGatherer.enemiesKilledPerSecondInLastRoom = enemiesInRoom.Count / timeTakenToClearRoom;
             enemiesRemaining = 0;
 
         }
@@ -65,6 +71,7 @@ public class RoomEnemiesManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         //player enters room
         if(other.gameObject.layer == 8)
         {
@@ -72,8 +79,10 @@ public class RoomEnemiesManager : MonoBehaviour
             roomExplored = true;
             foreach(Enemy e in enemiesInRoom)
             {
-                e.gameObject.SetActive(true);
-                
+                if (e != null)
+                    {
+                    e.gameObject.SetActive(true);
+                }
 
             }
 

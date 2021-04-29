@@ -47,7 +47,9 @@ MonoBehaviour:
   knockback: 0
   timeBetweenAttacks: 0
   speed: 0
+  weaponValue: 0
   weaponName: 
+  bladeCollider: {fileID: 0}
 --- !u!1 &532219141798555898
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +75,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532219141798555898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.51, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 532219141291702573}
@@ -213,8 +215,11 @@ GameObject:
   - component: {fileID: 532219142156003585}
   - component: {fileID: 4293977160246295716}
   - component: {fileID: 519842566908835117}
+  - component: {fileID: 6106651768012389615}
+  - component: {fileID: 6735963919108396744}
   - component: {fileID: 532219140553263683}
   - component: {fileID: 532219140553263680}
+  - component: {fileID: -1215729276977935319}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
@@ -273,9 +278,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac483da5480466d41816c545c12c5f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 75
-  drag: 0.875
+  speed: 100
+  drag: 0.75
   weapon_weight: 0
+  playerKnockback: 0
+  playerKnockbackLength: 0.2
+  playerKnockBackCount: 0
+  knockFromRight: 0
 --- !u!114 &4293977160246295716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,11 +310,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ca02d3979675644ab752f502236a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_hp: 80
+  max_hp: 100
+  weapon: {fileID: 1530003362}
   wm: {fileID: 0}
   timeBetweenAttack: 0
   swinging: 0
   startTimeBetweenAttack: 0
+--- !u!114 &6106651768012389615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146750489386661584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5da610924db9e5f42a24bede65b80667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noOfEnemies: 19
+--- !u!114 &6735963919108396744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146750489386661584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847e6c8785d3fb34cb20d285971a88a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCombat: {fileID: 519842566908835117}
 --- !u!199 &532219140553263683
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -5028,6 +5064,22 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &-1215729276977935319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146750489386661584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f0c4350c95cb843a639708be79e4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 532219141291702572}
+  particles_prefab: {fileID: 8682612718153965986, guid: ec4bc932fa68a8e419dbba5ad0a07c8e,
+    type: 3}
+  effect_time: 10
 --- !u!1 &9146750489773046182
 GameObject:
   m_ObjectHideFlags: 0
@@ -5114,6 +5166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26faf2ad9e738014a918769ab821b5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSprite: {fileID: 9146750488640456295}
 --- !u!1 &9146750490199285500
 GameObject:
   m_ObjectHideFlags: 0

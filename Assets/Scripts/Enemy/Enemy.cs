@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
 
     public float maxHealth = 50f;
 
+    float weaponSpeed;
+
     public EnemyHealthBar healthBar;
 
     public Transform healthBarPostitionTarget;
@@ -31,10 +33,15 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     Animator weaponAnimator;
 
+    public Collider2D myBladeCollider;
+    public float maxTimeBetweenAttacks;
+    float timerBetweenAttacks = -1;
+
     public float enemyKnockback;
     public float enemyKnockbackLength;
     public float enemyKnockBackCount;
     public bool knockFromRight;
+
 
     void Awake()
     {
@@ -59,6 +66,13 @@ public class Enemy : MonoBehaviour
         enemyKnockbackLength = 0.2f;
         enemyKnockback = 2;
 
+        myBladeCollider = weapon.bladeCollider;
+
+        maxTimeBetweenAttacks = weapon.timeBetweenAttacks;
+
+        ///Should fix weapon speed///
+        weaponSpeed = weapon.speed;
+        animator.speed = weaponSpeed;
     }
 
     // Update is called once per frame
@@ -79,7 +93,23 @@ public class Enemy : MonoBehaviour
 
         if (dying) { dyingEffect(); }
 
+        if(timerBetweenAttacks >=0)
+        {
+            timerBetweenAttacks -= Time.deltaTime;
 
+            if(timerBetweenAttacks < maxTimeBetweenAttacks/2)
+            {
+                myBladeCollider.enabled = false;
+            }
+
+            if(timerBetweenAttacks <0)
+            {
+                usingWeapon = false;
+
+
+            }
+
+        }
         
 
         
@@ -99,6 +129,7 @@ public class Enemy : MonoBehaviour
 
         health += Value;
         healthBar.ChangeHealth(health/maxHealth);
+        rem.EnemyDamaged(Value);
 
         if (health <=0)
         {
@@ -120,6 +151,8 @@ public class Enemy : MonoBehaviour
 
     void dyingEffect()
     {
+        SoundManager.playSound("enemy_death_sound", 1, 1, false, false);
+
         animator.enabled = false;
 
         gameObject.transform.localScale = new Vector3(1, transform.localScale.y - shrinkScale, 1);
@@ -172,12 +205,15 @@ public class Enemy : MonoBehaviour
 
     public void UseWeapon()
     {
-        if (!usingWeapon)
+        if (!usingWeapon && timerBetweenAttacks < 0)
         {
+            myBladeCollider.enabled = true;
+
             weaponAnimator.Play("SwingSword");
 
             Debug.Log("ENEMY SWINGS WEAPON");
             usingWeapon = true;
+            timerBetweenAttacks = maxTimeBetweenAttacks;
         }
 
 
@@ -186,6 +222,8 @@ public class Enemy : MonoBehaviour
 
     void Dead()
     {
+        GetComponent<PotionDrop>().drop();
+        player.GetComponent<PlayerWin>().kill();
         Destroy(healthBar.gameObject);
         Destroy(this.gameObject);
 
