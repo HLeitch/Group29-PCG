@@ -11,6 +11,9 @@ public class PlayerCombat : MonoBehaviour
     public WeaponManager wm;
     public float timeBetweenAttack;
     public bool swinging = false;
+    public bool bigSwing = false;
+    public float waitTime = 0;
+    public bool smallSwing = false;
     public float startTimeBetweenAttack;
     private Animator weaponAnimator;
     private UIManager ui;
@@ -101,22 +104,50 @@ public class PlayerCombat : MonoBehaviour
     {
         if (timeBetweenAttack <= 0)
         {
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse0) && bigSwing == false)
             {
+                smallSwing = true;
                 Debug.Log("Swinging weapon");
                 wg.UpdateSwingsTook();
                 timeBetweenAttack = startTimeBetweenAttack;
                 weaponAnimator.SetBool("Swinging", true);
+                weaponAnimator.SetBool("SmallSwing", true);
 
                 weaponAnimator.speed = weapon.speed;
+                waitTime = 0.3f / weapon.speed;
 
                 swinging = true;
                 weapon.bladeCollider.enabled = true;
-                yield return new WaitForSeconds(0.3f);
+                yield return new WaitForSeconds(waitTime);
                 weaponAnimator.SetBool("Swinging", false);
+                weaponAnimator.SetBool("SmallSwing", false);
+
+                yield return new WaitForSeconds(0.15f);
+                swinging = false;
+                smallSwing = false;
+                weapon.bladeCollider.enabled = false;
+            }
+            else if (Input.GetKey(KeyCode.Mouse1) && smallSwing == false)
+            {
+                bigSwing = true;
+                Debug.Log("Swinging weapon");
+                wg.UpdateSwingsTook();
+                timeBetweenAttack = startTimeBetweenAttack;
+                weaponAnimator.SetBool("Swinging", true);
+                weaponAnimator.SetBool("BigSwing", true);
+
+                weaponAnimator.speed = weapon.speed;
+                waitTime = 0.75f / weapon.speed;
+
+                swinging = true;
+                weapon.bladeCollider.enabled = true;
+                yield return new WaitForSeconds(waitTime);
+                weaponAnimator.SetBool("Swinging", false);
+                weaponAnimator.SetBool("BigSwing", false);
                 
                 yield return new WaitForSeconds(0.15f);
                 swinging = false;
+                bigSwing = false;
                 weapon.bladeCollider.enabled = false;
             }
         }
