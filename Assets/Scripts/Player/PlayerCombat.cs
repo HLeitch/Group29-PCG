@@ -9,25 +9,31 @@ public class PlayerCombat : MonoBehaviour
     int hp;
     public Weapon weapon;
     public WeaponManager wm;
-    public float timeBetweenAttack;
+    public float timerBetweenAttack;
     public bool swinging = false;
     public bool bigSwing = false;
     public float waitTime = 0;
     public bool smallSwing = false;
-    public float startTimeBetweenAttack;
+
     private Animator weaponAnimator;
     private UIManager ui;
-    
+
+    public float startTimeBetweenAttack()
+    {
+
+        float value = weapon.timeBetweenAttacks;
+        return value;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         wg = FindObjectOfType<WeaponGeneration>();
         hp = max_hp;
-        startTimeBetweenAttack = 1f;
+        
         weaponAnimator = transform.Find("Pivot").GetComponent<Animator>();
         ui = FindObjectOfType<UIManager>();
-        timeBetweenAttack = weapon.timeBetweenAttacks;
+        timerBetweenAttack = weapon.timeBetweenAttacks;
       
 
     }
@@ -43,7 +49,7 @@ public class PlayerCombat : MonoBehaviour
             
         }
 
-        if (timeBetweenAttack <= 0)
+        if (timerBetweenAttack <= 0)
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
@@ -102,14 +108,14 @@ public class PlayerCombat : MonoBehaviour
 
     IEnumerator SwingWeapon()
     {
-        if (timeBetweenAttack <= 0)
+        if (timerBetweenAttack <= 0)
         {
             if (Input.GetKey(KeyCode.Mouse0) && bigSwing == false)
             {
                 smallSwing = true;
                 Debug.Log("Swinging weapon");
                 wg.UpdateSwingsTook();
-                timeBetweenAttack = startTimeBetweenAttack;
+                timerBetweenAttack = startTimeBetweenAttack();
                 weaponAnimator.SetBool("Swinging", true);
                 weaponAnimator.SetBool("SmallSwing", true);
 
@@ -132,7 +138,7 @@ public class PlayerCombat : MonoBehaviour
                 bigSwing = true;
                 Debug.Log("Swinging weapon");
                 wg.UpdateSwingsTook();
-                timeBetweenAttack = startTimeBetweenAttack;
+                timerBetweenAttack = startTimeBetweenAttack();
                 weaponAnimator.SetBool("Swinging", true);
                 weaponAnimator.SetBool("BigSwing", true);
 
@@ -152,7 +158,7 @@ public class PlayerCombat : MonoBehaviour
             }
         }
         else
-            timeBetweenAttack -= Time.deltaTime;
+            timerBetweenAttack -= Time.deltaTime;
     }
 
 
