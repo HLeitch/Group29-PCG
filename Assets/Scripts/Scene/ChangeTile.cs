@@ -23,25 +23,23 @@ public class ChangeTile : MonoBehaviour
                 ChangeSprite();
             }
         }
-        if (collision.gameObject.name == "WallCollider")
+
+        if (collision.gameObject.name == "WallCollider" || collision.gameObject.tag == "Enemy")
         {
             if (gameObject.name == "AboveLayer")
             {
-                gameObject.GetComponentInParent<SpriteRenderer>().sortingLayerName = "Weapon";
+                gameObject.GetComponentInParent<SpriteRenderer>().sortingLayerName = "Default";
                 gameObject.GetComponentInParent<SpriteRenderer>().sortingOrder = 10;
-                Debug.Log("interact above");
             }
 
             if (gameObject.name == "BelowLayer")
             {
                 gameObject.GetComponentInParent<SpriteRenderer>().sortingLayerName = "Walls";
-
             }
         }
-        
     }
 
-  
+
     // Update is called once per frame
     public void ChangeSprite()
     {
