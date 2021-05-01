@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a73f86a1363f443b85e129375d3845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reactionTime: 0.3
 --- !u!61 &982870753675664711
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -394,9 +395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potions:
   - {fileID: 6925540200807008743, guid: dbcb442b4c521f545b643db5bacab817, type: 3}
-  - {fileID: 6569526857582771689, guid: 12b25981aee40374f9b82bd0fc60e43f, type: 3}
-  - {fileID: 4996038157991673264, guid: 7c6a40121bdf55042b45e19e680a54cf, type: 3}
   - {fileID: 1580081935757120676, guid: de6a588b606a7454ca7025c3ade923ad, type: 3}
+  - {fileID: 4996038157991673264, guid: 7c6a40121bdf55042b45e19e680a54cf, type: 3}
 --- !u!95 &5320538496354845839
 Animator:
   serializedVersion: 3

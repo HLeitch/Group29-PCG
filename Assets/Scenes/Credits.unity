@@ -369,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 3620202402915276670, guid: 212262c990c675645b27371dcb92b13f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3620202402915276670, guid: 212262c990c675645b27371dcb92b13f,
         type: 3}
@@ -527,7 +527,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 93420fc10ad1daf4a82c91fbcb19c0d2, type: 3}
-    m_FontSize: 30
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -546,15 +546,10 @@ MonoBehaviour:
     Robert (AKA 0x72)
 
 
-    Music:
+    Music & Sound:
 
-    TBD
-
-
-    Sound
-    Effects:
-
-    TBD'
+    Joshua
+    Kitchen'
 --- !u!222 &266541076
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -641,7 +636,7 @@ GameObject:
   - component: {fileID: 803916548}
   - component: {fileID: 803916547}
   m_Layer: 5
-  m_Name: Programmers
+  m_Name: Programmers1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -663,8 +658,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 353, y: -135}
-  m_SizeDelta: {x: 650, y: 450}
+  m_AnchoredPosition: {x: 208, y: -130}
+  m_SizeDelta: {x: 342.18726, y: 503.77576}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803916547
 MonoBehaviour:
@@ -687,7 +682,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 93420fc10ad1daf4a82c91fbcb19c0d2, type: 3}
-    m_FontSize: 30
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -707,17 +702,7 @@ MonoBehaviour:
     Emmanuel Ansong
 
 
-    James Isaacson
-
-
-    Jordan
-    Cave
-
-
-    Joshua Kitchen
-
-
-    Zhengyan Zhang '
+    James Isaacson'
 --- !u!222 &803916548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -726,6 +711,159 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803916545}
   m_CullTransparentMesh: 0
+--- !u!1 &1249304740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1249304741}
+  - component: {fileID: 1249304743}
+  - component: {fileID: 1249304742}
+  m_Layer: 5
+  m_Name: Programmers2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1249304741
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249304740}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1699566245}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 560.5, y: -175.41199}
+  m_SizeDelta: {x: 322.10645, y: 412.91516}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1249304742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249304740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 93420fc10ad1daf4a82c91fbcb19c0d2, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 150
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Jordan Cave
+
+
+    Joshua Kitchen
+
+
+    Zhengyan Zhang '
+--- !u!222 &1249304743
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249304740}
+  m_CullTransparentMesh: 0
+--- !u!1001 &1690438472
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308498, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940629353419308508, guid: 38bd9e6e969f21f40a571ab594b5e298,
+        type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38bd9e6e969f21f40a571ab594b5e298, type: 3}
 --- !u!1 &1699566241
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +959,7 @@ RectTransform:
   - {fileID: 56091526}
   - {fileID: 266541074}
   - {fileID: 803916546}
+  - {fileID: 1249304741}
   - {fileID: 241478099}
   m_Father: {fileID: 0}
   m_RootOrder: 1
