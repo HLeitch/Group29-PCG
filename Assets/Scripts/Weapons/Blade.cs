@@ -18,6 +18,8 @@ public class Blade : MonoBehaviour
         myCollider.enabled = false;
 
         parent.bladeCollider = myCollider;
+
+        gameObject.layer = parent.gameObject.layer;
     }
 
     // Update is called once per frame
