@@ -78,7 +78,7 @@ public class EnemyDamageable : MonoBehaviour,IDamageable
         {
             enemySprite.color = Color.black;
             yield return new WaitForSeconds(0.2f);
-            enemySprite.color = Color.white;
+         enemySprite.color = Color.white;
         }
     }
 }

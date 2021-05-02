@@ -205,10 +205,11 @@ public class Enemy : MonoBehaviour
 
     public void UseWeapon()
     {
-        if (!usingWeapon && timerBetweenAttacks < 0)
+       if (!usingWeapon && timerBetweenAttacks < 0)
         {
             myBladeCollider.enabled = true;
 
+            weaponAnimator.speed = weapon.speed;
             weaponAnimator.Play("SwingSword");
 
             Debug.Log("ENEMY SWINGS WEAPON");
