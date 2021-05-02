@@ -157,7 +157,7 @@ public class PlayerCombat : MonoBehaviour
                 weapon.bladeCollider.enabled = false;
             }
         }
-        else
+        else if (swinging == false)
             timerBetweenAttack -= Time.deltaTime;
     }
 
