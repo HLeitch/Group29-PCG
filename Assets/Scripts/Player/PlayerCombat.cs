@@ -9,6 +9,7 @@ public class PlayerCombat : MonoBehaviour
     int hp;
     public Weapon weapon;
     public WeaponManager wm;
+    public PlayerDamageable pd;
     public float timerBetweenAttack;
     public bool swinging = false;
     public bool bigSwing = false;
@@ -82,28 +83,6 @@ public class PlayerCombat : MonoBehaviour
     {
         hp = Mathf.Clamp(hp+value, 0, max_hp);
         healthChange();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-   {
-        if (collision.CompareTag("Projectile"))
-        {
-            // TODO: TakeDamage(collision.GetComponent<SCRIPTNAME>().damage); // Replace SCRIPTNAME with name of projectile script
-            // TODO: Emit particle effect?
-            Destroy(collision.gameObject);
-        }
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Projectile"))
-        {
-            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage); // Replace SCRIPTNAME with name of projectile script
-            // TODO: Emit particle effect?
-            Debug.Log("HIT");
-            Destroy(collision.gameObject);
-        }
     }
 
     IEnumerator SwingWeapon()
