@@ -180,7 +180,12 @@ public class Enemy : MonoBehaviour
                 Vector2 distanceToTarget = targetDestination - currentLocation;
 
                 Vector2 directionToTarget = distanceToTarget.normalized;
-                animator.SetFloat("MoveX", directionToTarget.x);
+
+                float direction;
+                if (directionToTarget.x > 0f) direction = 1;
+                else direction = -1;
+
+                animator.SetFloat("MoveX", direction);
 
                 Vector2 movement = (directionToTarget * moveSpeed);
 

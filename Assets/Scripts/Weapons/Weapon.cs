@@ -27,6 +27,7 @@ public class Weapon : MonoBehaviour
         speed = hilt.speed;
         timeBetweenAttacks = blade.timeBetweenSwings;
         weaponValue = (hilt.hiltValue + blade.bladeValue) / 2;
+        
 
     }
 
