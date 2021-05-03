@@ -33,7 +33,9 @@ public class Weapon : MonoBehaviour
 
     public string GetName()
     {
-        weaponName = /*modifier.gameObject.name + " " + */blade.gameObject.name + " " + this.tag/* + " of " + effect.gameObject.name*/;
+        int pretendValue = (int) (weaponValue * 1000) + (Random.Range(0, 99));
+
+        weaponName = /*modifier.gameObject.name + " " + */blade.gameObject.name + " " + this.tag/* + " of " + effect.gameObject.name*/ + "\n Fearsome Rating: " + pretendValue + "\n Damage: " + damage*100 + "\n Speed " + speed*100; ;
         name = weaponName;
         return weaponName;
     }
