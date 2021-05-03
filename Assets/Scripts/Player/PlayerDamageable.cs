@@ -60,6 +60,15 @@ public class PlayerDamageable : MonoBehaviour,IDamageable
                 }
 
             }
+            if (collision.CompareTag("Projectile"))
+            {
+                ChangeHealth(collision.gameObject.GetComponent<Projectile>().damage);
+                invunerable = true;
+                invunerableTime = maxInvunerableTime;
+                StartCoroutine(Flash());
+
+                Destroy(collision.gameObject);
+            }
         }
 
     }
