@@ -14,7 +14,7 @@ public class TrapTrigger : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();
+        pc = FindObjectOfType<PlayerCombat>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

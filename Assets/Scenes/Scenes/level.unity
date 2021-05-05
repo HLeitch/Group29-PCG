@@ -25219,7 +25219,7 @@ PrefabInstance:
     - target: {fileID: 4298325912447550947, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.935
+      value: 0.277494
       objectReference: {fileID: 0}
     - target: {fileID: 4298325912683859947, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
@@ -25249,7 +25249,7 @@ PrefabInstance:
     - target: {fileID: 4298325912883250101, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.935
+      value: 0.277494
       objectReference: {fileID: 0}
     - target: {fileID: 4298325912975206847, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
@@ -25269,7 +25269,7 @@ PrefabInstance:
     - target: {fileID: 4298325913135860091, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.935
+      value: 0.277494
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca8f92f8d3915934aba4d694e356d83b, type: 3}
@@ -38759,11 +38759,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Floor Spike (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6169347207264779787, guid: 8842f770d7db5ea46abb442b58214d12,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7809447456135267759, guid: 8842f770d7db5ea46abb442b58214d12,
         type: 3}
