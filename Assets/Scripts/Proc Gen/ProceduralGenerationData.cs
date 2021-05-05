@@ -79,7 +79,7 @@ public class ProceduralGenerationData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        
     }
 
     float TypePlayerPerformance()
@@ -150,15 +150,11 @@ public class ProceduralGenerationData : MonoBehaviour
         return performance;
     }
 
-    public void newData()
+    public IEnumerator newData()
     {
-
-
-
-
-
+        SoundManager.playSound("new_weapon_sound", 1, 0.5f, false, true);
+        yield return new WaitForSeconds(0.5f);
         weaponManager.GiveWeapon(TypePlayerPerformance(), BladePlayerPerformance(), HiltPlayerPerformance());
-
     }
 
 }

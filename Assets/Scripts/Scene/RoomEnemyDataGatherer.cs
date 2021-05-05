@@ -161,7 +161,7 @@ public class RoomEnemyDataGatherer : MonoBehaviour
 
             playerHealthChangeLastPeriod = playerHealthLastPeriod - pc.getHealth();
 
-            pg.newData();
+            StartCoroutine(pg.newData());
 
             
         }

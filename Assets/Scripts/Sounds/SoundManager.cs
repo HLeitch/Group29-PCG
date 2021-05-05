@@ -43,7 +43,7 @@ public static class SoundManager
             
             AudioSource audioSource = soundEffectObject.AddComponent<AudioSource>(); // Add an AudioSource component to it,
             audioSource.clip = soundEffect; // Set the AudioSource attributes to the parameters passed into this function,
-            audioSource.volume = volume * PlayerPrefs.GetFloat("Sound");
+            audioSource.volume = volume * PlayerPrefs.GetFloat("Sound", 0.5f);
             audioSource.pitch = pitch;
             audioSource.loop = loop;
 
