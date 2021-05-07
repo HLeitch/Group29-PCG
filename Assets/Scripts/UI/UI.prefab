@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -233.8, y: -32}
+  m_AnchoredPosition: {x: -36.00003, y: -32}
   m_SizeDelta: {x: 239.59497, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &24319323
@@ -207,7 +207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -233.8, y: -32}
+  m_AnchoredPosition: {x: -36, y: -32}
   m_SizeDelta: {x: 239.59497, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1528859421
@@ -1077,6 +1077,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4243634383118772257}
     m_Modifications:
+    - target: {fileID: 976826144930553736, guid: db416e11147f1564282ff951c03ad4c1,
+        type: 3}
+      propertyPath: maxPauseTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 976826144930553736, guid: db416e11147f1564282ff951c03ad4c1,
+        type: 3}
+      propertyPath: TimeBetweenTyping
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 976826144930553738, guid: db416e11147f1564282ff951c03ad4c1,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1160,12 +1170,12 @@ PrefabInstance:
     - target: {fileID: 976826144930553738, guid: db416e11147f1564282ff951c03ad4c1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 236
       objectReference: {fileID: 0}
     - target: {fileID: 976826144930553738, guid: db416e11147f1564282ff951c03ad4c1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 50
+      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 976826144930553738, guid: db416e11147f1564282ff951c03ad4c1,
         type: 3}
@@ -1184,6 +1194,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 976826144930553739, guid: db416e11147f1564282ff951c03ad4c1,
         type: 3}
+      propertyPath: m_margin.w
+      value: -116.96597
+      objectReference: {fileID: 0}
+    - target: {fileID: 976826144930553739, guid: db416e11147f1564282ff951c03ad4c1,
+        type: 3}
       propertyPath: m_margin.x
       value: -49.86879
       objectReference: {fileID: 0}
@@ -1191,6 +1206,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.z
       value: -55.11805
+      objectReference: {fileID: 0}
+    - target: {fileID: 976826144930553739, guid: db416e11147f1564282ff951c03ad4c1,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 514
       objectReference: {fileID: 0}
     - target: {fileID: 976826144930553739, guid: db416e11147f1564282ff951c03ad4c1,
         type: 3}

@@ -5006,6 +5006,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 24319320, guid: e9acd706c7a829e42b9df57ed4ec88a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -36.00003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528859418, guid: e9acd706c7a829e42b9df57ed4ec88a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -36
+      objectReference: {fileID: 0}
     - target: {fileID: 3620202402758709199, guid: e9acd706c7a829e42b9df57ed4ec88a8,
         type: 3}
       propertyPath: m_IsActive
@@ -24958,7 +24966,12 @@ PrefabInstance:
     - target: {fileID: 3010004235811949287, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.935
+      value: 0.24826702
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010004235811949287, guid: ca8f92f8d3915934aba4d694e356d83b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3010004236080248279, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
@@ -25353,7 +25366,7 @@ PrefabInstance:
     - target: {fileID: 4298325912447550947, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.935
+      value: 0.24826702
       objectReference: {fileID: 0}
     - target: {fileID: 4298325912683859947, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
@@ -25383,7 +25396,7 @@ PrefabInstance:
     - target: {fileID: 4298325912883250101, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.935
+      value: 0.24826702
       objectReference: {fileID: 0}
     - target: {fileID: 4298325912975206847, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
@@ -25403,7 +25416,7 @@ PrefabInstance:
     - target: {fileID: 4298325913135860091, guid: ca8f92f8d3915934aba4d694e356d83b,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.935
+      value: 0.24826702
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca8f92f8d3915934aba4d694e356d83b, type: 3}
