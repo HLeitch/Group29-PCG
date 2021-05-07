@@ -36,12 +36,15 @@ public class PlayerVisuals : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             if (parts.isPlaying) parts.Stop();
-            SoundManager.stopSoundLoop("player_walk_sound");
+            //Destroy(GameObject.Find("player_walk_sound Sound Effect"));
         }
         else
         {
             if (!parts.isPlaying) parts.Play();
-            SoundManager.playSound("player_walk_sound", 0.1f, Random.Range(0.75f, 1.25f), true, false);
+            //if (GameObject.Find("player_walk_sound Sound Effect") == null)
+            //{
+            SoundManager.playSound("player_walk_sound", 0.1f, Random.Range(0.85f, 1.15f), false, false);
+            //}
         }
         anim.SetFloat("Velocity", rb.velocity.magnitude);
     }

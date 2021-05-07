@@ -70,6 +70,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void TakeDamage(int value)
     {
+        SoundManager.playSound("hit_sound", 1, Random.Range(0.75f, 1.25f));
         hp = hp - value;
         Debug.Log("Health value" + hp);
         healthChange();
@@ -83,6 +84,28 @@ public class PlayerCombat : MonoBehaviour
     {
         hp = Mathf.Clamp(hp+value, 0, max_hp);
         healthChange();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+   {
+        if (collision.CompareTag("Projectile"))
+        {
+            // TODO: TakeDamage(collision.GetComponent<SCRIPTNAME>().damage); // Replace SCRIPTNAME with name of projectile script
+            // TODO: Emit particle effect?
+            Destroy(collision.gameObject);
+        }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            TakeDamage(collision.gameObject.GetComponent<Projectile>().damage); // Replace SCRIPTNAME with name of projectile script
+            // TODO: Emit particle effect?
+            Debug.Log("HIT");
+            Destroy(collision.gameObject);
+        }
     }
 
     IEnumerator SwingWeapon()
