@@ -44,7 +44,7 @@ public class PlayerCombat : MonoBehaviour
     {
         StartCoroutine(SwingWeapon());
         // Attack code is handled by the weapon (i think)
-        if (Input.GetKeyDown("m"))
+        if (Input.GetKeyDown("m") && Application.isEditor)
         {
             GetNewWeapon();
             
