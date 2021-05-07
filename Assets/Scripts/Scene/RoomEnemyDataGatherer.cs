@@ -165,12 +165,12 @@ public class RoomEnemyDataGatherer : MonoBehaviour
 
             
         }
-
-        if(Input.GetKeyDown("l"))
+        
+        /*if(Input.GetKeyDown("l"))
         {
             DebugMe();
 
-        }
+        }*/
 
     }
 

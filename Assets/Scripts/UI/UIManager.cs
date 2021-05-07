@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
     public UIAbilities uiabilities;
     public UIHealthBar uihealthbar;
     public UIPlayerWeaponText uiPlayerWeaponText;
-    public UIRoomText uiRoomText;
+    //public UIRoomText uiRoomText;
     public Sprite testSprite;
 
     public EnemyHealthBar EnemyHealthBarOriginal;
@@ -37,11 +37,11 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void ChangeRoomText(string text)
+ /*   public void ChangeRoomText(string text)
     {
         uiRoomText.ChangeText(text);
 
-    }
+    }*/
 
 
     private void Update()
@@ -49,7 +49,7 @@ public class UIManager : MonoBehaviour
         //Debugging
         //w key shows or removes a test sprite
         
-        if (Input.GetKeyUp("space"))
+       /* if (Input.GetKeyUp("space"))
         {
             changeHealthBar(0.6f);
 
@@ -65,7 +65,7 @@ public class UIManager : MonoBehaviour
         {
             ChangeRoomText("i am a fish");
 
-        }
+        }*/
 
       
     }

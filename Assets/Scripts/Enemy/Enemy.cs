@@ -81,12 +81,12 @@ public class Enemy : MonoBehaviour
 
         healthBar.moveHealthBar(healthBarPostitionTarget);
 
-        if (Input.GetKeyUp(("'")))
+        /*if (Input.GetKeyUp(("'")))
         {
 
 
             ChangeHealth(-10f);
-        }
+        }*/
 
         //weapon.transform.position = weaponHoldPoint.transform.position;
 
